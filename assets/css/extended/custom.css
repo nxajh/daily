@@ -9,6 +9,35 @@
   max-width: calc(1024px + var(--gap) * 2);
 }
 
+/* --- Article Page Typography --- */
+.post-title {
+  font-size: 26px !important;
+  line-height: 1.35 !important;
+}
+
+.post-description {
+  font-size: 14px;
+}
+
+.md-content h2 {
+  font-size: 22px !important;
+  margin: 28px 0 16px !important;
+}
+
+.md-content h3 {
+  font-size: 18px !important;
+  margin: 20px 0 10px !important;
+}
+
+.md-content h4 {
+  font-size: 16px !important;
+}
+
+.post-content {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
 /* --- Article Page Source Block --- */
 .post-content blockquote {
   border-left: 3px solid var(--primary);
@@ -46,7 +75,7 @@
 }
 
 .first-entry .entry-header h2 {
-  font-size: 1.3em;
+  font-size: 1.15em;
 }
 
 .first-entry .entry-content p {
@@ -111,4 +140,9 @@
 /* --- Code Blocks --- */
 .highlight {
   border-radius: 8px;
+}
+
+/* --- Section Page Header --- */
+.page-header h1 {
+  font-size: 26px !important;
 }
