@@ -278,22 +278,21 @@ body {
 }
 
 .toc {
-  border-radius: 10px !important;
-  border: 1px solid var(--border) !important;
-  padding: 16px 20px !important;
+  border-radius: 10px;
+  border: 1px solid var(--border);
   background: var(--code-bg);
   margin: 0;
+  overflow: hidden;
 }
 
-/* Desktop: sticky right sidebar, always open */
+/* Desktop: sticky right sidebar, always visible */
 @media (min-width: 1200px) {
   .toc-sidebar {
     position: sticky;
     top: 80px;
     flex-shrink: 0;
-    width: 240px;
+    width: 220px;
     max-height: calc(100vh - 120px);
-    overflow-y: auto;
     order: 1;
   }
 
@@ -303,14 +302,19 @@ body {
     order: 0;
   }
 
-  /* Force <details> open on desktop */
-  .toc[open],
-  .toc {
-    /* details stays as-is, we just ensure it's open via JS */
+  .toc-toggle {
+    display: none;
+  }
+
+  .toc-inner {
+    display: block !important;
+    padding: 14px 16px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
   }
 }
 
-/* Mobile / tablet: collapsible via native <details> */
+/* Mobile / tablet: collapsible */
 @media (max-width: 1199px) {
   .post-with-toc {
     flex-direction: column;
@@ -321,25 +325,66 @@ body {
     margin-bottom: 20px;
   }
 
-  .toc summary {
+  .toc-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 16px;
     cursor: pointer;
-    font-size: 0.95em;
+    background: none;
+    border: none;
+    font-size: 0.9em;
     font-weight: 600;
     color: var(--primary);
+    font-family: inherit;
+  }
+
+  .toc-chevron {
+    transition: transform 0.2s;
+  }
+
+  .open .toc-chevron {
+    transform: rotate(180deg);
+  }
+
+  .toc-inner {
+    display: none;
+    padding: 0 16px 14px;
+  }
+
+  .toc.open .toc-inner {
+    display: block;
   }
 }
 
-.toc .inner {
-  font-size: 0.88em;
+.toc-inner ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-.toc .inner a {
+.toc-inner ul ul {
+  padding-left: 14px;
+  border-left: 1px solid var(--border);
+  margin-left: 6px;
+}
+
+.toc-inner li {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.toc-inner a {
   color: var(--secondary);
   text-decoration: none;
-  transition: color 0.2s;
+  font-size: 0.85em;
+  transition: color 0.15s;
+  display: block;
+  padding: 2px 0;
 }
 
-.toc .inner a:hover {
+.toc-inner a:hover {
   color: var(--primary);
 }
 

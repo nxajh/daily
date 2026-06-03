@@ -1,0 +1,13 @@
+{{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
+{{- $has_headers := ge (len $headers) 1 -}}
+{{- if $has_headers -}}
+<nav class="toc" id="toc">
+  <button class="toc-toggle" onclick="this.parentElement.classList.toggle('open')" aria-label="Toggle TOC">
+    <span>目录</span>
+    <svg class="toc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4.427 9.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 9H4.604a.25.25 0 00-.177.427zM4.427 6.573L7.823 3.177a.25.25 0 01.354 0L11.573 6.573A.25.25 0 0111.396 7H4.604a.25.25 0 01-.177-.427z"/></svg>
+  </button>
+  <div class="toc-inner">
+    {{- .TableOfContents -}}
+  </div>
+</nav>
+{{- end }}

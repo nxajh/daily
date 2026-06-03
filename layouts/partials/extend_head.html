@@ -2,33 +2,19 @@
 <div class="reading-progress" id="reading-progress"></div>
 <script>
 (function() {
-  // Progress bar
   var bar = document.getElementById('reading-progress');
-  if (bar) {
-    function update() {
-      var content = document.querySelector('.post-content');
-      if (!content) { bar.style.width = '0%'; return; }
-      var rect = content.getBoundingClientRect();
-      var total = content.offsetHeight - window.innerHeight;
-      var scrolled = -rect.top;
-      bar.style.width = Math.min(100, Math.max(0, (scrolled / total) * 100)) + '%';
-    }
-    window.addEventListener('scroll', update, { passive: true });
-    update();
+  if (!bar) return;
+  function update() {
+    var content = document.querySelector('.post-content');
+    if (!content) { bar.style.width = '0%'; return; }
+    var rect = content.getBoundingClientRect();
+    var total = content.offsetHeight - window.innerHeight;
+    var scrolled = -rect.top;
+    bar.style.width = Math.min(100, Math.max(0, (scrolled / total) * 100)) + '%';
   }
-
-  // Force TOC open on desktop
-  var toc = document.querySelector('.toc');
-  if (toc && toc.tagName === 'DETAILS') {
-    function applyToc() {
-      if (window.innerWidth >= 1200) {
-        toc.setAttribute('open', '');
-      }
-    }
-    applyToc();
-    window.addEventListener('resize', applyToc);
-  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
 })();
 </script>
-<!-- SVG Favicon override -->
+<!-- SVG Favicon -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
