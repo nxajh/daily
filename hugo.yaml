@@ -31,14 +31,6 @@ params:
   showtoc: false
   tocopen: false
 
-  homeInfoParams:
-    Title: "📡 Daily Hub"
-    Content: "用 AI 为你精读每天的技术、财经与世界。"
-
-  socialIcons:
-    - name: "github"
-      url: "https://github.com/nxajh/daily"
-
   label:
     text: "Daily Hub"
 
