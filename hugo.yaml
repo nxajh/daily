@@ -1,7 +1,7 @@
 baseURL: "https://daily.jinl.in/"
 languageCode: "zh-cn"
 defaultContentLanguage: "zh"
-title: "技术日报"
+title: "Daily Hub"
 theme: "PaperMod"
 pagination:
   pagerSize: 20
@@ -13,7 +13,7 @@ buildExpired: false
 
 params:
   env: production
-  description: "RSS 订阅源 AI 摘要日报"
+  description: "AI 摘要日报 · 技术笔记 · 资源收藏 · 旅行杂记"
   author: "Daily Bot"
   defaultTheme: "auto"
   ShowShareButtons: false
@@ -24,30 +24,34 @@ params:
   ShowToc: false
 
   homeInfoParams:
-    Title: "📡 技术日报"
-    Content: "每日精选 RSS 订阅源，AI 生成摘要。信息密度 > 噪音。"
+    Title: "📡 Daily Hub"
+    Content: "每日精选 RSS 摘要、技术笔记、资源收藏与旅行记录。"
 
   socialIcons:
     - name: "github"
       url: "https://github.com/nxajh/daily"
 
   label:
-    text: "技术日报"
+    text: "Daily Hub"
 
 menu:
   main:
-    - identifier: "archives"
-      name: "归档"
-      url: "/archives/"
+    - identifier: "daily-news"
+      name: "Daily News"
+      url: "/daily-news/"
       weight: 10
-    - identifier: "tags"
-      name: "标签"
-      url: "/tags/"
+    - identifier: "tech-notes"
+      name: "Tech Notes"
+      url: "/tech-notes/"
       weight: 20
-    - identifier: "search"
-      name: "搜索"
-      url: "/search/"
+    - identifier: "resources"
+      name: "Resources"
+      url: "/resources/"
       weight: 30
+    - identifier: "travel-log"
+      name: "Travel Log"
+      url: "/travel-log/"
+      weight: 40
 
 outputs:
   home:
