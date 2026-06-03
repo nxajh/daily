@@ -1,0 +1,81 @@
+{{- define "main" }}
+
+{{- if .Site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+  <header class="entry-header">
+    <h1>{{ .Site.Params.homeInfoParams.Title | default "Home" }}</h1>
+  </header>
+  <div class="entry-content md-content">
+    {{ .Site.Params.homeInfoParams.Content | default "" | page.RenderString }}
+  </div>
+  {{- if .Site.Params.socialIcons }}
+  <footer class="entry-footer">
+    <div class="social-icons">
+      {{- range .Site.Params.socialIcons }}
+      <a href="{{ .url }}" target="_blank" rel="noopener noreferrer me" title="{{ .name | title }}">
+        {{- partial "svg.html" (dict "name" .name "class" "svg-inline-custom") -}}
+      </a>
+      {{- end }}
+    </div>
+  </footer>
+  {{- end }}
+</article>
+
+<!-- Section Cards -->
+<div class="section-grid">
+  <a href="/daily-news/" class="section-card">
+    <span class="icon">📡</span>
+    <span class="name">Daily News</span>
+    <span class="desc">每日技术·财经·世界快览</span>
+  </a>
+  <a href="/tech-notes/" class="section-card">
+    <span class="icon">🔧</span>
+    <span class="name">Tech Notes</span>
+    <span class="desc">问题解决与技术积累</span>
+  </a>
+  <a href="/resources/" class="section-card">
+    <span class="icon">🌐</span>
+    <span class="name">Resources</span>
+    <span class="desc">好用的工具与服务</span>
+  </a>
+  <a href="/travel-log/" class="section-card">
+    <span class="icon">✈️</span>
+    <span class="name">Travel Log</span>
+    <span class="desc">旅行见闻与计划</span>
+  </a>
+</div>
+{{- end }}
+
+{{- $pages := union .RegularPages .Sections }}
+{{- if $pages }}
+
+<!-- Latest from all sections -->
+<div style="margin-top: 32px;">
+  <h2 style="margin-bottom: 16px; font-size: 1.1em; color: var(--secondary);">最新内容</h2>
+  {{- range $pages.ByDate.Reverse | first 20 }}
+  <article class="post-entry">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h2>
+    </header>
+    <div class="entry-content">
+      {{- if .Params.summary }}
+      <p>{{ .Params.summary | truncate 100 }}</p>
+      {{- else }}
+      <p>{{ .Summary | truncate 100 }}</p>
+      {{- end }}
+    </div>
+    <footer class="entry-footer">
+      <span title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</span>
+      {{- with .Params.categories }}
+      &nbsp;·&nbsp;
+      {{- range . }}<a href="{{ "categories/" | absURL }}{{ . | urlize }}/">​{{ . }}</a>{{- end }}
+      {{- end }}
+    </footer>
+  </article>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- end }}

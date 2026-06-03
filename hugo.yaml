@@ -13,7 +13,7 @@ buildExpired: false
 
 params:
   env: production
-  description: "AI 摘要日报 · 技术笔记 · 资源收藏 · 旅行杂记"
+  description: "每日技术·财经·世界快览 — AI 精选 RSS 摘要、技术笔记、资源收藏与旅行记录"
   author: "Daily Bot"
   defaultTheme: "auto"
   ShowShareButtons: false
@@ -22,10 +22,18 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowToc: false
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
 
   homeInfoParams:
     Title: "📡 Daily Hub"
-    Content: "每日精选 RSS 摘要、技术笔记、资源收藏与旅行记录。"
+    Content: "用 AI 为你精读每天的技术、财经与世界。"
 
   socialIcons:
     - name: "github"
