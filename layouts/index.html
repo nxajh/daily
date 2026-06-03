@@ -46,33 +46,35 @@
 </div>
 {{- end }}
 
-{{- $pages := union .RegularPages .Sections }}
-{{- if $pages }}
-
-<!-- Latest from all sections -->
+<!-- Latest articles across all sections -->
+{{- $pages := where site.RegularPages "Type" "ne" "page" }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- with $pages.ByDate.Reverse | first 10 }}
 <div style="margin-top: 32px;">
   <h2 style="margin-bottom: 16px; font-size: 1.1em; color: var(--secondary);">最新内容</h2>
-  {{- range $pages.ByDate.Reverse | first 20 }}
+  {{- range . }}
   <article class="post-entry">
     <header class="entry-header">
       <h2 class="entry-hint-parent">
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{- .Title }}
       </h2>
     </header>
+    {{- if .Params.summary }}
     <div class="entry-content">
-      {{- if .Params.summary }}
       <p>{{ .Params.summary | truncate 100 }}</p>
-      {{- else }}
-      <p>{{ .Summary | truncate 100 }}</p>
-      {{- end }}
     </div>
+    {{- else if .Summary }}
+    <div class="entry-content">
+      <p>{{ .Summary | plainify | truncate 100 }}</p>
+    </div>
+    {{- end }}
     <footer class="entry-footer">
       <span title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</span>
-      {{- with .Params.categories }}
-      &nbsp;·&nbsp;
-      {{- range . }}<a href="{{ "categories/" | absURL }}{{ . | urlize }}/">​{{ . }}</a>{{- end }}
+      {{- with .Section }}
+      &nbsp;·&nbsp;<a href="{{ . | absURL }}/" style="text-transform:capitalize;">{{ . }}</a>
       {{- end }}
     </footer>
+    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
   </article>
   {{- end }}
 </div>
