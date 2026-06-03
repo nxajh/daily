@@ -1,5 +1,10 @@
 /* ===== Daily Hub Custom Styles ===== */
 
+/* --- Unified width: match nav bar --- */
+:root {
+  --main-width: 1024px;
+}
+
 /* --- Article Page Source Block --- */
 .post-content blockquote {
   border-left: 3px solid var(--primary);
@@ -18,6 +23,17 @@
 .post-content blockquote a {
   color: var(--primary);
   font-weight: 500;
+}
+
+/* --- Post List Card Style --- */
+.post-entry {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.post-entry:hover {
+  border-color: var(--primary);
 }
 
 /* --- Tag Badges --- */
