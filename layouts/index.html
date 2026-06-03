@@ -4,8 +4,10 @@
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
 {{- $paginator := .Paginate ($pages.ByDate.Reverse) }}
 
+<div class="timeline">
 {{- range $index, $page := $paginator.Pages }}
-<article class="post-entry">
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
   <header class="entry-header">
     <h2 class="entry-hint-parent">
       {{- $page.Title }}
@@ -29,6 +31,7 @@
   <a class="entry-link" aria-label="post link to {{ $page.Title | plainify }}" href="{{ $page.Permalink }}"></a>
 </article>
 {{- end }}
+</div>
 
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">

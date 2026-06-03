@@ -7,6 +7,7 @@ pagination:
   pagerSize: 20
 
 enableRobotsTXT: true
+enableGitInfo: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
@@ -23,6 +24,7 @@ params:
   ShowCodeCopyButtons: true
   ShowToc: true
   ShowWordCount: false
+  ShowLastEdited: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: true

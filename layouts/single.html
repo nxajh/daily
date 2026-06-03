@@ -46,6 +46,11 @@
   {{- partial "extend_post_content.html" . }}
 
   <footer class="post-footer">
+    {{- if and (.Param "ShowLastEdited") (ne .Lastmod .Date) }}
+    <div class="last-edited">
+      最后编辑于 {{ .Lastmod.Format "2006年1月2日 15:04" }}
+    </div>
+    {{- end }}
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
       {{- range ($.GetTerms $tags) }}
