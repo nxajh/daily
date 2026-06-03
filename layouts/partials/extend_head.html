@@ -2,36 +2,32 @@
 <div class="reading-progress" id="reading-progress"></div>
 <script>
 (function() {
+  // Progress bar
   var bar = document.getElementById('reading-progress');
-  if (!bar) return;
-  function update() {
-    var content = document.querySelector('.post-content');
-    if (!content) { bar.style.width = '0%'; return; }
-    var rect = content.getBoundingClientRect();
-    var total = content.offsetHeight - window.innerHeight;
-    var scrolled = -rect.top;
-    bar.style.width = Math.min(100, Math.max(0, (scrolled / total) * 100)) + '%';
+  if (bar) {
+    function update() {
+      var content = document.querySelector('.post-content');
+      if (!content) { bar.style.width = '0%'; return; }
+      var rect = content.getBoundingClientRect();
+      var total = content.offsetHeight - window.innerHeight;
+      var scrolled = -rect.top;
+      bar.style.width = Math.min(100, Math.max(0, (scrolled / total) * 100)) + '%';
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    update();
   }
-  window.addEventListener('scroll', update, { passive: true });
-  update();
-})();
-</script>
-<!-- TOC toggle for mobile -->
-<script>
-(function() {
+
+  // Force TOC open on desktop
   var toc = document.querySelector('.toc');
-  if (!toc) return;
-  var inner = toc.querySelector('.inner');
-  if (!inner) return;
-  // Insert toggle button before inner
-  var btn = document.createElement('button');
-  btn.className = 'toc-toggle';
-  btn.textContent = '目录';
-  btn.addEventListener('click', function() {
-    btn.classList.toggle('open');
-    inner.classList.toggle('open');
-  });
-  toc.insertBefore(btn, inner);
+  if (toc && toc.tagName === 'DETAILS') {
+    function applyToc() {
+      if (window.innerWidth >= 1200) {
+        toc.setAttribute('open', '');
+      }
+    }
+    applyToc();
+    window.addEventListener('resize', applyToc);
+  }
 })();
 </script>
 <!-- SVG Favicon override -->

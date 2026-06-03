@@ -282,9 +282,10 @@ body {
   border: 1px solid var(--border) !important;
   padding: 16px 20px !important;
   background: var(--code-bg);
+  margin: 0;
 }
 
-/* Desktop: sticky right sidebar */
+/* Desktop: sticky right sidebar, always open */
 @media (min-width: 1200px) {
   .toc-sidebar {
     position: sticky;
@@ -302,16 +303,14 @@ body {
     order: 0;
   }
 
-  .toc-toggle {
-    display: none !important;
-  }
-
-  .toc .inner {
-    display: block !important;
+  /* Force <details> open on desktop */
+  .toc[open],
+  .toc {
+    /* details stays as-is, we just ensure it's open via JS */
   }
 }
 
-/* Mobile / tablet: collapsible */
+/* Mobile / tablet: collapsible via native <details> */
 @media (max-width: 1199px) {
   .post-with-toc {
     flex-direction: column;
@@ -322,39 +321,11 @@ body {
     margin-bottom: 20px;
   }
 
-  .toc-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  .toc summary {
     cursor: pointer;
-    padding: 0;
-    margin: 0;
     font-size: 0.95em;
     font-weight: 600;
     color: var(--primary);
-    background: none;
-    border: none;
-    font-family: inherit;
-  }
-
-  .toc-toggle::after {
-    content: "▸";
-    transition: transform 0.2s;
-    margin-left: 8px;
-  }
-
-  .toc-toggle.open::after {
-    transform: rotate(90deg);
-  }
-
-  .toc .inner {
-    display: none;
-    margin-top: 12px;
-  }
-
-  .toc .inner.open {
-    display: block;
   }
 }
 
