@@ -16,5 +16,23 @@
   update();
 })();
 </script>
+<!-- TOC toggle for mobile -->
+<script>
+(function() {
+  var toc = document.querySelector('.toc');
+  if (!toc) return;
+  var inner = toc.querySelector('.inner');
+  if (!inner) return;
+  // Insert toggle button before inner
+  var btn = document.createElement('button');
+  btn.className = 'toc-toggle';
+  btn.textContent = '目录';
+  btn.addEventListener('click', function() {
+    btn.classList.toggle('open');
+    inner.classList.toggle('open');
+  });
+  toc.insertBefore(btn, inner);
+})();
+</script>
 <!-- SVG Favicon override -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">

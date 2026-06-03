@@ -85,41 +85,6 @@ body {
   font-weight: 500;
 }
 
-/* --- Section Navigation (Homepage) --- */
-.section-nav {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 24px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-}
-
-.section-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  background: var(--code-bg);
-  font-size: 0.88em;
-  color: var(--secondary);
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-
-.section-item:hover {
-  background: var(--primary);
-  color: var(--entry);
-}
-
-.section-icon {
-  font-size: 1em;
-}
-
-.section-label {
-  font-weight: 500;
-}
-
 /* --- First Entry (homepage hero) --- */
 .first-entry {
   border-radius: 10px !important;
@@ -305,15 +270,106 @@ body {
   border-left-color: var(--tertiary);
 }
 
-/* --- TOC (Table of Contents) --- */
+/* --- TOC: right sidebar (desktop) / collapsible (mobile) --- */
+.post-with-toc {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
 .toc {
   border-radius: 10px !important;
   border: 1px solid var(--border) !important;
   padding: 16px 20px !important;
+  background: var(--code-bg);
+}
+
+/* Desktop: sticky right sidebar */
+@media (min-width: 1200px) {
+  .toc-sidebar {
+    position: sticky;
+    top: 80px;
+    flex-shrink: 0;
+    width: 240px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    order: 1;
+  }
+
+  .post-content {
+    flex: 1;
+    min-width: 0;
+    order: 0;
+  }
+
+  .toc-toggle {
+    display: none !important;
+  }
+
+  .toc .inner {
+    display: block !important;
+  }
+}
+
+/* Mobile / tablet: collapsible */
+@media (max-width: 1199px) {
+  .post-with-toc {
+    flex-direction: column;
+  }
+
+  .toc-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .toc-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: var(--primary);
+    background: none;
+    border: none;
+    font-family: inherit;
+  }
+
+  .toc-toggle::after {
+    content: "▸";
+    transition: transform 0.2s;
+    margin-left: 8px;
+  }
+
+  .toc-toggle.open::after {
+    transform: rotate(90deg);
+  }
+
+  .toc .inner {
+    display: none;
+    margin-top: 12px;
+  }
+
+  .toc .inner.open {
+    display: block;
+  }
 }
 
 .toc .inner {
   font-size: 0.88em;
+}
+
+.toc .inner a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.toc .inner a:hover {
+  color: var(--primary);
 }
 
 /* --- Responsive --- */

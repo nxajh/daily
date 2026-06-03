@@ -1,26 +1,5 @@
 {{- define "main" }}
 
-<!-- Section Navigation -->
-<div class="section-nav">
-  <a href="/daily-news/" class="section-item">
-    <span class="section-icon">📡</span>
-    <span class="section-label">Daily News</span>
-  </a>
-  <a href="/tech-notes/" class="section-item">
-    <span class="section-icon">🔧</span>
-    <span class="section-label">Tech Notes</span>
-  </a>
-  <a href="/resources/" class="section-item">
-    <span class="section-icon">🌐</span>
-    <span class="section-label">Resources</span>
-  </a>
-  <a href="/travel-log/" class="section-item">
-    <span class="section-icon">✈️</span>
-    <span class="section-label">Travel Log</span>
-  </a>
-</div>
-
-<!-- Latest Articles -->
 {{- $pages := where site.RegularPages "Type" "ne" "page" }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
 {{- $paginator := .Paginate ($pages.ByDate.Reverse) }}
