@@ -3,7 +3,8 @@ languageCode: "zh-cn"
 defaultContentLanguage: "zh"
 title: "技术日报"
 theme: "PaperMod"
-paginate: 20
+pagination:
+  pagerSize: 20
 
 enableRobotsTXT: true
 buildDrafts: false
