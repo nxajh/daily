@@ -1,8 +1,12 @@
 /* ===== Daily Hub Custom Styles ===== */
 
 /* --- Unified width: match nav bar --- */
-:root {
-  --main-width: 1024px;
+.main {
+  max-width: calc(1024px + var(--gap) * 2);
+}
+
+.footer {
+  max-width: calc(1024px + var(--gap) * 2);
 }
 
 /* --- Article Page Source Block --- */
