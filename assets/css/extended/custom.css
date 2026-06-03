@@ -364,18 +364,24 @@ body {
   .menu {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: calc(100% + 6px);
     right: 0;
+    left: auto;
+    width: auto;
+    min-width: 140px;
+    max-width: 200px;
     background: var(--entry);
     border: 1px solid var(--border);
     border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    padding: 8px 0;
-    margin-top: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 4px 0;
     z-index: 100;
     flex-direction: column;
     list-style: none;
+  }
+
+  [data-theme="dark"] .menu {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   }
 
   .menu.open {
@@ -384,16 +390,25 @@ body {
 
   .menu li {
     width: 100%;
+    margin: 0;
   }
 
   .menu li a {
     display: block;
-    padding: 10px 20px;
-    font-size: 0.95em;
+    padding: 6px 16px;
+    font-size: 0.88em;
+    color: var(--secondary);
+    transition: background 0.15s, color 0.15s;
   }
 
   .menu li a:hover {
     background: var(--code-bg);
+    color: var(--primary);
+  }
+
+  .menu li a span.active {
+    color: var(--primary);
+    font-weight: 600;
   }
 }
 
