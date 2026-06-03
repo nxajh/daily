@@ -1,0 +1,67 @@
+{{- define "main" }}
+
+<!-- Section Navigation -->
+<div class="section-nav">
+  <a href="/daily-news/" class="section-item">
+    <span class="section-icon">📡</span>
+    <span class="section-label">Daily News</span>
+  </a>
+  <a href="/tech-notes/" class="section-item">
+    <span class="section-icon">🔧</span>
+    <span class="section-label">Tech Notes</span>
+  </a>
+  <a href="/resources/" class="section-item">
+    <span class="section-icon">🌐</span>
+    <span class="section-label">Resources</span>
+  </a>
+  <a href="/travel-log/" class="section-item">
+    <span class="section-icon">✈️</span>
+    <span class="section-label">Travel Log</span>
+  </a>
+</div>
+
+<!-- Latest Articles -->
+{{- $pages := where site.RegularPages "Type" "ne" "page" }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- $paginator := .Paginate ($pages.ByDate.Reverse) }}
+
+{{- range $index, $page := $paginator.Pages }}
+<article class="post-entry">
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">
+      {{- $page.Title }}
+    </h2>
+  </header>
+  {{- if $page.Params.summary }}
+  <div class="entry-content">
+    <p>{{ $page.Params.summary | truncate 120 }}</p>
+  </div>
+  {{- else if $page.Summary }}
+  <div class="entry-content">
+    <p>{{ $page.Summary | plainify | truncate 120 }}</p>
+  </div>
+  {{- end }}
+  <footer class="entry-footer">
+    <span title="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "2006年1月2日" }}</span>
+    {{- with $page.Section }}
+    &nbsp;·&nbsp;<a href="{{ . | absURL }}/">{{ . }}</a>
+    {{- end }}
+  </footer>
+  <a class="entry-link" aria-label="post link to {{ $page.Title | plainify }}" href="{{ $page.Permalink }}"></a>
+</article>
+{{- end }}
+
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« {{ i18n "prev_page" }}</a>
+    {{- end }}
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL | absURL }}">{{ i18n "next_page" }} »</a>
+    {{- end }}
+  </nav>
+</footer>
+{{- end }}
+
+{{- end }}

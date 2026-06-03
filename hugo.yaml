@@ -21,18 +21,22 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
-  ShowToc: false
+  ShowToc: true
   ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
-  disableSpecial1stPost: false
+  disableSpecial1stPost: true
   hidemeta: false
   hideSummary: false
-  showtoc: false
+  showtoc: true
   tocopen: false
 
   label:
     text: "Daily Hub"
+
+  socialIcons:
+    - name: "rss"
+      url: "/index.xml"
 
 menu:
   main:

@@ -1,0 +1,20 @@
+<!-- Reading Progress Bar -->
+<div class="reading-progress" id="reading-progress"></div>
+<script>
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  function update() {
+    var content = document.querySelector('.post-content');
+    if (!content) { bar.style.width = '0%'; return; }
+    var rect = content.getBoundingClientRect();
+    var total = content.offsetHeight - window.innerHeight;
+    var scrolled = -rect.top;
+    bar.style.width = Math.min(100, Math.max(0, (scrolled / total) * 100)) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+<!-- SVG Favicon override -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
