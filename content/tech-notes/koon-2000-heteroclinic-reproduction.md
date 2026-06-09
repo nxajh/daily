@@ -1,7 +1,7 @@
 ---
 title: "复现 Koon et al. 2000: CR3BP 中的异宿连接与共振跃迁"
 date: 2026-06-09
-summary: "完整复现 Koon, Lo, Marsden, Ross 2000 年 Chaos 论文——在圆形限制性三体问题中，通过 Poincaré 截面证明 $L_1 \leftrightarrow L_2$ 异宿连接和同宿连接的存在。包含 Sun-Earth、Earth-Moon、Sun-Jupiter 三个系统的数值验证。"
+summary: "完整复现 Koon, Lo, Marsden, Ross 2000 年 Chaos 论文——在圆形限制性三体问题中，通过 Poincaré 截面证明 L1↔L2 异宿连接和同宿连接的存在。包含 Sun-Earth、Earth-Moon、Sun-Jupiter 三个系统的数值验证。"
 tags: ["轨道力学", "CR3BP", "异宿连接", "不变流形", "天体力学", "论文复现"]
 categories: ["技术笔记"]
 showToc: true
