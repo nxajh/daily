@@ -64,3 +64,12 @@ outputs:
     - HTML
     - RSS
     - JSON
+
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          - ["$$", "$$"]
+          - ["$", "$"]
+        enable: true
