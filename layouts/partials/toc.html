@@ -1,4 +1,4 @@
-{{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
+{{- $headers := findRE "<h[2-6][^>]*>(.*?)</h[2-6]>" .Content -}}
 {{- $has_headers := ge (len $headers) 1 -}}
 {{- if $has_headers -}}
 <nav class="toc" id="toc">
@@ -7,7 +7,25 @@
     <svg class="toc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4.427 9.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 9H4.604a.25.25 0 00-.177.427zM4.427 6.573L7.823 3.177a.25.25 0 01.354 0L11.573 6.573A.25.25 0 0111.396 7H4.604a.25.25 0 01-.177-.427z"/></svg>
   </button>
   <div class="toc-inner">
-    {{- .TableOfContents -}}
+    <ul>
+    {{- range $headers -}}
+      {{- $level := index (findRE "h([2-6])" . 1) 0 | replaceRE "h([2-6])" "$1" -}}
+      {{- $text := replaceRE "<h[2-6][^>]*>(.*?)</h[2-6]>" "$1" . -}}
+      {{- $text = replaceRE "<a[^>]*>.*?</a>" "" $text -}}
+      {{- $text = replaceRE "<[^>]+>" "" $text -}}
+      {{- $id := "" -}}
+      {{- if findRE "id=\"([^\"]+)\"" . -}}
+        {{- $id = index (findRE "id=\"([^\"]+)\"" . 1) 0 | replaceRE "id=\"([^\"]+)\"" "$1" -}}
+      {{- end -}}
+      <li class="toc-level-{{ $level }}">
+        {{- if $id -}}
+        <a href="#{{ $id }}">{{ $text | safeHTML }}</a>
+        {{- else -}}
+        <span>{{ $text | safeHTML }}</span>
+        {{- end -}}
+      </li>
+    {{- end -}}
+    </ul>
   </div>
 </nav>
 {{- end }}
