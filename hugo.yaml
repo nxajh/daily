@@ -70,6 +70,8 @@ markup:
     extensions:
       passthrough:
         delimiters:
-          - ["$$", "$$"]
-          - ["$", "$"]
+          block:
+            - ["$$", "$$"]
+          inline:
+            - ["$", "$"]
         enable: true
