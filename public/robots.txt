@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://daily.jinl.in/sitemap.xml
