@@ -33,22 +33,26 @@ Hargraves 和 Paris 在 1987 年发表的 **Direct Trajectory Optimization Using
 
 论文考虑一般形式的轨迹优化问题：
 
-```text
-minimize J = Φ[x(E), u(E), ω, E]
-subject to x' = f(x, u, ω, t)
-```
+$$
+\begin{aligned}
+\min \quad & J = \Phi(x(E), u(E), \omega, E) \\
+\text{s.t.} \quad & \dot{x} = f(x, u, \omega, t)
+\end{aligned}
+$$
 
 其中状态、控制、事件时间、设计参数一起构成 NLP 的决策变量。论文把所有变量收集为一个向量：
 
-```text
-P = [Z, E, u]
-```
+$$
+P = \begin{bmatrix} Z^T & E^T & u^T \end{bmatrix}^T
+$$
 
 然后把动力学缺陷、边界条件和路径约束都写成非线性约束：
 
-```text
-C(P) = 0 或 lower <= C(P) <= upper
-```
+$$
+C(P) = 0
+\quad \text{or} \quad
+\ell \le C(P) \le u
+$$
 
 最终得到标准非线性规划问题。
 
@@ -56,40 +60,40 @@ C(P) = 0 或 lower <= C(P) <= upper
 
 对每一个离散段，状态用三次多项式表示：
 
-```text
-x(s) = C0 + C1 s + C2 s^2 + C3 s^3,   s ∈ [0, 1]
-```
+$$
+x(s) = C_0 + C_1 s + C_2 s^2 + C_3 s^3, \qquad s \in [0, 1]
+$$
 
 端点状态为 `x_i, x_{i+1}`，端点导数由动力学给出：
 
-```text
-f_i     = f(x_i, u_i)
+$$
+f_i = f(x_i, u_i), \qquad
 f_{i+1} = f(x_{i+1}, u_{i+1})
-```
+$$
 
 段长为 `h`。根据 Hermite 插值，中心点状态为：
 
-```text
-x_c = 0.5 * (x_i + x_{i+1}) + h/8 * (f_i - f_{i+1})
-```
+$$
+x_c = \frac{1}{2}(x_i + x_{i+1}) + \frac{h}{8}(f_i - f_{i+1})
+$$
 
 中心点处由多项式导出的斜率为：
 
-```text
-slope_c = 1.5 * (x_{i+1} - x_i) / h - 0.25 * (f_i + f_{i+1})
-```
+$$
+\dot{x}_c^H = \frac{3}{2h}(x_{i+1} - x_i) - \frac{1}{4}(f_i + f_{i+1})
+$$
 
 控制变量线性插值得到中心控制：
 
-```text
-u_c = 0.5 * (u_i + u_{i+1})
-```
+$$
+u_c = \frac{1}{2}(u_i + u_{i+1})
+$$
 
 于是每一段的 collocation defect 是：
 
-```text
-defect = slope_c - f(x_c, u_c) = 0
-```
+$$
+\Delta_i = \dot{x}_c^H - f(x_c, u_c) = 0
+$$
 
 这就是我复现代码中的核心。
 
@@ -132,20 +136,23 @@ def defects(z, p):
 
 我设置的验证问题为：
 
-```text
-x(0) = 0, y(0) = 1, v(0) = 0
-x(tf) = 1, y(tf) = 0
-g = 1
-minimize tf
-```
+$$
+\begin{aligned}
+x(0) &= 0, & y(0) &= 1, & v(0) &= 0, \\
+x(t_f) &= 1, & y(t_f) &= 0, & g &= 1, \\
+\min \quad & t_f
+\end{aligned}
+$$
 
 动力学为：
 
-```text
-x_dot = v cos(theta)
-y_dot = v sin(theta)
-v_dot = -g sin(theta)
-```
+$$
+\begin{aligned}
+\dot{x} &= v\cos\theta, \\
+\dot{y} &= v\sin\theta, \\
+\dot{v} &= -g\sin\theta.
+\end{aligned}
+$$
 
 这里 `theta` 是控制角，`y` 正方向向上。为了下降，优化器会选择负的 `theta`。
 
@@ -153,19 +160,21 @@ v_dot = -g sin(theta)
 
 无约束 brachistochrone 的解析解是摆线：
 
-```text
-x = a (phi - sin phi)
-y_drop = a (1 - cos phi)
-tf = phi * sqrt(a/g)
-```
+$$
+\begin{aligned}
+x &= a(\phi - \sin\phi), \\
+y_{\mathrm{drop}} &= a(1 - \cos\phi), \\
+t_f &= \phi_f \sqrt{\frac{a}{g}}.
+\end{aligned}
+$$
 
 对于起点 `(0, 1)`、终点 `(1, 0)`、`g = 1`，求得：
 
-```text
-phi_f = 2.412011143914
-a     = 0.572917037532
-tf    = 1.825682189397
-```
+$$
+\phi_f = 2.412011143914, \qquad
+a = 0.572917037532, \qquad
+t_f = 1.825682189397.
+$$
 
 这给了我们一个很干净的 benchmark：数值配点结果应该随着段数增加逐渐收敛到 `1.825682189397`。
 
@@ -202,9 +211,9 @@ tf    = 1.825682189397
 
 论文中特别强调直接法的一个优势：容易处理路径约束。为此我也做了一个 constrained brachistochrone-like 版本，在节点和中心点都检查路径约束：
 
-```text
-y >= smooth obstacle / floor
-```
+$$
+y \ge y_{\mathrm{floor}}(x)
+$$
 
 对应代码中，节点约束和中心点约束都会进入 NLP：
 
@@ -283,11 +292,13 @@ NPDOT 使用 22 段
 
 真正核心的数学公式只有几行：
 
-```text
-x_c = 0.5 * (x_i + x_{i+1}) + h/8 * (f_i - f_{i+1})
-slope_c = 1.5 * (x_{i+1} - x_i) / h - 0.25 * (f_i + f_{i+1})
-defect = slope_c - f(x_c, u_c)
-```
+$$
+\begin{aligned}
+x_c &= \frac{1}{2}(x_i + x_{i+1}) + \frac{h}{8}(f_i - f_{i+1}), \\
+\dot{x}_c^H &= \frac{3}{2h}(x_{i+1} - x_i) - \frac{1}{4}(f_i + f_{i+1}), \\
+\Delta_i &= \dot{x}_c^H - f(x_c, u_c).
+\end{aligned}
+$$
 
 但这几行把连续时间最优控制问题变成了有限维 NLP。
 
@@ -295,10 +306,10 @@ defect = slope_c - f(x_c, u_c)
 
 间接法处理路径约束时通常会牵涉复杂的切换结构、乘子条件和边界弧。直接法则可以直接写成：
 
-```text
-g(x_i, u_i) >= 0
-g(x_c, u_c) >= 0
-```
+$$
+g(x_i, u_i) \ge 0, \qquad
+g(x_c, u_c) \ge 0.
+$$
 
 然后交给 NLP 求解器。
 
