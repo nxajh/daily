@@ -16,6 +16,10 @@ params:
   env: production
   description: "每日技术·财经·世界快览 — AI 精选 RSS 摘要、技术笔记、资源收藏与旅行记录"
   author: "Daily Bot"
+
+  # SEO
+  title: "Daily Hub — 每日技术·财经·世界快览"
+  keywords: ["每日新闻", "技术笔记", "AI摘要", "RSS", "财经新闻", "科技资讯"]
   defaultTheme: "auto"
   ShowShareButtons: false
   ShowReadingTime: false
