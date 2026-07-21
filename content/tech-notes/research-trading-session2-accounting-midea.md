@@ -411,8 +411,8 @@ $$
 |--------|------|------------|
 | Session 1 | 工具、基准、禁止事项、文件夹 | 前置；未完成先补 |
 | **Session 2（本文）** | 三表最小集 + 三数同向 | **当前** |
-| Session 3 | 毛利率细节、扣非、资产负债关键科目 | 会用到本文现金/利润裂口意识 |
-| Session 4 | 产业卡 + 第一份纸上计划 | 不再卡在「数是什么意思」 |
+| [Session 3](/tech-notes/research-trading-session3-quality-midea/) | 毛利率细节、扣非、资产负债关键科目 | 会用到本文现金/利润裂口意识 |
+| [Session 4](/tech-notes/research-trading-session4-industry-plan-midea/) | 产业卡 + 第一份纸上计划 | 不再卡在「数是什么意思」 |
 
 上一篇一页纸文里强调的 **2026Q1 扣非异常**，在你完成 Session 2 后会更好懂：  
 那是「利润表内部质量」问题；Session 2 先保证你分得清 **净利 vs 经营现金**。
