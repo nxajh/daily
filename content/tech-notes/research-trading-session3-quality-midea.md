@@ -390,10 +390,10 @@ H2：
 
 | Session | 你带走什么 |
 |---------|------------|
-| 2 | 三表语言 + 三数同向 |
+| [2](/tech-notes/research-trading-session2-accounting-midea/) | 三表语言 + 三数同向 |
 | **3（本文）** | **质量语言 + 扣非裂口作业** |
-| 4 | 产业卡 + 第一份纸上计划（用本课证伪当退出条件） |
-| 一页纸长文 | 完整变量/预期差/双计划样板 |
+| [4](/tech-notes/research-trading-session4-industry-plan-midea/) | 产业卡 + 第一份纸上计划（用本课证伪当退出条件） |
+| [一页纸长文](/tech-notes/research-trading-case-midea-000333/) | 完整变量/预期差/双计划样板 |
 
 Session 4 会直接调用你在 **§7.F** 写的证伪条件——没有质量证伪，纸上计划只是愿望清单。
 
