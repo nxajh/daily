@@ -1,1 +1,68 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技术笔记 on Daily Hub</title><link>https://daily.jinl.in/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</link><description>Recent content in 技术笔记 on Daily Hub</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 05 Jul 2026 23:05:30 +0000</lastBuildDate><atom:link href="https://daily.jinl.in/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>复现 Hargraves &amp; Paris 1987：用非线性规划和配点法做轨迹优化</title><link>https://daily.jinl.in/tech-notes/direct-collocation-hargraves-paris-reproduction/</link><pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate><guid>https://daily.jinl.in/tech-notes/direct-collocation-hargraves-paris-reproduction/</guid><description>复现经典论文 Direct Trajectory Optimization Using Nonlinear Programming and Collocation：实现三次 Hermite 状态插值、控制线性插值、中心点配点缺陷，并用 brachistochrone 解析解验证数值收敛。</description></item><item><title>复现 Koon et al. 2000: CR3BP 中的异宿连接与共振跃迁</title><link>https://daily.jinl.in/tech-notes/koon-2000-heteroclinic-reproduction/</link><pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate><guid>https://daily.jinl.in/tech-notes/koon-2000-heteroclinic-reproduction/</guid><description>完整复现 Koon, Lo, Marsden, Ross 2000 年 Chaos 论文——在圆形限制性三体问题中，通过 Poincaré 截面证明 L1↔L2 异宿连接和同宿连接的存在。包含 Sun-Earth、Earth-Moon、Sun-Jupiter 三个系统的数值验证。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>技术笔记 on Daily Hub</title>
+    <link>https://daily.jinl.in/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 技术笔记 on Daily Hub</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 24 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://daily.jinl.in/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>黄金与货币体系的底层逻辑：从化学排除法、央行储备到短期博弈的深度拆解</title>
+      <link>https://daily.jinl.in/tech-notes/gold-monetary-system-underlying-logic/</link>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/gold-monetary-system-underlying-logic/</guid>
+      <description>基于一轮层层递进的苏格拉底式对话，系统梳理并修正关于黄金的诸多认知误区。只保留经得起逻辑与数据检验的真实结论。</description>
+    </item>
+    <item>
+      <title>研究型交易 Session 2 精讲：三张表最小会计 &#43; 美的集团抄数全流程</title>
+      <link>https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/</guid>
+      <description>按 A 股零基础训练大纲 Session 2（约 2 小时）：用白话讲清资产负债表恒等式、利润表链条、三类现金流；以美的集团（000333）2025 年报为逐步案例，完成「营收 / 净利润 / 经营现金流」抄数，并判断利润与现金是否同向。方法训练，非投资建议。</description>
+    </item>
+    <item>
+      <title>研究型交易 Session 3 精讲：利润质量深化 &#43; 美的扣非裂口拆解</title>
+      <link>https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/</guid>
+      <description>第 1 周 Session 3（约 2 小时）：在 Session 2 三表识字之上，学会毛利率拆读、扣非净利润、应收/存货/经营周期、经营现金/净利比值；以美的集团 2025 年报与 2026Q1 为逐步案例，完成质量异常作业。方法训练，非投资建议。</description>
+    </item>
+    <item>
+      <title>研究型交易 Session 4 精讲：白电产业卡 &#43; 美的第一份纸上计划</title>
+      <link>https://daily.jinl.in/tech-notes/research-trading-session4-industry-plan-midea/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/research-trading-session4-industry-plan-midea/</guid>
+      <description>第 1 周 Session 4（约 2 小时）：用白色家电最小产业卡把公司放回行业；完成核心变量≤3、预期差一句话、波段/事件纸上计划与中报事前区间。承接 Session 2–3 的美的数据与扣非质量作业。方法训练，非投资建议。</description>
+    </item>
+    <item>
+      <title>研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划</title>
+      <link>https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/</guid>
+      <description>按 A 股零基础、每周 8 小时训练大纲，以白色家电龙头美的集团为作业样本：走通数据从哪来、公司一页纸、同业对照、预期差与证伪、波段/事件两套纸上交易计划。本文是方法演示，不是投资建议。</description>
+    </item>
+    <item>
+      <title>中兴智能体手机：过渡性 Pilot，还是消费级终局？</title>
+      <link>https://daily.jinl.in/tech-notes/zte-agent-phone-waic-2026/</link>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/zte-agent-phone-waic-2026/</guid>
+      <description>从 WAIC 2026 亮相与豆包集成出发，拆解中兴智能体手机的产品定位、体验约束、量产策略与集团层面的战略价值：它更像面向极客与早期采用者的 Pilot，而不是马上改写消费手机格局的终局产品。</description>
+    </item>
+    <item>
+      <title>复现 Hargraves &amp; Paris 1987：用非线性规划和配点法做轨迹优化</title>
+      <link>https://daily.jinl.in/tech-notes/direct-collocation-hargraves-paris-reproduction/</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/direct-collocation-hargraves-paris-reproduction/</guid>
+      <description>复现经典论文 Direct Trajectory Optimization Using Nonlinear Programming and Collocation：实现三次 Hermite 状态插值、控制线性插值、中心点配点缺陷，并用 brachistochrone 解析解验证数值收敛。</description>
+    </item>
+    <item>
+      <title>复现 Koon et al. 2000: CR3BP 中的异宿连接与共振跃迁</title>
+      <link>https://daily.jinl.in/tech-notes/koon-2000-heteroclinic-reproduction/</link>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/koon-2000-heteroclinic-reproduction/</guid>
+      <description>完整复现 Koon, Lo, Marsden, Ross 2000 年 Chaos 论文——在圆形限制性三体问题中，通过 Poincaré 截面证明 L1↔L2 异宿连接和同宿连接的存在。包含 Sun-Earth、Earth-Moon、Sun-Jupiter 三个系统的数值验证。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>研究型交易 Session 3 精讲：利润质量深化 &#43; 美的扣非裂口拆解 | Daily Hub</title>
+<meta name="keywords" content="研究型交易, Session3, 利润质量, 扣非, 毛利率, 营运资本, 美的集团, 000333, 零基础, A股">
+<meta name="description" content="第 1 周 Session 3（约 2 小时）：在 Session 2 三表识字之上，学会毛利率拆读、扣非净利润、应收/存货/经营周期、经营现金/净利比值；以美的集团 2025 年报与 2026Q1 为逐步案例，完成质量异常作业。方法训练，非投资建议。">
+<meta name="author" content="Daily Bot">
+<link rel="canonical" href="https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b4d13903cc5bab8548bb462b1fb5be420749e7e6cc4d23ef237eb423a984b9f4.css" integrity="sha256-tNE5A8xbq4VIu0YrH7W&#43;QgdJ5&#43;bMTSPvI360I6mEufQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://daily.jinl.in/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://daily.jinl.in/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://daily.jinl.in/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://daily.jinl.in/apple-touch-icon.png">
+<link rel="mask-icon" href="https://daily.jinl.in/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<div class="reading-progress" id="reading-progress"></div>
+<script>
+
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  function update() {
+    var content = document.querySelector('.post-content');
+    if (!content) { bar.style.width = '0%'; return; }
+    var rect = content.getBoundingClientRect();
+    var total = content.offsetHeight - window.innerHeight;
+    var scrolled = -rect.top;
+    bar.style.width = Math.min(100, Math.max(0, (scrolled / total) * 100)) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.getElementById('hamburger');
+  var menu = document.getElementById('menu');
+  if (!hamburger || !menu) return;
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+});
+</script>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});">
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "研究型交易 Session 3 精讲：利润质量深化 + 美的扣非裂口拆解",
+  "description": "第 1 周 Session 3（约 2 小时）：在 Session 2 三表识字之上，学会毛利率拆读、扣非净利润、应收/存货/经营周期、经营现金/净利比值；以美的集团 2025 年报与 2026Q1 为逐步案例，完成质量异常作业。方法训练，非投资建议。",
+  "url": "https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/",
+  "image": "https://daily.jinl.in/og-default.png",
+  "datePublished": "2026-07-21T00:00:00Z",
+  "dateModified": "2026-07-21T11:05:33Z",
+  "author": {
+    "@type": "Organization",
+    "name": "Daily Bot"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Hub",
+    "url": "https://daily.jinl.in/"
+  }
+}
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://daily.jinl.in/"
+    }
+    
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tech Notes",
+      "item": "https://daily.jinl.in/tech-notes/"
+    }
+    
+    ,{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "研究型交易 Session 3 精讲：利润质量深化 + 美的扣非裂口拆解",
+      "item": "https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/"
+    }
+  ]
+}
+</script>
+
+<meta property="og:url" content="https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/">
+  <meta property="og:site_name" content="Daily Hub">
+  <meta property="og:title" content="研究型交易 Session 3 精讲：利润质量深化 &#43; 美的扣非裂口拆解">
+  <meta property="og:description" content="第 1 周 Session 3（约 2 小时）：在 Session 2 三表识字之上，学会毛利率拆读、扣非净利润、应收/存货/经营周期、经营现金/净利比值；以美的集团 2025 年报与 2026Q1 为逐步案例，完成质量异常作业。方法训练，非投资建议。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tech-notes">
+    <meta property="article:published_time" content="2026-07-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-21T11:05:33+00:00">
+    <meta property="article:tag" content="研究型交易">
+    <meta property="article:tag" content="Session3">
+    <meta property="article:tag" content="利润质量">
+    <meta property="article:tag" content="扣非">
+    <meta property="article:tag" content="毛利率">
+    <meta property="article:tag" content="营运资本">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="研究型交易 Session 3 精讲：利润质量深化 &#43; 美的扣非裂口拆解">
+  <meta name="twitter:description" content="第 1 周 Session 3（约 2 小时）：在 Session 2 三表识字之上，学会毛利率拆读、扣非净利润、应收/存货/经营周期、经营现金/净利比值；以美的集团 2025 年报与 2026Q1 为逐步案例，完成质量异常作业。方法训练，非投资建议。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Tech Notes",
+      "item": "https://daily.jinl.in/tech-notes/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "研究型交易 Session 3 精讲：利润质量深化 + 美的扣非裂口拆解",
+      "item": "https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "研究型交易 Session 3 精讲：利润质量深化 + 美的扣非裂口拆解",
+  "name": "研究型交易 Session 3 精讲：利润质量深化 \u002b 美的扣非裂口拆解",
+  "description": "第 1 周 Session 3（约 2 小时）：在 Session 2 三表识字之上，学会毛利率拆读、扣非净利润、应收/存货/经营周期、经营现金/净利比值；以美的集团 2025 年报与 2026Q1 为逐步案例，完成质量异常作业。方法训练，非投资建议。",
+  "keywords": [
+    "研究型交易", "Session3", "利润质量", "扣非", "毛利率", "营运资本", "美的集团", "000333", "零基础", "A股"
+  ],
+  "articleBody": "0. 本文定位 Session 2 本文 Session 3 一页纸总览 问题 三张表在说什么？ 赚的质量好不好？ 研究闭环长什么样？ 作业 抄三数 + 同向 扣非裂口 + 质量表 + 证伪草稿 变量/计划完整版 时间 ~2h ~2h 多周累积 前置： 已完成 Session 2（知道营收 / 归母净利 / 经营现金流在哪）。\n样本： 继续美的集团（000333）。\n快照日： 2026-07-21；公开聚合口径，正式练习以巨潮 PDF 为准。\n不是投资建议。\n1. Session 3 及格线 做完应能不看稿：\n毛利率变了，至少能列出 3 个可能原因（结构 / 成本 / 价格 / 会计，任选其三方向）。 解释 扣非净利润 相对归母净利多扣了什么（人话即可）。 会算并解释：\n$$ \\frac{\\text{经营现金流净额}}{\\text{归母净利润}} $$ 应收账款周转天数、存货周转天数、经营周期 各是什么直觉。 对美的 2026Q1：写出「归母 vs 扣非」裂口数字，并给出 ≥2 条可验证假设（不是结论故事）。 写出 2 条质量类证伪条件（可执行，不是形容词）。 第 5、6 条没写在自己笔记里 = Session 3 未完成。\n2. 从 Session 2 带到今天的「旧作业答案」 美的 2025 年报（教学量级）：\n项目 约数 营收 4585.02 亿 归母净利 439.45 亿 扣非归母净利 412.67 亿 经营现金流净额 533.46 亿 销售毛利率 26.39% 销售净利率 9.75% 加权 ROE 19.7% 资产负债率 61.2% 应收周转天数 ~30 天 存货周转天数 ~73 天 Session 2 结论：利润与经营现金 同向。\nSession 3 要问：同向之外，质量有没有裂缝？裂缝在哪一期？\n3. 模块一（35 min）：毛利率 —— 别只看一个点 3.1 公式复习（30 秒） $$ \\text{毛利率} = \\frac{\\text{营收} - \\text{营业成本}}{\\text{营收}} $$美的 2025：约 26.4% → 每卖 100 元，扣直接成本约剩 26 元，再往下扣费用、税等。\n3.2 毛利率变动的四抽屉（先分类，再找证据） 抽屉 含义 公开上可能看什么 A 价格 卖贵了/卖便宜了、促销、均价 行业均价、公司提价/促销表述、高端占比 B 成本 铜铝钢塑料运费、制造效率 成本率、原材料表述、规模效应 C 结构 高毛利产品/地区变多或变少 分部收入、产品组合、外销占比 D 会计与口径 运费列报、重分类、并表范围 会计政策、口径说明（低频但要会怀疑） 零基础纪律： 毛利率同比变动 \u003c1 个百分点时，先记「中枢平稳」，不要编史诗；≥1～2 个点或连续同向，再升级为研究题。\n3.3 美的毛利率时间轴（教学） 报告期 销售毛利率约 读法 2023 年报 25.7% 中枢 2024 年报 26.4% 略升 2025 年报 26.4% 与 2024 几乎持平（接口同比约 −0.1pct） 2025Q1 25.4% 一季通常略低于全年（季节/结构） 2026Q1 25.6% 同比略升 vs 2025Q1，未见崩盘 Session 3 示范句：\n2023–2025 美的毛利率在 25.7%–26.4% 窄幅波动；2026Q1 约 25.6%，相对 2025Q1 未恶化。\n因此： 若有人只因「扣非走弱」就喊毛利崩了，当前数据不支持——质量问题优先去看扣非与利润表「毛利以下」，而不是先宣判成本崩溃。\n3.4 毛利率 vs 净利率：中间那截 指标 2025 年约 含义 毛利率 26.4% 产品/成本层 净利率 9.8% 股东最终层 差额约 ~16.6pct 费用、其它损益、所得税等 再记一个接口字段直觉：期间费用率/销售费用类（如 SALE_ER_PK 量级约 15%+ 口径，具体定义以软件说明为准）——Session 3 不要求背字段名，只要求：\n毛利稳住、净利不稳 → 往 费用、投资收益、资产减值、所得税、非经常项目 找。\n3.5 5 分钟小题 营收 100，成本 74 → 毛利率？ 若均价降 2%、成本不变，毛利率方向？ 毛利率不变、净利率下降，优先怀疑毛利之上还是之下？ 答：1）26%；2）下降；3）毛利之下（费用/其它/税/非经常）。\n4. 模块二（40 min）：扣非 —— Session 3 的主菜 4.1 人话定义 归母净利润： 合并报表归属于上市公司股东的净利润（会计利润结果）。\n扣除非经常性损益后的净利润（扣非）：\n在归母净利基础上，按监管口径去掉一批「与主业持续性弱相关」的损益后，更接近「主业经常性盈利」的近似指标。\n常见被调的方向（概念级，不必背全表）：\n处置长期资产损益 政府补助（部分） 公允价值变动、部分投资收益 资产减值/转回中符合非经常定义的项目 其它一次性项目 精确列表以年报/季报「非经常性损益」附注为准。 Session 3 目标是：会找、会比、会标异常，不是当注册会计师。\n4.2 两个必须会算的裂口 水平裂口（同一期）：\n$$ \\Delta = \\text{归母净利} - \\text{扣非净利} $$ (\\Delta \u003e 0)：归母里含有净「加分」非经常（扣非更低） (\\Delta \u003c 0)：归母被一些项目压低，或扣非口径下经常性更高（少见形态也要会读） 速度裂口（同比）：\n看「归母同比」与「扣非同比」是否同向、幅度是否接近。\n4.3 案例 A：美的 2025 年报 —— 正常形态 项目 约数 同比约 归母净利 439.45 亿 +14.0% 扣非净利 412.67 亿 +15.5% 水平裂口 (\\Delta) +26.8 亿 归母略高于扣非 速度 扣非增速 ≥ 归母增速 质量不弱于账面利润 示范句：\n2025 全年，扣非与归母同向双位数增长，扣非甚至略快；水平裂口约 27 亿，相对 439 亿净利约 6%，属于「有非经常但未主导利润」的常见形态。\n4.4 案例 B：美的 2026Q1 —— 教学异常（必做） 项目 2026Q1 约 同比约 2025Q1 约 营收 1315.81 亿 +2.5% 1284.28 亿 归母净利 126.75 亿 +2.0% 124.22 亿 扣非净利 109.62 亿 −14.0% 127.50 亿 水平裂口 (\\Delta) +17.13 亿 — −3.28 亿 毛利率 25.57% 略高于 2025Q1 25.45% 经营现金流 145.29 亿 略高于 2025Q1 的 143.21 143.21 亿 异常画像（只描述，不编故事）：\n营收、归母仍小幅正增长 → 不是「收入塌方」叙事。 扣非同比 −14%，与归母 +2% 速度不同向 → 利润质量警报灯亮。 2026Q1 归母 − 扣非 ≈ +17 亿；2025Q1 反而是扣非略高于归母（约 −3 亿裂口）→ 非经常贡献的方向/结构变了。 毛利率未崩、经营现金仍为正且略增 → 不是「主业现金枯竭」初级形态；问题更像 利润表结构/非经常/基数，待附注验证。 4.5 强制作业：≥2 条可验证假设（示范） 你必须自己写；示范仅作格式：\n# 假设（可被证伪） 去哪验证 若成立 若不成立 H1 扣非走弱主因是 非经常性损益同比少贡献/多损失，主业经常性盈利承压但幅度小于 −14% 标题 一季报「非经常性损益」明细表 + MD\u0026A 标成「结构噪音」，跟踪中报是否回归 明细解释弱 → 升级主业担忧 H2 高基数：2025Q1 扣非同比曾约 +38%，2026Q1 回落含基数效应 对比 2024Q1→2025Q1→2026Q1 扣非绝对额 用「两年复合」辅助看，不只看单季同比 绝对额连续下滑 → 趋势问题 H3 毛利与现金尚稳，暂时不满足「毛利+扣非双杀」证伪 中报再比毛利率、扣非、OCF/净利 维持观察名单 中报双弱 → 触发证伪 禁止的写法：\n「反正美的是龙头所以没事」「一定是政府补助」「内幕说主业爆了」。\n4.6 一季报读数顺序（贴墙） 1. 营收同比 2. 归母净利同比 3. 扣非净利同比 ← 与 2 比同向？ 4. 毛利率同比 5. 经营现金流 vs 净利 6. 打开非经常明细（PDF） 7. 写入「我不知道什么」 5. 模块三（30 min）：营运资本三件套 + 现金质量比 5.1 为什么 Session 3 要碰应收和存货 利润可以「先确认」；现金往往卡在：\n应收账款 ↑：货出了，钱还在客户那里 存货 ↑：钱变成了货 应付 ↑：占用供应商资金（制造业常见，要结合商业模式读，不是道德审判） 零基础先掌握 天数，比死记绝对额更不容易被规模误导。\n5.2 三个天数（直觉版） 指标 直觉 美的 2025 年约 应收周转天数 平均多久收回货款 ~30 天 存货周转天数 货平均在库多久 ~73 天 经营周期（粗） 应收天数 + 存货天数 ~103 天（接口经营周期字段同量级） 2026Q1 教学快照：应收天数 ~32 天，存货天数 ~61 天（季度指标与年报不可简单横比绝对值，但可看 同比方向）。\n读法纪律：\n天数 连续拉长 + 利润很好 + 经营现金变差 → 质量降级信号 单季波动先标注，不立刻判死刑 不同行业天数中枢不同：白电与软件、白酒、工程机械不可横比「谁更优秀」到外行程度 5.3 核心比率：经营现金 / 归母净利 $$ R = \\frac{\\text{经营现金流净额}}{\\text{归母净利润}} $$ 年份 经营现金（亿） 归母净利（亿） (R) 约 2023 579.03 337.20 1.72 2024 605.12 385.37 1.57 2025 533.46 439.45 1.21 2026Q1 145.29 126.75 1.15（单季） 示范解读（研究句，非买卖句）：\n2023–2025 美的 (R) 始终 \u003e1（现金覆盖净利），但比值从约 1.7 降至约 1.2，质量仍合格、弹性在变薄。\n2026Q1 单季 (R\\approx1.15) 仍 \u003e1，与「利润有、现金无」初级雷不同。\nSession 3 动作：把 (R) 写入质量表，设「若连续两期 (R\u003c0.8) 且扣非走弱」一类证伪（阈值可自定，但必须写死）。\n5.4 资产负债率（点到为止） 美的资产负债率约 60%–62% 带（2025 约 61.2%，2026Q1 约 60.0%）。\n制造业龙头带一定杠杆与供应链负债结构常见。Session 3 只要求：\n知道位置：资产负债表 会抄两年对比方向 不在没读懂有息负债结构前，用「负债率 60%=危险」一句话吓人 6. 模块四：同业质量对照（15 min，防「唯美的」） 同一数据源口径（教学快照）：\n6.1 2025 年报 公司 营收同比 归母同比 扣非同比 毛利率约 备注 美的 000333 +12.1% +14.0% +15.5% 26.4% 规模扩张 + 扣非不弱 格力 000651 −10.0% −9.9% −8.0% 29.8% 规模收缩，毛利更高 海尔 600690 +5.7% +4.4% +4.5% 26.7% 平稳增长 6.2 2026Q1 公司 营收同比 归母同比 扣非同比 教学读法 美的 +2.5% +2.0% −14.0% 质量裂口最大（本课主样本） 格力 +3.5% +3.0% −0.3% 归母与扣非接近 海尔 −6.9% −15.2% −17.2% 量利同压，裂口形态不同 必须写下的一句：\n白电不是铁板；2026Q1 三家压力形态不同。美的作业价值在于 归母与扣非速度背离，不是因为「最差」或「最好」。\n7. 标准作业：Session 3 质量一页表（你必须手填） 7.1 空白模板 # Session 3 | 公司：美的 000333 | 日期：____ 数据来源：巨潮 / F10（圈一） ## A. 毛利率 2024：____% 2025：____% 2026Q1：____% 一句话：中枢是否平稳？ ## B. 扣非裂口 2025：归母____ 扣非____ Δ____ 同比是否同向？ 2026Q1：归母____ 扣非____ Δ____ 归母同比____ 扣非同比____ 异常？是/否：____ ## C. 现金质量 R_2023=____ R_2024=____ R_2025=____ R_2026Q1=____ 一句话： ## D. 营运资本（抄天数即可） 应收天数 年报____ Q1____ 存货天数 年报____ Q1____ ## E. 可验证假设（≥2） H1： 验证点： H2： 验证点： ## F. 质量证伪（≥2，可执行） 1. 2. ## G. 我不知道什么 1. 2. 7.2 示范填空（对照，勿只复制不打开报表） A. 26.4% / 26.4% / 25.6% → 中枢平稳，Q1 无崩。\nB.\n2025：439.45 / 412.67 / Δ≈+26.8；同比同向。 2026Q1：126.75 / 109.62 / Δ≈+17.1；归母 +2% vs 扣非 −14% → 异常=是。 C. R≈1.72 / 1.57 / 1.21 / 1.15 → 覆盖仍在，趋势变薄。\nD. 年报应收30、存货73；Q1 约 32 / 61（季度口径慎比）。\nE. 见 §4.5 H1/H2。\nF. 证伪示例：\n中报扣非同比仍 ≤ −10% 且毛利率同比下滑 ≥1pct。 连续两期 (R\u003c0.8) 同时扣非弱于营收增速 10pct 以上。 G. 非经常明细结构；分部利润真实贡献；渠道库存。\n8. 2 小时时间表 块 时长 动作 完成标志 0 5 min 打开 Session 2 笔记 + 本文 三数还在 1 30 min §3 毛利率 四抽屉能复述 2 40 min §4 扣非 + 填 2026Q1 裂口 异常表有数 3 25 min §5 现金比 + 天数 R 三年算完 4 15 min §6 同业一句 + §7 E/F 假设与证伪 缓冲 5 min 标最卡点 留给 Session 4 9. 错题本 错法 纠正 扣非低 = 造假 可能是口径与一次性项目；先查明细 归母高 = 主业好 看扣非与现金 一季同比吓人就空仓叙事 看基数、绝对额、毛利、现金 用软件「扣非」字段从不再核 PDF 关键异常必须附注 Session 3 开始算目标价 禁止；质量未写清不许进交易计划终局 把格力更高毛利直接当「格力更好」 业务结构不同，先同口径比趋势 10. 与前后 Session 衔接 Session 你带走什么 2 三表语言 + 三数同向 3（本文） 质量语言 + 扣非裂口作业 4 产业卡 + 第一份纸上计划（用本课证伪当退出条件） 一页纸长文 完整变量/预期差/双计划样板 Session 4 会直接调用你在 §7.F 写的证伪条件——没有质量证伪，纸上计划只是愿望清单。\n11. 结论 Session 3 的使命：\n在会抄数之后，会质疑数的质量；并把质疑写成可验证假设与可执行证伪。\n美的样板此刻最有教学价值的不是 PE，而是：\n2026Q1：归母 +2% / 扣非 −14% / 毛利与经营现金仍稳。\n你的笔记里若只有情绪没有表格，等于没上这节课。\n12. 免责声明 本文用于投资研究基础训练，不构成任何证券的投资建议或收益承诺。财务数据来自公开聚合接口，存在口径差与更新延迟；请以巨潮等法定披露为准。前 8 周训练默认纸上交易纪律。\n",
+  "wordCount" : "919",
+  "inLanguage": "zh",
+  "datePublished": "2026-07-21T00:00:00Z",
+  "dateModified": "2026-07-21T11:05:33Z",
+  "author":{
+    "@type": "Person",
+    "name": "Daily Bot"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Hub",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://daily.jinl.in/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://daily.jinl.in/" accesskey="h" title="Daily Hub (Alt + H)">Daily Hub</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://daily.jinl.in/daily-news/" title="Daily News">
+                    <span>Daily News</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/tech-notes/" title="Tech Notes">
+                    <span>Tech Notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/resources/" title="Resources">
+                    <span>Resources</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/travel-log/" title="Travel Log">
+                    <span>Travel Log</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">主页</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/tech-notes/">Tech Notes</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      研究型交易 Session 3 精讲：利润质量深化 &#43; 美的扣非裂口拆解
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-07-21 00:00:00 +0000 UTC'>2026年7月21日</span>&nbsp;·&nbsp;<span>Daily Bot</span>
+
+</div>
+  </header> <nav class="toc" id="toc">
+  <button class="toc-toggle" onclick="this.parentElement.classList.toggle('open')" aria-label="Toggle TOC">
+    <span>目录</span>
+    <svg class="toc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4.427 9.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 9H4.604a.25.25 0 00-.177.427zM4.427 6.573L7.823 3.177a.25.25 0 01.354 0L11.573 6.573A.25.25 0 0111.396 7H4.604a.25.25 0 01-.177-.427z"/></svg>
+  </button>
+  <div class="toc-inner">
+    <ul><li class="toc-level-2"><a href="#0-%e6%9c%ac%e6%96%87%e5%ae%9a%e4%bd%8d">0. 本文定位</a></li><li class="toc-level-2"><a href="#1-session-3-%e5%8f%8a%e6%a0%bc%e7%ba%bf">1. Session 3 及格线</a></li><li class="toc-level-2"><a href="#2-%e4%bb%8e-session-2-%e5%b8%a6%e5%88%b0%e4%bb%8a%e5%a4%a9%e7%9a%84%e6%97%a7%e4%bd%9c%e4%b8%9a%e7%ad%94%e6%a1%88">2. 从 Session 2 带到今天的「旧作业答案」</a></li><li class="toc-level-2"><a href="#3-%e6%a8%a1%e5%9d%97%e4%b8%8035-min%e6%af%9b%e5%88%a9%e7%8e%87--%e5%88%ab%e5%8f%aa%e7%9c%8b%e4%b8%80%e4%b8%aa%e7%82%b9">3. 模块一（35 min）：毛利率 —— 别只看一个点</a></li><li class="toc-level-3"><a href="#31-%e5%85%ac%e5%bc%8f%e5%a4%8d%e4%b9%a030-%e7%a7%92">3.1 公式复习（30 秒）</a></li><li class="toc-level-3"><a href="#32-%e6%af%9b%e5%88%a9%e7%8e%87%e5%8f%98%e5%8a%a8%e7%9a%84%e5%9b%9b%e6%8a%bd%e5%b1%89%e5%85%88%e5%88%86%e7%b1%bb%e5%86%8d%e6%89%be%e8%af%81%e6%8d%ae">3.2 毛利率变动的四抽屉（先分类，再找证据）</a></li><li class="toc-level-3"><a href="#33-%e7%be%8e%e7%9a%84%e6%af%9b%e5%88%a9%e7%8e%87%e6%97%b6%e9%97%b4%e8%bd%b4%e6%95%99%e5%ad%a6">3.3 美的毛利率时间轴（教学）</a></li><li class="toc-level-3"><a href="#34-%e6%af%9b%e5%88%a9%e7%8e%87-vs-%e5%87%80%e5%88%a9%e7%8e%87%e4%b8%ad%e9%97%b4%e9%82%a3%e6%88%aa">3.4 毛利率 vs 净利率：中间那截</a></li><li class="toc-level-3"><a href="#35-5-%e5%88%86%e9%92%9f%e5%b0%8f%e9%a2%98">3.5 5 分钟小题</a></li><li class="toc-level-2"><a href="#4-%e6%a8%a1%e5%9d%97%e4%ba%8c40-min%e6%89%a3%e9%9d%9e--session-3-%e7%9a%84%e4%b8%bb%e8%8f%9c">4. 模块二（40 min）：扣非 —— Session 3 的主菜</a></li><li class="toc-level-3"><a href="#41-%e4%ba%ba%e8%af%9d%e5%ae%9a%e4%b9%89">4.1 人话定义</a></li><li class="toc-level-3"><a href="#42-%e4%b8%a4%e4%b8%aa%e5%bf%85%e9%a1%bb%e4%bc%9a%e7%ae%97%e7%9a%84%e8%a3%82%e5%8f%a3">4.2 两个必须会算的裂口</a></li><li class="toc-level-3"><a href="#43-%e6%a1%88%e4%be%8b-a%e7%be%8e%e7%9a%84-2025-%e5%b9%b4%e6%8a%a5--%e6%ad%a3%e5%b8%b8%e5%bd%a2%e6%80%81">4.3 案例 A：美的 2025 年报 —— 正常形态</a></li><li class="toc-level-3"><a href="#44-%e6%a1%88%e4%be%8b-b%e7%be%8e%e7%9a%84-2026q1--%e6%95%99%e5%ad%a6%e5%bc%82%e5%b8%b8%e5%bf%85%e5%81%9a">4.4 案例 B：美的 2026Q1 —— 教学异常（必做）</a></li><li class="toc-level-3"><a href="#45-%e5%bc%ba%e5%88%b6%e4%bd%9c%e4%b8%9a2-%e6%9d%a1%e5%8f%af%e9%aa%8c%e8%af%81%e5%81%87%e8%ae%be%e7%a4%ba%e8%8c%83">4.5 强制作业：≥2 条可验证假设（示范）</a></li><li class="toc-level-3"><a href="#46-%e4%b8%80%e5%ad%a3%e6%8a%a5%e8%af%bb%e6%95%b0%e9%a1%ba%e5%ba%8f%e8%b4%b4%e5%a2%99">4.6 一季报读数顺序（贴墙）</a></li><li class="toc-level-2"><a href="#5-%e6%a8%a1%e5%9d%97%e4%b8%8930-min%e8%90%a5%e8%bf%90%e8%b5%84%e6%9c%ac%e4%b8%89%e4%bb%b6%e5%a5%97--%e7%8e%b0%e9%87%91%e8%b4%a8%e9%87%8f%e6%af%94">5. 模块三（30 min）：营运资本三件套 + 现金质量比</a></li><li class="toc-level-3"><a href="#51-%e4%b8%ba%e4%bb%80%e4%b9%88-session-3-%e8%a6%81%e7%a2%b0%e5%ba%94%e6%94%b6%e5%92%8c%e5%ad%98%e8%b4%a7">5.1 为什么 Session 3 要碰应收和存货</a></li><li class="toc-level-3"><a href="#52-%e4%b8%89%e4%b8%aa%e5%a4%a9%e6%95%b0%e7%9b%b4%e8%a7%89%e7%89%88">5.2 三个天数（直觉版）</a></li><li class="toc-level-3"><a href="#53-%e6%a0%b8%e5%bf%83%e6%af%94%e7%8e%87%e7%bb%8f%e8%90%a5%e7%8e%b0%e9%87%91--%e5%bd%92%e6%af%8d%e5%87%80%e5%88%a9">5.3 核心比率：经营现金 / 归母净利</a></li><li class="toc-level-3"><a href="#54-%e8%b5%84%e4%ba%a7%e8%b4%9f%e5%80%ba%e7%8e%87%e7%82%b9%e5%88%b0%e4%b8%ba%e6%ad%a2">5.4 资产负债率（点到为止）</a></li><li class="toc-level-2"><a href="#6-%e6%a8%a1%e5%9d%97%e5%9b%9b%e5%90%8c%e4%b8%9a%e8%b4%a8%e9%87%8f%e5%af%b9%e7%85%a715-min%e9%98%b2%e5%94%af%e7%be%8e%e7%9a%84">6. 模块四：同业质量对照（15 min，防「唯美的」）</a></li><li class="toc-level-3"><a href="#61-2025-%e5%b9%b4%e6%8a%a5">6.1 2025 年报</a></li><li class="toc-level-3"><a href="#62-2026q1">6.2 2026Q1</a></li><li class="toc-level-2"><a href="#7-%e6%a0%87%e5%87%86%e4%bd%9c%e4%b8%9asession-3-%e8%b4%a8%e9%87%8f%e4%b8%80%e9%a1%b5%e8%a1%a8%e4%bd%a0%e5%bf%85%e9%a1%bb%e6%89%8b%e5%a1%ab">7. 标准作业：Session 3 质量一页表（你必须手填）</a></li><li class="toc-level-3"><a href="#71-%e7%a9%ba%e7%99%bd%e6%a8%a1%e6%9d%bf">7.1 空白模板</a></li><li class="toc-level-3"><a href="#72-%e7%a4%ba%e8%8c%83%e5%a1%ab%e7%a9%ba%e5%af%b9%e7%85%a7%e5%8b%bf%e5%8f%aa%e5%a4%8d%e5%88%b6%e4%b8%8d%e6%89%93%e5%bc%80%e6%8a%a5%e8%a1%a8">7.2 示范填空（对照，勿只复制不打开报表）</a></li><li class="toc-level-2"><a href="#8-2-%e5%b0%8f%e6%97%b6%e6%97%b6%e9%97%b4%e8%a1%a8">8. 2 小时时间表</a></li><li class="toc-level-2"><a href="#9-%e9%94%99%e9%a2%98%e6%9c%ac">9. 错题本</a></li><li class="toc-level-2"><a href="#10-%e4%b8%8e%e5%89%8d%e5%90%8e-session-%e8%a1%94%e6%8e%a5">10. 与前后 Session 衔接</a></li><li class="toc-level-2"><a href="#11-%e7%bb%93%e8%ae%ba">11. 结论</a></li><li class="toc-level-2"><a href="#12-%e5%85%8d%e8%b4%a3%e5%a3%b0%e6%98%8e">12. 免责声明</a></li></ul>
+  </div>
+</nav>
+
+  <div class="post-content md-content"><h2 id="0-本文定位">0. 本文定位<a hidden class="anchor" aria-hidden="true" href="#0-本文定位">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th><a href="/tech-notes/research-trading-session2-accounting-midea/">Session 2</a></th>
+          <th><strong>本文 Session 3</strong></th>
+          <th><a href="/tech-notes/research-trading-case-midea-000333/">一页纸总览</a></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>问题</td>
+          <td>三张表在说什么？</td>
+          <td><strong>赚的质量好不好？</strong></td>
+          <td>研究闭环长什么样？</td>
+      </tr>
+      <tr>
+          <td>作业</td>
+          <td>抄三数 + 同向</td>
+          <td><strong>扣非裂口 + 质量表 + 证伪草稿</strong></td>
+          <td>变量/计划完整版</td>
+      </tr>
+      <tr>
+          <td>时间</td>
+          <td>~2h</td>
+          <td>~2h</td>
+          <td>多周累积</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>前置：</strong> 已完成 Session 2（知道营收 / 归母净利 / 经营现金流在哪）。<br>
+<strong>样本：</strong> 继续美的集团（000333）。<br>
+<strong>快照日：</strong> 2026-07-21；公开聚合口径，正式练习以巨潮 PDF 为准。<br>
+<strong>不是投资建议。</strong></p>
+<hr>
+<h2 id="1-session-3-及格线">1. Session 3 及格线<a hidden class="anchor" aria-hidden="true" href="#1-session-3-及格线">#</a></h2>
+<p>做完应能不看稿：</p>
+<ol>
+<li>毛利率变了，至少能列出 <strong>3 个可能原因</strong>（结构 / 成本 / 价格 / 会计，任选其三方向）。</li>
+<li>解释 <strong>扣非净利润</strong> 相对归母净利多扣了什么（人话即可）。</li>
+<li>会算并解释：<br>
+$$
+   \frac{\text{经营现金流净额}}{\text{归母净利润}}
+   $$</li>
+<li>应收账款周转天数、存货周转天数、经营周期 <strong>各是什么直觉</strong>。</li>
+<li>对美的 <strong>2026Q1</strong>：写出「归母 vs 扣非」裂口数字，并给出 <strong>≥2 条可验证假设</strong>（不是结论故事）。</li>
+<li>写出 <strong>2 条质量类证伪条件</strong>（可执行，不是形容词）。</li>
+</ol>
+<p>第 5、6 条没写在自己笔记里 = Session 3 未完成。</p>
+<hr>
+<h2 id="2-从-session-2-带到今天的旧作业答案">2. 从 Session 2 带到今天的「旧作业答案」<a hidden class="anchor" aria-hidden="true" href="#2-从-session-2-带到今天的旧作业答案">#</a></h2>
+<p>美的 <strong>2025 年报</strong>（教学量级）：</p>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>约数</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>营收</td>
+          <td>4585.02 亿</td>
+      </tr>
+      <tr>
+          <td>归母净利</td>
+          <td>439.45 亿</td>
+      </tr>
+      <tr>
+          <td>扣非归母净利</td>
+          <td>412.67 亿</td>
+      </tr>
+      <tr>
+          <td>经营现金流净额</td>
+          <td>533.46 亿</td>
+      </tr>
+      <tr>
+          <td>销售毛利率</td>
+          <td>26.39%</td>
+      </tr>
+      <tr>
+          <td>销售净利率</td>
+          <td>9.75%</td>
+      </tr>
+      <tr>
+          <td>加权 ROE</td>
+          <td>19.7%</td>
+      </tr>
+      <tr>
+          <td>资产负债率</td>
+          <td>61.2%</td>
+      </tr>
+      <tr>
+          <td>应收周转天数</td>
+          <td>~30 天</td>
+      </tr>
+      <tr>
+          <td>存货周转天数</td>
+          <td>~73 天</td>
+      </tr>
+  </tbody>
+</table>
+<p>Session 2 结论：利润与经营现金 <strong>同向</strong>。<br>
+Session 3 要问：同向之外，<strong>质量有没有裂缝？裂缝在哪一期？</strong></p>
+<hr>
+<h2 id="3-模块一35-min毛利率--别只看一个点">3. 模块一（35 min）：毛利率 —— 别只看一个点<a hidden class="anchor" aria-hidden="true" href="#3-模块一35-min毛利率--别只看一个点">#</a></h2>
+<h3 id="31-公式复习30-秒">3.1 公式复习（30 秒）<a hidden class="anchor" aria-hidden="true" href="#31-公式复习30-秒">#</a></h3>
+$$
+\text{毛利率} = \frac{\text{营收} - \text{营业成本}}{\text{营收}}
+$$<p>美的 2025：约 <strong>26.4%</strong> → 每卖 100 元，扣直接成本约剩 26 元，再往下扣费用、税等。</p>
+<h3 id="32-毛利率变动的四抽屉先分类再找证据">3.2 毛利率变动的四抽屉（先分类，再找证据）<a hidden class="anchor" aria-hidden="true" href="#32-毛利率变动的四抽屉先分类再找证据">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>抽屉</th>
+          <th>含义</th>
+          <th>公开上可能看什么</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>A 价格</td>
+          <td>卖贵了/卖便宜了、促销、均价</td>
+          <td>行业均价、公司提价/促销表述、高端占比</td>
+      </tr>
+      <tr>
+          <td>B 成本</td>
+          <td>铜铝钢塑料运费、制造效率</td>
+          <td>成本率、原材料表述、规模效应</td>
+      </tr>
+      <tr>
+          <td>C 结构</td>
+          <td>高毛利产品/地区变多或变少</td>
+          <td>分部收入、产品组合、外销占比</td>
+      </tr>
+      <tr>
+          <td>D 会计与口径</td>
+          <td>运费列报、重分类、并表范围</td>
+          <td>会计政策、口径说明（低频但要会怀疑）</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>零基础纪律：</strong> 毛利率同比变动 &lt;1 个百分点时，先记「中枢平稳」，不要编史诗；≥1～2 个点或连续同向，再升级为研究题。</p>
+<h3 id="33-美的毛利率时间轴教学">3.3 美的毛利率时间轴（教学）<a hidden class="anchor" aria-hidden="true" href="#33-美的毛利率时间轴教学">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>报告期</th>
+          <th>销售毛利率约</th>
+          <th>读法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2023 年报</td>
+          <td>25.7%</td>
+          <td>中枢</td>
+      </tr>
+      <tr>
+          <td>2024 年报</td>
+          <td>26.4%</td>
+          <td>略升</td>
+      </tr>
+      <tr>
+          <td>2025 年报</td>
+          <td>26.4%</td>
+          <td>与 2024 几乎持平（接口同比约 −0.1pct）</td>
+      </tr>
+      <tr>
+          <td>2025Q1</td>
+          <td>25.4%</td>
+          <td>一季通常略低于全年（季节/结构）</td>
+      </tr>
+      <tr>
+          <td>2026Q1</td>
+          <td>25.6%</td>
+          <td>同比略升 vs 2025Q1，<strong>未见崩盘</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Session 3 示范句：</strong></p>
+<blockquote>
+<p>2023–2025 美的毛利率在 <strong>25.7%–26.4%</strong> 窄幅波动；2026Q1 约 25.6%，相对 2025Q1 未恶化。<br>
+<strong>因此：</strong> 若有人只因「扣非走弱」就喊毛利崩了，<strong>当前数据不支持</strong>——质量问题优先去看扣非与利润表「毛利以下」，而不是先宣判成本崩溃。</p></blockquote>
+<h3 id="34-毛利率-vs-净利率中间那截">3.4 毛利率 vs 净利率：中间那截<a hidden class="anchor" aria-hidden="true" href="#34-毛利率-vs-净利率中间那截">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>指标</th>
+          <th>2025 年约</th>
+          <th>含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>毛利率</td>
+          <td>26.4%</td>
+          <td>产品/成本层</td>
+      </tr>
+      <tr>
+          <td>净利率</td>
+          <td>9.8%</td>
+          <td>股东最终层</td>
+      </tr>
+      <tr>
+          <td>差额约</td>
+          <td>~16.6pct</td>
+          <td>费用、其它损益、所得税等</td>
+      </tr>
+  </tbody>
+</table>
+<p>再记一个接口字段直觉：<strong>期间费用率/销售费用类</strong>（如 <code>SALE_ER_PK</code> 量级约 15%+ 口径，具体定义以软件说明为准）——Session 3 不要求背字段名，只要求：</p>
+<blockquote>
+<p>毛利稳住、净利不稳 → 往 <strong>费用、投资收益、资产减值、所得税、非经常项目</strong> 找。</p></blockquote>
+<h3 id="35-5-分钟小题">3.5 5 分钟小题<a hidden class="anchor" aria-hidden="true" href="#35-5-分钟小题">#</a></h3>
+<ol>
+<li>营收 100，成本 74 → 毛利率？</li>
+<li>若均价降 2%、成本不变，毛利率方向？</li>
+<li>毛利率不变、净利率下降，优先怀疑毛利之上还是之下？</li>
+</ol>
+<p>答：1）26%；2）下降；3）毛利之下（费用/其它/税/非经常）。</p>
+<hr>
+<h2 id="4-模块二40-min扣非--session-3-的主菜">4. 模块二（40 min）：扣非 —— Session 3 的主菜<a hidden class="anchor" aria-hidden="true" href="#4-模块二40-min扣非--session-3-的主菜">#</a></h2>
+<h3 id="41-人话定义">4.1 人话定义<a hidden class="anchor" aria-hidden="true" href="#41-人话定义">#</a></h3>
+<p><strong>归母净利润：</strong> 合并报表归属于上市公司股东的净利润（会计利润结果）。</p>
+<p><strong>扣除非经常性损益后的净利润（扣非）：</strong><br>
+在归母净利基础上，按监管口径去掉一批「与主业持续性弱相关」的损益后，更接近「主业经常性盈利」的近似指标。</p>
+<p>常见被调的方向（概念级，不必背全表）：</p>
+<ul>
+<li>处置长期资产损益</li>
+<li>政府补助（部分）</li>
+<li>公允价值变动、部分投资收益</li>
+<li>资产减值/转回中符合非经常定义的项目</li>
+<li>其它一次性项目</li>
+</ul>
+<p><strong>精确列表以年报/季报「非经常性损益」附注为准。</strong> Session 3 目标是：<strong>会找、会比、会标异常</strong>，不是当注册会计师。</p>
+<h3 id="42-两个必须会算的裂口">4.2 两个必须会算的裂口<a hidden class="anchor" aria-hidden="true" href="#42-两个必须会算的裂口">#</a></h3>
+<p><strong>水平裂口（同一期）：</strong></p>
+$$
+\Delta = \text{归母净利} - \text{扣非净利}
+$$<ul>
+<li>(\Delta &gt; 0)：归母里含有净「加分」非经常（扣非更低）</li>
+<li>(\Delta &lt; 0)：归母被一些项目压低，或扣非口径下经常性更高（少见形态也要会读）</li>
+</ul>
+<p><strong>速度裂口（同比）：</strong></p>
+<p>看「归母同比」与「扣非同比」是否同向、幅度是否接近。</p>
+<h3 id="43-案例-a美的-2025-年报--正常形态">4.3 案例 A：美的 2025 年报 —— 正常形态<a hidden class="anchor" aria-hidden="true" href="#43-案例-a美的-2025-年报--正常形态">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>约数</th>
+          <th>同比约</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>归母净利</td>
+          <td>439.45 亿</td>
+          <td>+14.0%</td>
+      </tr>
+      <tr>
+          <td>扣非净利</td>
+          <td>412.67 亿</td>
+          <td>+15.5%</td>
+      </tr>
+      <tr>
+          <td>水平裂口 (\Delta)</td>
+          <td><strong>+26.8 亿</strong></td>
+          <td>归母略高于扣非</td>
+      </tr>
+      <tr>
+          <td>速度</td>
+          <td>扣非增速 ≥ 归母增速</td>
+          <td><strong>质量不弱于账面利润</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p>示范句：</p>
+<blockquote>
+<p>2025 全年，扣非与归母同向双位数增长，扣非甚至略快；水平裂口约 27 亿，相对 439 亿净利约 6%，属于「有非经常但未主导利润」的常见形态。</p></blockquote>
+<h3 id="44-案例-b美的-2026q1--教学异常必做">4.4 案例 B：美的 2026Q1 —— 教学异常（必做）<a hidden class="anchor" aria-hidden="true" href="#44-案例-b美的-2026q1--教学异常必做">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>2026Q1 约</th>
+          <th>同比约</th>
+          <th>2025Q1 约</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>营收</td>
+          <td>1315.81 亿</td>
+          <td><strong>+2.5%</strong></td>
+          <td>1284.28 亿</td>
+      </tr>
+      <tr>
+          <td>归母净利</td>
+          <td>126.75 亿</td>
+          <td><strong>+2.0%</strong></td>
+          <td>124.22 亿</td>
+      </tr>
+      <tr>
+          <td>扣非净利</td>
+          <td>109.62 亿</td>
+          <td><strong>−14.0%</strong></td>
+          <td>127.50 亿</td>
+      </tr>
+      <tr>
+          <td>水平裂口 (\Delta)</td>
+          <td><strong>+17.13 亿</strong></td>
+          <td>—</td>
+          <td><strong>−3.28 亿</strong></td>
+      </tr>
+      <tr>
+          <td>毛利率</td>
+          <td>25.57%</td>
+          <td>略高于 2025Q1</td>
+          <td>25.45%</td>
+      </tr>
+      <tr>
+          <td>经营现金流</td>
+          <td>145.29 亿</td>
+          <td>略高于 2025Q1 的 143.21</td>
+          <td>143.21 亿</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>异常画像（只描述，不编故事）：</strong></p>
+<ol>
+<li>营收、归母仍小幅正增长 → 不是「收入塌方」叙事。</li>
+<li>扣非同比 <strong>−14%</strong>，与归母 <strong>+2%</strong> <strong>速度不同向</strong> → 利润质量警报灯亮。</li>
+<li>2026Q1 归母 − 扣非 ≈ <strong>+17 亿</strong>；2025Q1 反而是扣非略高于归母（约 −3 亿裂口）→ <strong>非经常贡献的方向/结构变了</strong>。</li>
+<li>毛利率未崩、经营现金仍为正且略增 → <strong>不是</strong>「主业现金枯竭」初级形态；问题更像 <strong>利润表结构/非经常/基数</strong>，待附注验证。</li>
+</ol>
+<h3 id="45-强制作业2-条可验证假设示范">4.5 强制作业：≥2 条可验证假设（示范）<a hidden class="anchor" aria-hidden="true" href="#45-强制作业2-条可验证假设示范">#</a></h3>
+<p>你必须自己写；示范仅作格式：</p>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>假设（可被证伪）</th>
+          <th>去哪验证</th>
+          <th>若成立</th>
+          <th>若不成立</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>H1</td>
+          <td>扣非走弱主因是 <strong>非经常性损益同比少贡献/多损失</strong>，主业经常性盈利承压但幅度小于 −14% 标题</td>
+          <td>一季报「非经常性损益」明细表 + MD&amp;A</td>
+          <td>标成「结构噪音」，跟踪中报是否回归</td>
+          <td>明细解释弱 → 升级主业担忧</td>
+      </tr>
+      <tr>
+          <td>H2</td>
+          <td><strong>高基数</strong>：2025Q1 扣非同比曾约 +38%，2026Q1 回落含基数效应</td>
+          <td>对比 2024Q1→2025Q1→2026Q1 扣非绝对额</td>
+          <td>用「两年复合」辅助看，不只看单季同比</td>
+          <td>绝对额连续下滑 → 趋势问题</td>
+      </tr>
+      <tr>
+          <td>H3</td>
+          <td>毛利与现金尚稳，<strong>暂时不满足</strong>「毛利+扣非双杀」证伪</td>
+          <td>中报再比毛利率、扣非、OCF/净利</td>
+          <td>维持观察名单</td>
+          <td>中报双弱 → 触发证伪</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>禁止的写法：</strong><br>
+「反正美的是龙头所以没事」「一定是政府补助」「内幕说主业爆了」。</p>
+<h3 id="46-一季报读数顺序贴墙">4.6 一季报读数顺序（贴墙）<a hidden class="anchor" aria-hidden="true" href="#46-一季报读数顺序贴墙">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1. 营收同比
+</span></span><span style="display:flex;"><span>2. 归母净利同比
+</span></span><span style="display:flex;"><span>3. 扣非净利同比  ← 与 2 比同向？
+</span></span><span style="display:flex;"><span>4. 毛利率同比
+</span></span><span style="display:flex;"><span>5. 经营现金流 vs 净利
+</span></span><span style="display:flex;"><span>6. 打开非经常明细（PDF）
+</span></span><span style="display:flex;"><span>7. 写入「我不知道什么」
+</span></span></code></pre></div><hr>
+<h2 id="5-模块三30-min营运资本三件套--现金质量比">5. 模块三（30 min）：营运资本三件套 + 现金质量比<a hidden class="anchor" aria-hidden="true" href="#5-模块三30-min营运资本三件套--现金质量比">#</a></h2>
+<h3 id="51-为什么-session-3-要碰应收和存货">5.1 为什么 Session 3 要碰应收和存货<a hidden class="anchor" aria-hidden="true" href="#51-为什么-session-3-要碰应收和存货">#</a></h3>
+<p>利润可以「先确认」；现金往往卡在：</p>
+<ul>
+<li><strong>应收账款</strong> ↑：货出了，钱还在客户那里</li>
+<li><strong>存货</strong> ↑：钱变成了货</li>
+<li><strong>应付</strong> ↑：占用供应商资金（制造业常见，要结合商业模式读，不是道德审判）</li>
+</ul>
+<p>零基础先掌握 <strong>天数</strong>，比死记绝对额更不容易被规模误导。</p>
+<h3 id="52-三个天数直觉版">5.2 三个天数（直觉版）<a hidden class="anchor" aria-hidden="true" href="#52-三个天数直觉版">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>指标</th>
+          <th>直觉</th>
+          <th>美的 2025 年约</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>应收周转天数</td>
+          <td>平均多久收回货款</td>
+          <td><strong>~30 天</strong></td>
+      </tr>
+      <tr>
+          <td>存货周转天数</td>
+          <td>货平均在库多久</td>
+          <td><strong>~73 天</strong></td>
+      </tr>
+      <tr>
+          <td>经营周期（粗）</td>
+          <td>应收天数 + 存货天数</td>
+          <td><strong>~103 天</strong>（接口经营周期字段同量级）</td>
+      </tr>
+  </tbody>
+</table>
+<p>2026Q1 教学快照：应收天数 ~32 天，存货天数 ~61 天（季度指标与年报不可简单横比绝对值，但可看 <strong>同比方向</strong>）。</p>
+<p><strong>读法纪律：</strong></p>
+<ul>
+<li>天数 <strong>连续拉长</strong> + 利润很好 + 经营现金变差 → 质量降级信号</li>
+<li>单季波动先标注，不立刻判死刑</li>
+<li>不同行业天数中枢不同：白电与软件、白酒、工程机械不可横比「谁更优秀」到外行程度</li>
+</ul>
+<h3 id="53-核心比率经营现金--归母净利">5.3 核心比率：经营现金 / 归母净利<a hidden class="anchor" aria-hidden="true" href="#53-核心比率经营现金--归母净利">#</a></h3>
+$$
+R = \frac{\text{经营现金流净额}}{\text{归母净利润}}
+$$<table>
+  <thead>
+      <tr>
+          <th>年份</th>
+          <th>经营现金（亿）</th>
+          <th>归母净利（亿）</th>
+          <th>(R) 约</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2023</td>
+          <td>579.03</td>
+          <td>337.20</td>
+          <td><strong>1.72</strong></td>
+      </tr>
+      <tr>
+          <td>2024</td>
+          <td>605.12</td>
+          <td>385.37</td>
+          <td><strong>1.57</strong></td>
+      </tr>
+      <tr>
+          <td>2025</td>
+          <td>533.46</td>
+          <td>439.45</td>
+          <td><strong>1.21</strong></td>
+      </tr>
+      <tr>
+          <td>2026Q1</td>
+          <td>145.29</td>
+          <td>126.75</td>
+          <td><strong>1.15</strong>（单季）</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示范解读（研究句，非买卖句）：</strong></p>
+<blockquote>
+<p>2023–2025 美的 (R) 始终 <strong>&gt;1</strong>（现金覆盖净利），但比值从约 1.7 降至约 1.2，<strong>质量仍合格、弹性在变薄</strong>。<br>
+2026Q1 单季 (R\approx1.15) 仍 &gt;1，与「利润有、现金无」初级雷不同。<br>
+Session 3 动作：把 (R) 写入质量表，设「若连续两期 (R&lt;0.8) 且扣非走弱」一类证伪（阈值可自定，但必须写死）。</p></blockquote>
+<h3 id="54-资产负债率点到为止">5.4 资产负债率（点到为止）<a hidden class="anchor" aria-hidden="true" href="#54-资产负债率点到为止">#</a></h3>
+<p>美的资产负债率约 <strong>60%–62%</strong> 带（2025 约 61.2%，2026Q1 约 60.0%）。</p>
+<p>制造业龙头带一定杠杆与供应链负债结构常见。Session 3 只要求：</p>
+<ul>
+<li>知道位置：<strong>资产负债表</strong></li>
+<li>会抄两年对比方向</li>
+<li><strong>不</strong>在没读懂有息负债结构前，用「负债率 60%=危险」一句话吓人</li>
+</ul>
+<hr>
+<h2 id="6-模块四同业质量对照15-min防唯美的">6. 模块四：同业质量对照（15 min，防「唯美的」）<a hidden class="anchor" aria-hidden="true" href="#6-模块四同业质量对照15-min防唯美的">#</a></h2>
+<p>同一数据源口径（教学快照）：</p>
+<h3 id="61-2025-年报">6.1 2025 年报<a hidden class="anchor" aria-hidden="true" href="#61-2025-年报">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>公司</th>
+          <th>营收同比</th>
+          <th>归母同比</th>
+          <th>扣非同比</th>
+          <th>毛利率约</th>
+          <th>备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>美的 000333</td>
+          <td>+12.1%</td>
+          <td>+14.0%</td>
+          <td>+15.5%</td>
+          <td>26.4%</td>
+          <td>规模扩张 + 扣非不弱</td>
+      </tr>
+      <tr>
+          <td>格力 000651</td>
+          <td>−10.0%</td>
+          <td>−9.9%</td>
+          <td>−8.0%</td>
+          <td>29.8%</td>
+          <td>规模收缩，毛利更高</td>
+      </tr>
+      <tr>
+          <td>海尔 600690</td>
+          <td>+5.7%</td>
+          <td>+4.4%</td>
+          <td>+4.5%</td>
+          <td>26.7%</td>
+          <td>平稳增长</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="62-2026q1">6.2 2026Q1<a hidden class="anchor" aria-hidden="true" href="#62-2026q1">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>公司</th>
+          <th>营收同比</th>
+          <th>归母同比</th>
+          <th>扣非同比</th>
+          <th>教学读法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>美的</td>
+          <td>+2.5%</td>
+          <td>+2.0%</td>
+          <td><strong>−14.0%</strong></td>
+          <td><strong>质量裂口最大</strong>（本课主样本）</td>
+      </tr>
+      <tr>
+          <td>格力</td>
+          <td>+3.5%</td>
+          <td>+3.0%</td>
+          <td>−0.3%</td>
+          <td>归母与扣非接近</td>
+      </tr>
+      <tr>
+          <td>海尔</td>
+          <td>−6.9%</td>
+          <td>−15.2%</td>
+          <td>−17.2%</td>
+          <td>量利同压，裂口形态不同</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>必须写下的一句：</strong></p>
+<blockquote>
+<p>白电不是铁板；2026Q1 三家压力形态不同。美的作业价值在于 <strong>归母与扣非速度背离</strong>，不是因为「最差」或「最好」。</p></blockquote>
+<hr>
+<h2 id="7-标准作业session-3-质量一页表你必须手填">7. 标准作业：Session 3 质量一页表（你必须手填）<a hidden class="anchor" aria-hidden="true" href="#7-标准作业session-3-质量一页表你必须手填">#</a></h2>
+<h3 id="71-空白模板">7.1 空白模板<a hidden class="anchor" aria-hidden="true" href="#71-空白模板">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span># Session 3 | 公司：美的 000333 | 日期：____
+</span></span><span style="display:flex;"><span>数据来源：巨潮 / F10（圈一）
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## A. 毛利率
+</span></span><span style="display:flex;"><span>2024：____%  2025：____%  2026Q1：____%
+</span></span><span style="display:flex;"><span>一句话：中枢是否平稳？
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## B. 扣非裂口
+</span></span><span style="display:flex;"><span>2025：归母____ 扣非____ Δ____  同比是否同向？
+</span></span><span style="display:flex;"><span>2026Q1：归母____ 扣非____ Δ____
+</span></span><span style="display:flex;"><span>归母同比____  扣非同比____
+</span></span><span style="display:flex;"><span>异常？是/否：____
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## C. 现金质量
+</span></span><span style="display:flex;"><span>R_2023=____  R_2024=____  R_2025=____  R_2026Q1=____
+</span></span><span style="display:flex;"><span>一句话：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## D. 营运资本（抄天数即可）
+</span></span><span style="display:flex;"><span>应收天数 年报____ Q1____
+</span></span><span style="display:flex;"><span>存货天数 年报____ Q1____
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## E. 可验证假设（≥2）
+</span></span><span style="display:flex;"><span>H1：
+</span></span><span style="display:flex;"><span>验证点：
+</span></span><span style="display:flex;"><span>H2：
+</span></span><span style="display:flex;"><span>验证点：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## F. 质量证伪（≥2，可执行）
+</span></span><span style="display:flex;"><span>1.
+</span></span><span style="display:flex;"><span>2.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## G. 我不知道什么
+</span></span><span style="display:flex;"><span>1.
+</span></span><span style="display:flex;"><span>2.
+</span></span></code></pre></div><h3 id="72-示范填空对照勿只复制不打开报表">7.2 示范填空（对照，勿只复制不打开报表）<a hidden class="anchor" aria-hidden="true" href="#72-示范填空对照勿只复制不打开报表">#</a></h3>
+<p><strong>A.</strong> 26.4% / 26.4% / 25.6% → 中枢平稳，Q1 无崩。</p>
+<p><strong>B.</strong></p>
+<ul>
+<li>2025：439.45 / 412.67 / Δ≈+26.8；同比同向。</li>
+<li>2026Q1：126.75 / 109.62 / Δ≈+17.1；归母 +2% vs 扣非 −14% → <strong>异常=是</strong>。</li>
+</ul>
+<p><strong>C.</strong> R≈1.72 / 1.57 / 1.21 / 1.15 → 覆盖仍在，趋势变薄。</p>
+<p><strong>D.</strong> 年报应收<del>30、存货</del>73；Q1 约 32 / 61（季度口径慎比）。</p>
+<p><strong>E.</strong> 见 §4.5 H1/H2。</p>
+<p><strong>F. 证伪示例：</strong></p>
+<ol>
+<li>中报扣非同比仍 ≤ −10% 且毛利率同比下滑 ≥1pct。</li>
+<li>连续两期 (R&lt;0.8) 同时扣非弱于营收增速 10pct 以上。</li>
+</ol>
+<p><strong>G.</strong> 非经常明细结构；分部利润真实贡献；渠道库存。</p>
+<hr>
+<h2 id="8-2-小时时间表">8. 2 小时时间表<a hidden class="anchor" aria-hidden="true" href="#8-2-小时时间表">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>块</th>
+          <th>时长</th>
+          <th>动作</th>
+          <th>完成标志</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>5 min</td>
+          <td>打开 Session 2 笔记 + 本文</td>
+          <td>三数还在</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>30 min</td>
+          <td>§3 毛利率</td>
+          <td>四抽屉能复述</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>40 min</td>
+          <td>§4 扣非 + 填 2026Q1 裂口</td>
+          <td>异常表有数</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>25 min</td>
+          <td>§5 现金比 + 天数</td>
+          <td>R 三年算完</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>15 min</td>
+          <td>§6 同业一句 + §7 E/F</td>
+          <td>假设与证伪</td>
+      </tr>
+      <tr>
+          <td>缓冲</td>
+          <td>5 min</td>
+          <td>标最卡点</td>
+          <td>留给 Session 4</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="9-错题本">9. 错题本<a hidden class="anchor" aria-hidden="true" href="#9-错题本">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>错法</th>
+          <th>纠正</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>扣非低 = 造假</td>
+          <td>可能是口径与一次性项目；先查明细</td>
+      </tr>
+      <tr>
+          <td>归母高 = 主业好</td>
+          <td>看扣非与现金</td>
+      </tr>
+      <tr>
+          <td>一季同比吓人就空仓叙事</td>
+          <td>看基数、绝对额、毛利、现金</td>
+      </tr>
+      <tr>
+          <td>用软件「扣非」字段从不再核 PDF</td>
+          <td>关键异常必须附注</td>
+      </tr>
+      <tr>
+          <td>Session 3 开始算目标价</td>
+          <td>禁止；质量未写清不许进交易计划终局</td>
+      </tr>
+      <tr>
+          <td>把格力更高毛利直接当「格力更好」</td>
+          <td>业务结构不同，先同口径比趋势</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="10-与前后-session-衔接">10. 与前后 Session 衔接<a hidden class="anchor" aria-hidden="true" href="#10-与前后-session-衔接">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Session</th>
+          <th>你带走什么</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="/tech-notes/research-trading-session2-accounting-midea/">2</a></td>
+          <td>三表语言 + 三数同向</td>
+      </tr>
+      <tr>
+          <td><strong>3（本文）</strong></td>
+          <td><strong>质量语言 + 扣非裂口作业</strong></td>
+      </tr>
+      <tr>
+          <td><a href="/tech-notes/research-trading-session4-industry-plan-midea/">4</a></td>
+          <td>产业卡 + 第一份纸上计划（用本课证伪当退出条件）</td>
+      </tr>
+      <tr>
+          <td><a href="/tech-notes/research-trading-case-midea-000333/">一页纸长文</a></td>
+          <td>完整变量/预期差/双计划样板</td>
+      </tr>
+  </tbody>
+</table>
+<p>Session 4 会直接调用你在 <strong>§7.F</strong> 写的证伪条件——没有质量证伪，纸上计划只是愿望清单。</p>
+<hr>
+<h2 id="11-结论">11. 结论<a hidden class="anchor" aria-hidden="true" href="#11-结论">#</a></h2>
+<p>Session 3 的使命：</p>
+<blockquote>
+<p><strong>在会抄数之后，会质疑数的质量；并把质疑写成可验证假设与可执行证伪。</strong></p></blockquote>
+<p>美的样板此刻最有教学价值的不是 PE，而是：</p>
+<p><strong>2026Q1：归母 +2% / 扣非 −14% / 毛利与经营现金仍稳。</strong></p>
+<p>你的笔记里若只有情绪没有表格，等于没上这节课。</p>
+<hr>
+<h2 id="12-免责声明">12. 免责声明<a hidden class="anchor" aria-hidden="true" href="#12-免责声明">#</a></h2>
+<p>本文用于投资研究基础训练，不构成任何证券的投资建议或收益承诺。财务数据来自公开聚合接口，存在口径差与更新延迟；请以巨潮等法定披露为准。前 8 周训练默认纸上交易纪律。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <div class="last-edited">
+      最后编辑于 2026年7月21日 11:05
+    </div>
+    <ul class="post-tags">
+      <li><a href="https://daily.jinl.in/tags/%E7%A0%94%E7%A9%B6%E5%9E%8B%E4%BA%A4%E6%98%93/">研究型交易</a></li>
+      <li><a href="https://daily.jinl.in/tags/session3/">Session3</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E5%88%A9%E6%B6%A6%E8%B4%A8%E9%87%8F/">利润质量</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E6%89%A3%E9%9D%9E/">扣非</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E6%AF%9B%E5%88%A9%E7%8E%87/">毛利率</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E8%90%A5%E8%BF%90%E8%B5%84%E6%9C%AC/">营运资本</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E7%BE%8E%E7%9A%84%E9%9B%86%E5%9B%A2/">美的集团</a></li>
+      <li><a href="https://daily.jinl.in/tags/000333/">000333</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E9%9B%B6%E5%9F%BA%E7%A1%80/">零基础</a></li>
+      <li><a href="https://daily.jinl.in/tags/a%E8%82%A1/">A股</a></li>
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://daily.jinl.in/">Daily Hub</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

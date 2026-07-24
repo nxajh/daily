@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>A股 on Daily Hub</title>
+    <link>https://daily.jinl.in/tags/a%E8%82%A1/</link>
+    <description>Recent content in A股 on Daily Hub</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 21 Jul 2026 11:05:33 +0000</lastBuildDate>
+    <atom:link href="https://daily.jinl.in/tags/a%E8%82%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>研究型交易 Session 2 精讲：三张表最小会计 &#43; 美的集团抄数全流程</title>
+      <link>https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/</guid>
+      <description>按 A 股零基础训练大纲 Session 2（约 2 小时）：用白话讲清资产负债表恒等式、利润表链条、三类现金流；以美的集团（000333）2025 年报为逐步案例，完成「营收 / 净利润 / 经营现金流」抄数，并判断利润与现金是否同向。方法训练，非投资建议。</description>
+    </item>
+    <item>
+      <title>研究型交易 Session 3 精讲：利润质量深化 &#43; 美的扣非裂口拆解</title>
+      <link>https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/research-trading-session3-quality-midea/</guid>
+      <description>第 1 周 Session 3（约 2 小时）：在 Session 2 三表识字之上，学会毛利率拆读、扣非净利润、应收/存货/经营周期、经营现金/净利比值；以美的集团 2025 年报与 2026Q1 为逐步案例，完成质量异常作业。方法训练，非投资建议。</description>
+    </item>
+    <item>
+      <title>研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划</title>
+      <link>https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/</guid>
+      <description>按 A 股零基础、每周 8 小时训练大纲，以白色家电龙头美的集团为作业样本：走通数据从哪来、公司一页纸、同业对照、预期差与证伪、波段/事件两套纸上交易计划。本文是方法演示，不是投资建议。</description>
+    </item>
+  </channel>
+</rss>

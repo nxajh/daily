@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Session2 on Daily Hub</title>
+    <link>https://daily.jinl.in/tags/session2/</link>
+    <description>Recent content in Session2 on Daily Hub</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 21 Jul 2026 11:04:51 +0000</lastBuildDate>
+    <atom:link href="https://daily.jinl.in/tags/session2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>研究型交易 Session 2 精讲：三张表最小会计 &#43; 美的集团抄数全流程</title>
+      <link>https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/</guid>
+      <description>按 A 股零基础训练大纲 Session 2（约 2 小时）：用白话讲清资产负债表恒等式、利润表链条、三类现金流；以美的集团（000333）2025 年报为逐步案例，完成「营收 / 净利润 / 经营现金流」抄数，并判断利润与现金是否同向。方法训练，非投资建议。</description>
+    </item>
+  </channel>
+</rss>

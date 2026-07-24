@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>研究型交易 Session 2 精讲：三张表最小会计 &#43; 美的集团抄数全流程 | Daily Hub</title>
+<meta name="keywords" content="研究型交易, Session2, 会计入门, 三张表, 美的集团, 000333, 经营现金流, 零基础, A股">
+<meta name="description" content="按 A 股零基础训练大纲 Session 2（约 2 小时）：用白话讲清资产负债表恒等式、利润表链条、三类现金流；以美的集团（000333）2025 年报为逐步案例，完成「营收 / 净利润 / 经营现金流」抄数，并判断利润与现金是否同向。方法训练，非投资建议。">
+<meta name="author" content="Daily Bot">
+<link rel="canonical" href="https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b4d13903cc5bab8548bb462b1fb5be420749e7e6cc4d23ef237eb423a984b9f4.css" integrity="sha256-tNE5A8xbq4VIu0YrH7W&#43;QgdJ5&#43;bMTSPvI360I6mEufQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://daily.jinl.in/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://daily.jinl.in/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://daily.jinl.in/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://daily.jinl.in/apple-touch-icon.png">
+<link rel="mask-icon" href="https://daily.jinl.in/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<div class="reading-progress" id="reading-progress"></div>
+<script>
+
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  function update() {
+    var content = document.querySelector('.post-content');
+    if (!content) { bar.style.width = '0%'; return; }
+    var rect = content.getBoundingClientRect();
+    var total = content.offsetHeight - window.innerHeight;
+    var scrolled = -rect.top;
+    bar.style.width = Math.min(100, Math.max(0, (scrolled / total) * 100)) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.getElementById('hamburger');
+  var menu = document.getElementById('menu');
+  if (!hamburger || !menu) return;
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+});
+</script>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});">
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "研究型交易 Session 2 精讲：三张表最小会计 + 美的集团抄数全流程",
+  "description": "按 A 股零基础训练大纲 Session 2（约 2 小时）：用白话讲清资产负债表恒等式、利润表链条、三类现金流；以美的集团（000333）2025 年报为逐步案例，完成「营收 / 净利润 / 经营现金流」抄数，并判断利润与现金是否同向。方法训练，非投资建议。",
+  "url": "https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/",
+  "image": "https://daily.jinl.in/og-default.png",
+  "datePublished": "2026-07-21T00:00:00Z",
+  "dateModified": "2026-07-21T11:04:51Z",
+  "author": {
+    "@type": "Organization",
+    "name": "Daily Bot"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Hub",
+    "url": "https://daily.jinl.in/"
+  }
+}
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://daily.jinl.in/"
+    }
+    
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tech Notes",
+      "item": "https://daily.jinl.in/tech-notes/"
+    }
+    
+    ,{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "研究型交易 Session 2 精讲：三张表最小会计 + 美的集团抄数全流程",
+      "item": "https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/"
+    }
+  ]
+}
+</script>
+
+<meta property="og:url" content="https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/">
+  <meta property="og:site_name" content="Daily Hub">
+  <meta property="og:title" content="研究型交易 Session 2 精讲：三张表最小会计 &#43; 美的集团抄数全流程">
+  <meta property="og:description" content="按 A 股零基础训练大纲 Session 2（约 2 小时）：用白话讲清资产负债表恒等式、利润表链条、三类现金流；以美的集团（000333）2025 年报为逐步案例，完成「营收 / 净利润 / 经营现金流」抄数，并判断利润与现金是否同向。方法训练，非投资建议。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tech-notes">
+    <meta property="article:published_time" content="2026-07-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-21T11:04:51+00:00">
+    <meta property="article:tag" content="研究型交易">
+    <meta property="article:tag" content="Session2">
+    <meta property="article:tag" content="会计入门">
+    <meta property="article:tag" content="三张表">
+    <meta property="article:tag" content="美的集团">
+    <meta property="article:tag" content="000333">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="研究型交易 Session 2 精讲：三张表最小会计 &#43; 美的集团抄数全流程">
+  <meta name="twitter:description" content="按 A 股零基础训练大纲 Session 2（约 2 小时）：用白话讲清资产负债表恒等式、利润表链条、三类现金流；以美的集团（000333）2025 年报为逐步案例，完成「营收 / 净利润 / 经营现金流」抄数，并判断利润与现金是否同向。方法训练，非投资建议。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Tech Notes",
+      "item": "https://daily.jinl.in/tech-notes/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "研究型交易 Session 2 精讲：三张表最小会计 + 美的集团抄数全流程",
+      "item": "https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "研究型交易 Session 2 精讲：三张表最小会计 + 美的集团抄数全流程",
+  "name": "研究型交易 Session 2 精讲：三张表最小会计 \u002b 美的集团抄数全流程",
+  "description": "按 A 股零基础训练大纲 Session 2（约 2 小时）：用白话讲清资产负债表恒等式、利润表链条、三类现金流；以美的集团（000333）2025 年报为逐步案例，完成「营收 / 净利润 / 经营现金流」抄数，并判断利润与现金是否同向。方法训练，非投资建议。",
+  "keywords": [
+    "研究型交易", "Session2", "会计入门", "三张表", "美的集团", "000333", "经营现金流", "零基础", "A股"
+  ],
+  "articleBody": "0. 本文定位 这是训练大纲 第 1 周 Session 2 的「足够细」示范课，与上一篇《公司一页纸实例》分工不同：\nSession 作业总览 / 一页纸 本文 Session 2 目标 研究闭环长什么样 先识字：报表在说什么 深度 变量、预期差、纸上计划 会计最小集 + 亲手抄三个数 你要带走的 模板 能口述三张表 + 完成一次同向判断 时间盒： 约 2 小时（可拆成 4×30 分钟）。\n样本公司： 美的集团（000333）——继续用白电龙头，降低商业模式干扰。\n数据快照： 2026-07-21 前后，东方财富数据中心公开财务字段；正式练习请打开巨潮年报 PDF 对照页码。\n不是投资建议；数字会过时，练的是动作。\n1. Session 2 要达成什么（及格线） 做完应能不看稿回答：\n资产 = 负债 + 权益 是什么意思？各举 2 个例子。 利润表从 营收 走到 净利润，中间至少经过哪几层？ 毛利率 和 净利率 差在哪？ 现金流的 经营 / 投资 / 筹资 各在干什么？ 为什么 有净利润，经营现金流仍可能很差？ 对美的 2025 年报：你抄的三个数是多少？利润与经营现金是否同向？ 做不到第 6 条 = Session 2 未完成（读再多也算没做）。\n2. 开课前 10 分钟：你的笔记从哪来 2.1 只保留一个抄数路径（今天示范两条，你固定一条） 路径 A（推荐入门）： 东方财富 / 同花顺等 F10 →「财务分析 / 主要指标」\n路径 B（更正式）： 巨潮资讯 → 搜 000333 → 《2025 年年度报告》PDF\n利润表：找「营业总收入」「归属于上市公司股东的净利润」 现金流量表：找「经营活动产生的现金流量净额」 本文用数据接口给出 可核对量级；你在 PDF 上应能找到同数量级数字（单位注意「元 / 万元 / 亿元」）。\n2.2 单位换算（新手最容易错） 报表常见写法 含义 458,502,407,000 元 约 4585.02 亿元 亿元 文中教学主单位 每股经营现金流 7.02 元 不是「全公司只有 7 块现金」 抄数纪律： 同一张作业里单位写死一种，并在笔记第一行标注。\n3. 模块一（约 30 min）：资产负债表 —— 公司的「家底照片」 3.1 一个等式，吃透就够 $$ \\text{资产} = \\text{负债} + \\text{所有者权益} $$人话：\n资产： 公司控制的、预期能带来经济利益的资源（钱、货、厂房、设备、应收款等）。 负债： 欠别人的（借款、应付供应商、合同负债等）。 所有者权益（净资产）： 股东剩下来的那一份 = 资产减负债。 像拍照：某一天 24:00 定格。不是全年流量，是时点存量。\n3.2 用「开奶茶店」建立直觉（再映射到美的） 假设你开店：\n项目 例子 报表侧 你出资 50 万 权益增加 实收资本 / 股东权益 银行借 30 万 负债增加，现金资产增加 借款 + 货币资金 买设备 40 万 现金变设备 资产内部结构变，总额看怎么付 欠豆商 5 万货款 负债增加，存货增加 应付账款 + 存货 美的体量是千亿级，逻辑相同：左边家底，右边「债主 + 股东」的要求权。\n3.3 零基础阶段，资产负债表先认这 6 样 科目方向 常见科目 直觉 资产 货币资金 账上现金及等价物 资产 应收账款 货卖了、钱还没收回 资产 存货 原材料、在产品、库存商品 资产 固定资产等 厂房设备 负债 有息负债 / 借款 要还本付息的钱 权益 未分配利润等 历史赚下来留在公司的部分（简化理解） Session 2 不做： 商誉减值模型、租赁准则细节、递延所得税深挖。\nSession 2 要做： 看到「应收 ↑、存货 ↑」知道可能占款变多，后面要和经营现金流对照。\n3.4 和利润表、现金流的关系（先记结论） 利润表赚的「净利润」，在权益里会推高「未分配利润」一类项目（还有分红等流出）。 但利润是权责发生制；现金看收付实现制 → 所以必须请出现金流量表。 4. 模块二（约 40 min）：利润表 —— 公司的「考试成绩单」 4.1 最小链条（请背熟） 营业总收入（营收） − 营业成本 ──────────────── 毛利 − 税金及附加、销售费用、管理费用、研发费用、财务费用等 ± 其他经营项目（简化） ──────────────── 营业利润 ± 营业外等（简化） ──────────────── 利润总额 − 所得税费用 ──────────────── 净利润 └─ 其中：归属于上市公司股东的净利润（归母净利）← A 股最常看 4.2 两个比率，Session 2 必会 毛利率\n$$ \\text{毛利率} = \\frac{\\text{营收} - \\text{营业成本}}{\\text{营收}} = \\frac{\\text{毛利}}{\\text{营收}} $$直觉：卖 100 元货，扣掉直接成本还剩多少。反映产品竞争力 / 成本 / 结构，还没扣卖货的广告、工资、研发、利息等。\n净利率\n$$ \\text{净利率} = \\frac{\\text{净利润}}{\\text{营收}} $$直觉：卖 100 元货，最终股东能留下多少。所有费用和税之后。\n毛利率 净利率 位置 利润表上半 利润表底部 高不高说明 产品与成本 整体赚钱效率 常见误读 毛利高 = 一定很赚钱 净利高 = 主业一定健康（可能有一次性项目） 后面会学 扣非净利润：把一些「不常发生」的损益拿掉，看主业。Session 2 先知道有这个词即可；抄数作业用 归母净利润 就够。\n4.3 案例：美的集团 2025 年报利润表三个核心量级 （公开数据聚合口径，教学用）\n项目 约数 说明 营业总收入 4585.02 亿元 「卖了多大」 归母净利润 439.45 亿元 「股东分得的利润结果」 销售毛利率 约 26.4% 每 100 元收入约 26 元毛利 销售净利率 约 9.8% 每 100 元收入约 10 元净利量级 扣非归母净利 约 412.67 亿元 略低于归母，质量观察用 人话翻译练习（请你出声说一遍）：\n2025 年美的大约卖了 4585 亿；去掉各种成本费用和税之后，归母净利约 439 亿。\n毛利率大约四分之一强，说明制造与产品端仍有可观加成；净利率约一成附近，说明费用、税和其他项目会吃掉毛利的一大部分——这是制造业龙头的常见形态，不是「毛利 26% 就该净利 26%」。\n4.4 同比：数字旁的「箭头」 同一套数据里，2025 年相对 2024 年大约：\n项目 2024 年约 2025 年约 同比约 营收 4090.84 亿 4585.02 亿 +12.1% 归母净利 385.37 亿 439.45 亿 +14.0% Session 2 读法：\n营收在长、利润也在长 → 成绩单「规模与盈利同向扩张」（至少这一年是）。 利润增速略高于营收 → 可能有费用率改善、结构变化、税率等，先标问号，Session 3+ 再拆，今天不深挖。 4.5 小练习（5 分钟，写在本子上） 若营收 100，营业成本 74，毛利率？ 若净利润 10，净利率？ 毛利率 26%、净利率 10%，中间大约「消失」了多少个百分点的收入占比？这些消失的项目主要在利润表的哪一段？ 参考答案：1）26%；2）10%；3）约 16 个百分点，主要在费用、税金、其它损益与所得税等「毛利以下」项目。\n5. 模块三（约 40 min）：现金流量表 —— 公司的「真实现金日记账」 5.1 为什么利润表不够 利润表可以出现：\n货已确认收入，钱还在客户那里 → 应收增加，利润有了，现金没到。 库存在涨 → 现金变成了货。 折旧等非现金费用 → 减利润，但不一定立刻减现金。 所以要问第二句：\n赚的利润，有多少变成了真金白银的回流？\n5.2 三类现金流（只要直觉） 类型 符号常见 在干什么 简单例子 经营活动 NETCASH_OPERATE 等 主业收钱付钱：销售回款、买原料、发工资、交税等 卖空调收回来的钱 − 付给供应链与员工的钱 投资活动 NETCASH_INVEST 买/卖长期资产、投资理财等 建厂、买设备、对外投资 筹资活动 NETCASH_FINANCE 借钱还款、股东出资、分红回购等 贷款、还贷、分红 符号读法：\n经营现金流净额 \u003e 0：主业现金净流入（通常健康信号之一，仍要看行业）。 投资现金流净额 \u003c 0：常见于扩张期（花钱建产能）；\u003e 0 可能是在卖资产或收回投资。 筹资现金流：融资期常为正，还债/分红回购期常为负。 5.3 案例：美的 2025 年「三色现金」 公开字段约数：\n项目 约数（亿元） 人话 经营活动现金流量净额 +533.46 主业大约净流入 533 亿现金 投资活动现金流量净额 +253.40 该年投资活动呈现净流入（具体细项看年报：处置、理财、资本开支对冲等，Session 2 只记录象） 筹资活动现金流量净额 −649.58 筹资端净流出（常见于分红、回购、还融资等组合，细节留给年报附注） Session 2 只强制吃透第一行：经营现金流。\n5.4 今日核心对照：利润 vs 经营现金 年份 归母净利（亿） 经营现金流净额（亿） 粗比值 经营现金/净利 同向？ 2025 439.45 533.46 约 1.21 同向（都为正，且现金 \u003e 利润） 2024 385.37 605.12 约 1.57 同向，现金更厚 2023 337.20 579.03 约 1.72 同向 2022 295.54 346.58 约 1.17 同向 教学结论句（可直接写进作业）：\n美的集团 2025 年归母净利润约 439 亿元，经营活动现金流量净额约 533 亿元；二者均为正，利润与经营现金同向，且经营现金覆盖净利有余。\n注意：同向 ≠ 可以买；只表示「这一年不是典型的利润与现金严重背离形态」。\n另：2025 经营现金绝对值低于 2024（605 → 533），同时净利更高 → 现金/净利比值下降，这是下一阶段可以标的「质量观察点」，Session 2 记录即可。\n5.5 四种常见组合（以后看任何公司都套这个表） 净利润 经营现金流 初级解读 + + 较健康的基础形态 + − 高度警惕：应收/存货/挤占？还是扩张性营运资本？ − + 可能有大额非现金成本，或利润表受伤但回款尚可 − − 主业与现金双重压力 美的 2025 落在第一格。\n5.6 每股经营现金流（补充识别） 数据里常见 MGJYXJJE（每股经营现金流） 2025 年约 7.02 元。\n直觉：按股本摊下来，每股对应多大约经营现金。\n不要和「股价 84 元」直接比大小当估值（单位与含义不同）。Session 2 只要求：知道这个指标在现金流质量工具箱里。\n6. 模块四（约 35–45 min）：标准作业 —— 你必须自己再做一遍 下面给出「示范填空」。你的笔记里应有自己的笔迹/敲字；允许与示范一致，不允许「只收藏链接」。\n6.1 作业题（原文照抄到笔记） 公司： 美的集团 000333\n报告期： 2025 年年度报告\n抄三个数：\n营业总收入 = ___________（单位：） 归属于上市公司股东的净利润 = _______________ 经营活动产生的现金流量净额 = _______________ 写一句话：\n利润和现金是否同向？________________\n依据：________________\n6.2 示范填空（对照用） 营业总收入 ≈ 4585.02 亿元（458,502,407,000 元） 归母净利润 ≈ 439.45 亿元（43,945,411,000 元） 经营现金流净额 ≈ 533.46 亿元（53,345,930,000 元） 同向判断：\n同向。 净利与经营现金流均为正；经营现金流（533 亿）高于归母净利（439 亿），2025 年不存在「大额盈利但主业现金崩塌」的初级警报。\n6.3 建议你在巨潮 PDF 上的动作清单 下载《美的集团股份有限公司 2025 年年度报告》 目录找到「合并利润表」「合并现金流量表」 用荧光笔标出上述三个数字（或截图贴笔记并标注页码） 额外扫一眼：合并资产负债表的「货币资金」「存货」「应收账款」标题位置（不用抄全） 在笔记写：数据来源路径 + 抄数日期 6.4 加分项（有余力，15 min） 计算：\n$$ \\frac{\\text{经营现金流净额}}{\\text{归母净利润}} \\approx \\frac{533.46}{439.45} \\approx 1.21 $$再算 2024 年同一比值（约 1.57）。写一句：比值下降可能意味着什么？\n（提示方向：营运资本占用、客户回款、支付节奏、利润结构变化……先列假设，别下定论。）\n7. 把三张表放进一张「Session 2 总图」 ┌─────────────────────┐ │ 利润表（一段期间） │ │ 营收 → … → 净利润 │ └──────────┬──────────┘ │ 赚了多少「会计利润」 ▼ ┌──────────────┐ ┌─────────────────────┐ │ 资产负债表 │◄────►│ 权益中的留存收益等 │ │ 时点：家底 │ └─────────────────────┘ └──────┬───────┘ │ 家底里的现金科目如何变化，要看 ▼ ┌─────────────────────┐ │ 现金流量表（一段期间）│ │ 经营 / 投资 / 筹资 │ │ ★先抓：经营现金流净额 │ └─────────────────────┘ 研究型交易为什么 Session 2 要这么慢：\n不会读三张表，后面所有「预期差、一页纸、波段计划」都会变成听故事。\n8. 常见错题本（Session 2 高频翻车） 错法 纠正 把「营收」当成「到手现金」 营收是确认的经营成果，现金看现金流表 净利很高就说公司很有钱 要看经营现金流、货币资金、负债 经营现金流一年为负就判死刑 先看行业季节、备货、扩张；看连续多期 抄数抄成母公司报表 A 股分析默认优先 合并报表 单位错位（亿元当元） 作业第一行写单位 Session 2 就开始讨论「该不该 84 元买入」 禁止；本课只有识字与抄数 只看美的示范不自己打开 PDF 等于没做 Session 2 9. 2 小时时间表（可直接照做） 块 时长 动作 完成标志 0 10 min 打开笔记模板 + 巨潮/F10 路径写好 1 25 min 读本文 §3 + 自己复述恒等式 能举债/权益各 2 例 2 35 min 读本文 §4 + 做 §4.5 三道小题 毛利率净利率会算 3 30 min 读本文 §5 + 抄美的三类现金表头 知道经营现金流在哪 4 20 min 正式抄三个数 + 同向句 笔记有数字与结论 缓冲 10 min 标记最卡概念 留给 Session 3 10. Session 2 结束后的「上交物」格式 请在笔记软件原样建一页：\n# Session 2 作业 | 日期：____ 公司：美的集团 000333 报告期：2025 年报 数据来源：巨潮 PDF p.___ / 或 F10（圈一） 1. 营收： 2. 归母净利： 3. 经营现金流净额： 同向判断：（同向 / 不同向） 一句话依据： 我最卡的概念： 下节课（Session 3）要问的问题： 11. 和 Session 1 / 后续的衔接 周次块 内容 与本文关系 Session 1 工具、基准、禁止事项、文件夹 前置；未完成先补 Session 2（本文） 三表最小集 + 三数同向 当前 Session 3 毛利率细节、扣非、资产负债关键科目 会用到本文现金/利润裂口意识 Session 4 产业卡 + 第一份纸上计划 不再卡在「数是什么意思」 上一篇一页纸文里强调的 2026Q1 扣非异常，在你完成 Session 2 后会更好懂：\n那是「利润表内部质量」问题；Session 2 先保证你分得清 净利 vs 经营现金。\n12. 本文示范数据汇总表（便于打印） 美的集团 000333 | 合并报表教学快照\n报告期 营收（亿元） 归母净利（亿元） 经营现金流净额（亿元） 同向（净利与经营现金） 2025 年报 4585.02 439.45 533.46 是（均正，现金\u003e净利） 2024 年报 4090.84 385.37 605.12 是 2023 年报 3737.10 337.20 579.03 是 行情与估值不是 Session 2 作业内容；需要时见一页纸专题文。\n13. 结论 Session 2 的唯一使命：\n看懂三张表在回答的三个问题——家底多少、赚了多少、钱从主业流没流回来；并用美的 2025 年报完成一次抄数与同向判断。\n示范答案是：营收约 4585 亿、归母净利约 439 亿、经营现金流约 533 亿，同向。\n你的任务不是记住这三个数，而是 在自己的笔记里拥有这三个数的来源痕迹。\n14. 免责声明 本文用于投资研究基础会计与财报阅读训练，不构成对任何证券的投资建议或收益承诺。财务数据来自公开聚合接口，可能存在口径差、调整与更新延迟；请以巨潮等法定披露文件为准。市场有风险，训练请遵守「先纸上、后小仓」纪律。\n",
+  "wordCount" : "927",
+  "inLanguage": "zh",
+  "datePublished": "2026-07-21T00:00:00Z",
+  "dateModified": "2026-07-21T11:04:51Z",
+  "author":{
+    "@type": "Person",
+    "name": "Daily Bot"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://daily.jinl.in/tech-notes/research-trading-session2-accounting-midea/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Hub",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://daily.jinl.in/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://daily.jinl.in/" accesskey="h" title="Daily Hub (Alt + H)">Daily Hub</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://daily.jinl.in/daily-news/" title="Daily News">
+                    <span>Daily News</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/tech-notes/" title="Tech Notes">
+                    <span>Tech Notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/resources/" title="Resources">
+                    <span>Resources</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/travel-log/" title="Travel Log">
+                    <span>Travel Log</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">主页</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/tech-notes/">Tech Notes</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      研究型交易 Session 2 精讲：三张表最小会计 &#43; 美的集团抄数全流程
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-07-21 00:00:00 +0000 UTC'>2026年7月21日</span>&nbsp;·&nbsp;<span>Daily Bot</span>
+
+</div>
+  </header> <nav class="toc" id="toc">
+  <button class="toc-toggle" onclick="this.parentElement.classList.toggle('open')" aria-label="Toggle TOC">
+    <span>目录</span>
+    <svg class="toc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4.427 9.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 9H4.604a.25.25 0 00-.177.427zM4.427 6.573L7.823 3.177a.25.25 0 01.354 0L11.573 6.573A.25.25 0 0111.396 7H4.604a.25.25 0 01-.177-.427z"/></svg>
+  </button>
+  <div class="toc-inner">
+    <ul><li class="toc-level-2"><a href="#0-%e6%9c%ac%e6%96%87%e5%ae%9a%e4%bd%8d">0. 本文定位</a></li><li class="toc-level-2"><a href="#1-session-2-%e8%a6%81%e8%be%be%e6%88%90%e4%bb%80%e4%b9%88%e5%8f%8a%e6%a0%bc%e7%ba%bf">1. Session 2 要达成什么（及格线）</a></li><li class="toc-level-2"><a href="#2-%e5%bc%80%e8%af%be%e5%89%8d-10-%e5%88%86%e9%92%9f%e4%bd%a0%e7%9a%84%e7%ac%94%e8%ae%b0%e4%bb%8e%e5%93%aa%e6%9d%a5">2. 开课前 10 分钟：你的笔记从哪来</a></li><li class="toc-level-3"><a href="#21-%e5%8f%aa%e4%bf%9d%e7%95%99%e4%b8%80%e4%b8%aa%e6%8a%84%e6%95%b0%e8%b7%af%e5%be%84%e4%bb%8a%e5%a4%a9%e7%a4%ba%e8%8c%83%e4%b8%a4%e6%9d%a1%e4%bd%a0%e5%9b%ba%e5%ae%9a%e4%b8%80%e6%9d%a1">2.1 只保留一个抄数路径（今天示范两条，你固定一条）</a></li><li class="toc-level-3"><a href="#22-%e5%8d%95%e4%bd%8d%e6%8d%a2%e7%ae%97%e6%96%b0%e6%89%8b%e6%9c%80%e5%ae%b9%e6%98%93%e9%94%99">2.2 单位换算（新手最容易错）</a></li><li class="toc-level-2"><a href="#3-%e6%a8%a1%e5%9d%97%e4%b8%80%e7%ba%a6-30-min%e8%b5%84%e4%ba%a7%e8%b4%9f%e5%80%ba%e8%a1%a8--%e5%85%ac%e5%8f%b8%e7%9a%84%e5%ae%b6%e5%ba%95%e7%85%a7%e7%89%87">3. 模块一（约 30 min）：资产负债表 —— 公司的「家底照片」</a></li><li class="toc-level-3"><a href="#31-%e4%b8%80%e4%b8%aa%e7%ad%89%e5%bc%8f%e5%90%83%e9%80%8f%e5%b0%b1%e5%a4%9f">3.1 一个等式，吃透就够</a></li><li class="toc-level-3"><a href="#32-%e7%94%a8%e5%bc%80%e5%a5%b6%e8%8c%b6%e5%ba%97%e5%bb%ba%e7%ab%8b%e7%9b%b4%e8%a7%89%e5%86%8d%e6%98%a0%e5%b0%84%e5%88%b0%e7%be%8e%e7%9a%84">3.2 用「开奶茶店」建立直觉（再映射到美的）</a></li><li class="toc-level-3"><a href="#33-%e9%9b%b6%e5%9f%ba%e7%a1%80%e9%98%b6%e6%ae%b5%e8%b5%84%e4%ba%a7%e8%b4%9f%e5%80%ba%e8%a1%a8%e5%85%88%e8%ae%a4%e8%bf%99-6-%e6%a0%b7">3.3 零基础阶段，资产负债表先认这 6 样</a></li><li class="toc-level-3"><a href="#34-%e5%92%8c%e5%88%a9%e6%b6%a6%e8%a1%a8%e7%8e%b0%e9%87%91%e6%b5%81%e7%9a%84%e5%85%b3%e7%b3%bb%e5%85%88%e8%ae%b0%e7%bb%93%e8%ae%ba">3.4 和利润表、现金流的关系（先记结论）</a></li><li class="toc-level-2"><a href="#4-%e6%a8%a1%e5%9d%97%e4%ba%8c%e7%ba%a6-40-min%e5%88%a9%e6%b6%a6%e8%a1%a8--%e5%85%ac%e5%8f%b8%e7%9a%84%e8%80%83%e8%af%95%e6%88%90%e7%bb%a9%e5%8d%95">4. 模块二（约 40 min）：利润表 —— 公司的「考试成绩单」</a></li><li class="toc-level-3"><a href="#41-%e6%9c%80%e5%b0%8f%e9%93%be%e6%9d%a1%e8%af%b7%e8%83%8c%e7%86%9f">4.1 最小链条（请背熟）</a></li><li class="toc-level-3"><a href="#42-%e4%b8%a4%e4%b8%aa%e6%af%94%e7%8e%87session-2-%e5%bf%85%e4%bc%9a">4.2 两个比率，Session 2 必会</a></li><li class="toc-level-3"><a href="#43-%e6%a1%88%e4%be%8b%e7%be%8e%e7%9a%84%e9%9b%86%e5%9b%a2-2025-%e5%b9%b4%e6%8a%a5%e5%88%a9%e6%b6%a6%e8%a1%a8%e4%b8%89%e4%b8%aa%e6%a0%b8%e5%bf%83%e9%87%8f%e7%ba%a7">4.3 案例：美的集团 2025 年报利润表三个核心量级</a></li><li class="toc-level-3"><a href="#44-%e5%90%8c%e6%af%94%e6%95%b0%e5%ad%97%e6%97%81%e7%9a%84%e7%ae%ad%e5%a4%b4">4.4 同比：数字旁的「箭头」</a></li><li class="toc-level-3"><a href="#45-%e5%b0%8f%e7%bb%83%e4%b9%a05-%e5%88%86%e9%92%9f%e5%86%99%e5%9c%a8%e6%9c%ac%e5%ad%90%e4%b8%8a">4.5 小练习（5 分钟，写在本子上）</a></li><li class="toc-level-2"><a href="#5-%e6%a8%a1%e5%9d%97%e4%b8%89%e7%ba%a6-40-min%e7%8e%b0%e9%87%91%e6%b5%81%e9%87%8f%e8%a1%a8--%e5%85%ac%e5%8f%b8%e7%9a%84%e7%9c%9f%e5%ae%9e%e7%8e%b0%e9%87%91%e6%97%a5%e8%ae%b0%e8%b4%a6">5. 模块三（约 40 min）：现金流量表 —— 公司的「真实现金日记账」</a></li><li class="toc-level-3"><a href="#51-%e4%b8%ba%e4%bb%80%e4%b9%88%e5%88%a9%e6%b6%a6%e8%a1%a8%e4%b8%8d%e5%a4%9f">5.1 为什么利润表不够</a></li><li class="toc-level-3"><a href="#52-%e4%b8%89%e7%b1%bb%e7%8e%b0%e9%87%91%e6%b5%81%e5%8f%aa%e8%a6%81%e7%9b%b4%e8%a7%89">5.2 三类现金流（只要直觉）</a></li><li class="toc-level-3"><a href="#53-%e6%a1%88%e4%be%8b%e7%be%8e%e7%9a%84-2025-%e5%b9%b4%e4%b8%89%e8%89%b2%e7%8e%b0%e9%87%91">5.3 案例：美的 2025 年「三色现金」</a></li><li class="toc-level-3"><a href="#54-%e4%bb%8a%e6%97%a5%e6%a0%b8%e5%bf%83%e5%af%b9%e7%85%a7%e5%88%a9%e6%b6%a6-vs-%e7%bb%8f%e8%90%a5%e7%8e%b0%e9%87%91">5.4 今日核心对照：利润 vs 经营现金</a></li><li class="toc-level-3"><a href="#55-%e5%9b%9b%e7%a7%8d%e5%b8%b8%e8%a7%81%e7%bb%84%e5%90%88%e4%bb%a5%e5%90%8e%e7%9c%8b%e4%bb%bb%e4%bd%95%e5%85%ac%e5%8f%b8%e9%83%bd%e5%a5%97%e8%bf%99%e4%b8%aa%e8%a1%a8">5.5 四种常见组合（以后看任何公司都套这个表）</a></li><li class="toc-level-3"><a href="#56-%e6%af%8f%e8%82%a1%e7%bb%8f%e8%90%a5%e7%8e%b0%e9%87%91%e6%b5%81%e8%a1%a5%e5%85%85%e8%af%86%e5%88%ab">5.6 每股经营现金流（补充识别）</a></li><li class="toc-level-2"><a href="#6-%e6%a8%a1%e5%9d%97%e5%9b%9b%e7%ba%a6-3545-min%e6%a0%87%e5%87%86%e4%bd%9c%e4%b8%9a--%e4%bd%a0%e5%bf%85%e9%a1%bb%e8%87%aa%e5%b7%b1%e5%86%8d%e5%81%9a%e4%b8%80%e9%81%8d">6. 模块四（约 35–45 min）：标准作业 —— 你必须自己再做一遍</a></li><li class="toc-level-3"><a href="#61-%e4%bd%9c%e4%b8%9a%e9%a2%98%e5%8e%9f%e6%96%87%e7%85%a7%e6%8a%84%e5%88%b0%e7%ac%94%e8%ae%b0">6.1 作业题（原文照抄到笔记）</a></li><li class="toc-level-3"><a href="#62-%e7%a4%ba%e8%8c%83%e5%a1%ab%e7%a9%ba%e5%af%b9%e7%85%a7%e7%94%a8">6.2 示范填空（对照用）</a></li><li class="toc-level-3"><a href="#63-%e5%bb%ba%e8%ae%ae%e4%bd%a0%e5%9c%a8%e5%b7%a8%e6%bd%ae-pdf-%e4%b8%8a%e7%9a%84%e5%8a%a8%e4%bd%9c%e6%b8%85%e5%8d%95">6.3 建议你在巨潮 PDF 上的动作清单</a></li><li class="toc-level-3"><a href="#64-%e5%8a%a0%e5%88%86%e9%a1%b9%e6%9c%89%e4%bd%99%e5%8a%9b15-min">6.4 加分项（有余力，15 min）</a></li><li class="toc-level-2"><a href="#7-%e6%8a%8a%e4%b8%89%e5%bc%a0%e8%a1%a8%e6%94%be%e8%bf%9b%e4%b8%80%e5%bc%a0session-2-%e6%80%bb%e5%9b%be">7. 把三张表放进一张「Session 2 总图」</a></li><li class="toc-level-2"><a href="#8-%e5%b8%b8%e8%a7%81%e9%94%99%e9%a2%98%e6%9c%acsession-2-%e9%ab%98%e9%a2%91%e7%bf%bb%e8%bd%a6">8. 常见错题本（Session 2 高频翻车）</a></li><li class="toc-level-2"><a href="#9-2-%e5%b0%8f%e6%97%b6%e6%97%b6%e9%97%b4%e8%a1%a8%e5%8f%af%e7%9b%b4%e6%8e%a5%e7%85%a7%e5%81%9a">9. 2 小时时间表（可直接照做）</a></li><li class="toc-level-2"><a href="#10-session-2-%e7%bb%93%e6%9d%9f%e5%90%8e%e7%9a%84%e4%b8%8a%e4%ba%a4%e7%89%a9%e6%a0%bc%e5%bc%8f">10. Session 2 结束后的「上交物」格式</a></li><li class="toc-level-2"><a href="#11-%e5%92%8c-session-1--%e5%90%8e%e7%bb%ad%e7%9a%84%e8%a1%94%e6%8e%a5">11. 和 Session 1 / 后续的衔接</a></li><li class="toc-level-2"><a href="#12-%e6%9c%ac%e6%96%87%e7%a4%ba%e8%8c%83%e6%95%b0%e6%8d%ae%e6%b1%87%e6%80%bb%e8%a1%a8%e4%be%bf%e4%ba%8e%e6%89%93%e5%8d%b0">12. 本文示范数据汇总表（便于打印）</a></li><li class="toc-level-2"><a href="#13-%e7%bb%93%e8%ae%ba">13. 结论</a></li><li class="toc-level-2"><a href="#14-%e5%85%8d%e8%b4%a3%e5%a3%b0%e6%98%8e">14. 免责声明</a></li></ul>
+  </div>
+</nav>
+
+  <div class="post-content md-content"><h2 id="0-本文定位">0. 本文定位<a hidden class="anchor" aria-hidden="true" href="#0-本文定位">#</a></h2>
+<p>这是训练大纲 <strong>第 1 周 Session 2</strong> 的「足够细」示范课，与上一篇《公司一页纸实例》分工不同：</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th><a href="/tech-notes/research-trading-case-midea-000333/">Session 作业总览 / 一页纸</a></th>
+          <th><strong>本文 Session 2</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>目标</td>
+          <td>研究闭环长什么样</td>
+          <td><strong>先识字：报表在说什么</strong></td>
+      </tr>
+      <tr>
+          <td>深度</td>
+          <td>变量、预期差、纸上计划</td>
+          <td>会计最小集 + <strong>亲手抄三个数</strong></td>
+      </tr>
+      <tr>
+          <td>你要带走的</td>
+          <td>模板</td>
+          <td><strong>能口述三张表 + 完成一次同向判断</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>时间盒：</strong> 约 2 小时（可拆成 4×30 分钟）。<br>
+<strong>样本公司：</strong> 美的集团（000333）——继续用白电龙头，降低商业模式干扰。<br>
+<strong>数据快照：</strong> 2026-07-21 前后，东方财富数据中心公开财务字段；正式练习请打开<strong>巨潮年报 PDF</strong> 对照页码。<br>
+<strong>不是投资建议</strong>；数字会过时，练的是动作。</p>
+<hr>
+<h2 id="1-session-2-要达成什么及格线">1. Session 2 要达成什么（及格线）<a hidden class="anchor" aria-hidden="true" href="#1-session-2-要达成什么及格线">#</a></h2>
+<p>做完应能不看稿回答：</p>
+<ol>
+<li><strong>资产 = 负债 + 权益</strong> 是什么意思？各举 2 个例子。</li>
+<li>利润表从 <strong>营收</strong> 走到 <strong>净利润</strong>，中间至少经过哪几层？</li>
+<li><strong>毛利率</strong> 和 <strong>净利率</strong> 差在哪？</li>
+<li>现金流的 <strong>经营 / 投资 / 筹资</strong> 各在干什么？</li>
+<li>为什么 <strong>有净利润，经营现金流仍可能很差</strong>？</li>
+<li>对美的 2025 年报：你抄的三个数是多少？<strong>利润与经营现金是否同向？</strong></li>
+</ol>
+<p>做不到第 6 条 = Session 2 未完成（读再多也算没做）。</p>
+<hr>
+<h2 id="2-开课前-10-分钟你的笔记从哪来">2. 开课前 10 分钟：你的笔记从哪来<a hidden class="anchor" aria-hidden="true" href="#2-开课前-10-分钟你的笔记从哪来">#</a></h2>
+<h3 id="21-只保留一个抄数路径今天示范两条你固定一条">2.1 只保留一个抄数路径（今天示范两条，你固定一条）<a hidden class="anchor" aria-hidden="true" href="#21-只保留一个抄数路径今天示范两条你固定一条">#</a></h3>
+<p><strong>路径 A（推荐入门）：</strong> 东方财富 / 同花顺等 F10 →「财务分析 / 主要指标」</p>
+<p><strong>路径 B（更正式）：</strong> <a href="http://www.cninfo.com.cn">巨潮资讯</a> → 搜 <code>000333</code> → 《2025 年年度报告》PDF</p>
+<ul>
+<li>利润表：找「营业总收入」「归属于上市公司股东的净利润」</li>
+<li>现金流量表：找「经营活动产生的现金流量净额」</li>
+</ul>
+<p>本文用数据接口给出 <strong>可核对量级</strong>；你在 PDF 上应能找到同数量级数字（单位注意「元 / 万元 / 亿元」）。</p>
+<h3 id="22-单位换算新手最容易错">2.2 单位换算（新手最容易错）<a hidden class="anchor" aria-hidden="true" href="#22-单位换算新手最容易错">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>报表常见写法</th>
+          <th>含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>458,502,407,000 元</td>
+          <td>约 <strong>4585.02 亿元</strong></td>
+      </tr>
+      <tr>
+          <td>亿元</td>
+          <td>文中教学主单位</td>
+      </tr>
+      <tr>
+          <td>每股经营现金流 7.02 元</td>
+          <td>不是「全公司只有 7 块现金」</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>抄数纪律：</strong> 同一张作业里单位写死一种，并在笔记第一行标注。</p>
+<hr>
+<h2 id="3-模块一约-30-min资产负债表--公司的家底照片">3. 模块一（约 30 min）：资产负债表 —— 公司的「家底照片」<a hidden class="anchor" aria-hidden="true" href="#3-模块一约-30-min资产负债表--公司的家底照片">#</a></h2>
+<h3 id="31-一个等式吃透就够">3.1 一个等式，吃透就够<a hidden class="anchor" aria-hidden="true" href="#31-一个等式吃透就够">#</a></h3>
+$$
+\text{资产} = \text{负债} + \text{所有者权益}
+$$<p>人话：</p>
+<ul>
+<li><strong>资产：</strong> 公司控制的、预期能带来经济利益的资源（钱、货、厂房、设备、应收款等）。</li>
+<li><strong>负债：</strong> 欠别人的（借款、应付供应商、合同负债等）。</li>
+<li><strong>所有者权益（净资产）：</strong> 股东剩下来的那一份 = 资产减负债。</li>
+</ul>
+<p>像拍照：某一天 24:00 定格。<strong>不是</strong>全年流量，是<strong>时点存量</strong>。</p>
+<h3 id="32-用开奶茶店建立直觉再映射到美的">3.2 用「开奶茶店」建立直觉（再映射到美的）<a hidden class="anchor" aria-hidden="true" href="#32-用开奶茶店建立直觉再映射到美的">#</a></h3>
+<p>假设你开店：</p>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>例子</th>
+          <th>报表侧</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>你出资 50 万</td>
+          <td>权益增加</td>
+          <td>实收资本 / 股东权益</td>
+      </tr>
+      <tr>
+          <td>银行借 30 万</td>
+          <td>负债增加，现金资产增加</td>
+          <td>借款 + 货币资金</td>
+      </tr>
+      <tr>
+          <td>买设备 40 万</td>
+          <td>现金变设备</td>
+          <td>资产内部结构变，总额看怎么付</td>
+      </tr>
+      <tr>
+          <td>欠豆商 5 万货款</td>
+          <td>负债增加，存货增加</td>
+          <td>应付账款 + 存货</td>
+      </tr>
+  </tbody>
+</table>
+<p>美的体量是千亿级，<strong>逻辑相同</strong>：左边家底，右边「债主 + 股东」的要求权。</p>
+<h3 id="33-零基础阶段资产负债表先认这-6-样">3.3 零基础阶段，资产负债表先认这 6 样<a hidden class="anchor" aria-hidden="true" href="#33-零基础阶段资产负债表先认这-6-样">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>科目方向</th>
+          <th>常见科目</th>
+          <th>直觉</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>资产</td>
+          <td>货币资金</td>
+          <td>账上现金及等价物</td>
+      </tr>
+      <tr>
+          <td>资产</td>
+          <td>应收账款</td>
+          <td>货卖了、钱还没收回</td>
+      </tr>
+      <tr>
+          <td>资产</td>
+          <td>存货</td>
+          <td>原材料、在产品、库存商品</td>
+      </tr>
+      <tr>
+          <td>资产</td>
+          <td>固定资产等</td>
+          <td>厂房设备</td>
+      </tr>
+      <tr>
+          <td>负债</td>
+          <td>有息负债 / 借款</td>
+          <td>要还本付息的钱</td>
+      </tr>
+      <tr>
+          <td>权益</td>
+          <td>未分配利润等</td>
+          <td>历史赚下来留在公司的部分（简化理解）</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Session 2 不做：</strong> 商誉减值模型、租赁准则细节、递延所得税深挖。<br>
+<strong>Session 2 要做：</strong> 看到「应收 ↑、存货 ↑」知道可能占款变多，后面要和<strong>经营现金流</strong>对照。</p>
+<h3 id="34-和利润表现金流的关系先记结论">3.4 和利润表、现金流的关系（先记结论）<a hidden class="anchor" aria-hidden="true" href="#34-和利润表现金流的关系先记结论">#</a></h3>
+<ul>
+<li>利润表赚的「净利润」，在权益里会推高「未分配利润」一类项目（还有分红等流出）。</li>
+<li>但利润是<strong>权责发生制</strong>；现金看<strong>收付实现制</strong> → 所以必须请出现金流量表。</li>
+</ul>
+<hr>
+<h2 id="4-模块二约-40-min利润表--公司的考试成绩单">4. 模块二（约 40 min）：利润表 —— 公司的「考试成绩单」<a hidden class="anchor" aria-hidden="true" href="#4-模块二约-40-min利润表--公司的考试成绩单">#</a></h2>
+<h3 id="41-最小链条请背熟">4.1 最小链条（请背熟）<a hidden class="anchor" aria-hidden="true" href="#41-最小链条请背熟">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>营业总收入（营收）
+</span></span><span style="display:flex;"><span>  − 营业成本
+</span></span><span style="display:flex;"><span>  ────────────────
+</span></span><span style="display:flex;"><span>  毛利
+</span></span><span style="display:flex;"><span>  − 税金及附加、销售费用、管理费用、研发费用、财务费用等
+</span></span><span style="display:flex;"><span>  ± 其他经营项目（简化）
+</span></span><span style="display:flex;"><span>  ────────────────
+</span></span><span style="display:flex;"><span>  营业利润
+</span></span><span style="display:flex;"><span>  ± 营业外等（简化）
+</span></span><span style="display:flex;"><span>  ────────────────
+</span></span><span style="display:flex;"><span>  利润总额
+</span></span><span style="display:flex;"><span>  − 所得税费用
+</span></span><span style="display:flex;"><span>  ────────────────
+</span></span><span style="display:flex;"><span>  净利润
+</span></span><span style="display:flex;"><span>      └─ 其中：归属于上市公司股东的净利润（归母净利）← A 股最常看
+</span></span></code></pre></div><h3 id="42-两个比率session-2-必会">4.2 两个比率，Session 2 必会<a hidden class="anchor" aria-hidden="true" href="#42-两个比率session-2-必会">#</a></h3>
+<p><strong>毛利率</strong></p>
+$$
+\text{毛利率} = \frac{\text{营收} - \text{营业成本}}{\text{营收}} = \frac{\text{毛利}}{\text{营收}}
+$$<p>直觉：卖 100 元货，扣掉直接成本还剩多少。反映<strong>产品竞争力 / 成本 / 结构</strong>，还没扣卖货的广告、工资、研发、利息等。</p>
+<p><strong>净利率</strong></p>
+$$
+\text{净利率} = \frac{\text{净利润}}{\text{营收}}
+$$<p>直觉：卖 100 元货，最终股东能留下多少。所有费用和税之后。</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>毛利率</th>
+          <th>净利率</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>位置</td>
+          <td>利润表上半</td>
+          <td>利润表底部</td>
+      </tr>
+      <tr>
+          <td>高不高说明</td>
+          <td>产品与成本</td>
+          <td>整体赚钱效率</td>
+      </tr>
+      <tr>
+          <td>常见误读</td>
+          <td>毛利高 = 一定很赚钱</td>
+          <td>净利高 = 主业一定健康（可能有一次性项目）</td>
+      </tr>
+  </tbody>
+</table>
+<p>后面会学 <strong>扣非净利润</strong>：把一些「不常发生」的损益拿掉，看主业。Session 2 先知道有这个词即可；抄数作业用 <strong>归母净利润</strong> 就够。</p>
+<h3 id="43-案例美的集团-2025-年报利润表三个核心量级">4.3 案例：美的集团 2025 年报利润表三个核心量级<a hidden class="anchor" aria-hidden="true" href="#43-案例美的集团-2025-年报利润表三个核心量级">#</a></h3>
+<p>（公开数据聚合口径，教学用）</p>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>约数</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>营业总收入</td>
+          <td><strong>4585.02 亿元</strong></td>
+          <td>「卖了多大」</td>
+      </tr>
+      <tr>
+          <td>归母净利润</td>
+          <td><strong>439.45 亿元</strong></td>
+          <td>「股东分得的利润结果」</td>
+      </tr>
+      <tr>
+          <td>销售毛利率</td>
+          <td>约 <strong>26.4%</strong></td>
+          <td>每 100 元收入约 26 元毛利</td>
+      </tr>
+      <tr>
+          <td>销售净利率</td>
+          <td>约 <strong>9.8%</strong></td>
+          <td>每 100 元收入约 10 元净利量级</td>
+      </tr>
+      <tr>
+          <td>扣非归母净利</td>
+          <td>约 <strong>412.67 亿元</strong></td>
+          <td>略低于归母，质量观察用</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>人话翻译练习（请你出声说一遍）：</strong></p>
+<blockquote>
+<p>2025 年美的大约卖了 4585 亿；去掉各种成本费用和税之后，归母净利约 439 亿。<br>
+毛利率大约四分之一强，说明制造与产品端仍有可观加成；净利率约一成附近，说明费用、税和其他项目会吃掉毛利的一大部分——这是制造业龙头的常见形态，不是「毛利 26% 就该净利 26%」。</p></blockquote>
+<h3 id="44-同比数字旁的箭头">4.4 同比：数字旁的「箭头」<a hidden class="anchor" aria-hidden="true" href="#44-同比数字旁的箭头">#</a></h3>
+<p>同一套数据里，2025 年相对 2024 年大约：</p>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>2024 年约</th>
+          <th>2025 年约</th>
+          <th>同比约</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>营收</td>
+          <td>4090.84 亿</td>
+          <td>4585.02 亿</td>
+          <td><strong>+12.1%</strong></td>
+      </tr>
+      <tr>
+          <td>归母净利</td>
+          <td>385.37 亿</td>
+          <td>439.45 亿</td>
+          <td><strong>+14.0%</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p>Session 2 读法：</p>
+<ul>
+<li>营收在长、利润也在长 → 成绩单「规模与盈利同向扩张」（至少这一年是）。</li>
+<li>利润增速略高于营收 → 可能有费用率改善、结构变化、税率等，<strong>先标问号，Session 3+ 再拆</strong>，今天不深挖。</li>
+</ul>
+<h3 id="45-小练习5-分钟写在本子上">4.5 小练习（5 分钟，写在本子上）<a hidden class="anchor" aria-hidden="true" href="#45-小练习5-分钟写在本子上">#</a></h3>
+<ol>
+<li>若营收 100，营业成本 74，毛利率？</li>
+<li>若净利润 10，净利率？</li>
+<li>毛利率 26%、净利率 10%，中间大约「消失」了多少个百分点的收入占比？这些消失的项目主要在利润表的哪一段？</li>
+</ol>
+<p>参考答案：1）26%；2）10%；3）约 16 个百分点，主要在费用、税金、其它损益与所得税等「毛利以下」项目。</p>
+<hr>
+<h2 id="5-模块三约-40-min现金流量表--公司的真实现金日记账">5. 模块三（约 40 min）：现金流量表 —— 公司的「真实现金日记账」<a hidden class="anchor" aria-hidden="true" href="#5-模块三约-40-min现金流量表--公司的真实现金日记账">#</a></h2>
+<h3 id="51-为什么利润表不够">5.1 为什么利润表不够<a hidden class="anchor" aria-hidden="true" href="#51-为什么利润表不够">#</a></h3>
+<p>利润表可以出现：</p>
+<ul>
+<li>货已确认收入，钱还在客户那里 → <strong>应收增加</strong>，利润有了，现金没到。</li>
+<li>库存在涨 → 现金变成了货。</li>
+<li>折旧等非现金费用 → 减利润，但不一定立刻减现金。</li>
+</ul>
+<p>所以要问第二句：</p>
+<blockquote>
+<p><strong>赚的利润，有多少变成了真金白银的回流？</strong></p></blockquote>
+<h3 id="52-三类现金流只要直觉">5.2 三类现金流（只要直觉）<a hidden class="anchor" aria-hidden="true" href="#52-三类现金流只要直觉">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>类型</th>
+          <th>符号常见</th>
+          <th>在干什么</th>
+          <th>简单例子</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>经营活动</strong></td>
+          <td><code>NETCASH_OPERATE</code> 等</td>
+          <td>主业收钱付钱：销售回款、买原料、发工资、交税等</td>
+          <td>卖空调收回来的钱 − 付给供应链与员工的钱</td>
+      </tr>
+      <tr>
+          <td><strong>投资活动</strong></td>
+          <td><code>NETCASH_INVEST</code></td>
+          <td>买/卖长期资产、投资理财等</td>
+          <td>建厂、买设备、对外投资</td>
+      </tr>
+      <tr>
+          <td><strong>筹资活动</strong></td>
+          <td><code>NETCASH_FINANCE</code></td>
+          <td>借钱还款、股东出资、分红回购等</td>
+          <td>贷款、还贷、分红</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>符号读法：</strong></p>
+<ul>
+<li>经营现金流净额 <strong>&gt; 0</strong>：主业现金净流入（通常健康信号之一，仍要看行业）。</li>
+<li>投资现金流净额 <strong>&lt; 0</strong>：常见于扩张期（花钱建产能）；<strong>&gt; 0</strong> 可能是在卖资产或收回投资。</li>
+<li>筹资现金流：融资期常为正，还债/分红回购期常为负。</li>
+</ul>
+<h3 id="53-案例美的-2025-年三色现金">5.3 案例：美的 2025 年「三色现金」<a hidden class="anchor" aria-hidden="true" href="#53-案例美的-2025-年三色现金">#</a></h3>
+<p>公开字段约数：</p>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>约数（亿元）</th>
+          <th>人话</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>经营活动现金流量净额</td>
+          <td><strong>+533.46</strong></td>
+          <td>主业大约净流入 533 亿现金</td>
+      </tr>
+      <tr>
+          <td>投资活动现金流量净额</td>
+          <td><strong>+253.40</strong></td>
+          <td>该年投资活动呈现净流入（具体细项看年报：处置、理财、资本开支对冲等，Session 2 只记录象）</td>
+      </tr>
+      <tr>
+          <td>筹资活动现金流量净额</td>
+          <td><strong>−649.58</strong></td>
+          <td>筹资端净流出（常见于分红、回购、还融资等组合，细节留给年报附注）</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Session 2 只强制吃透第一行：经营现金流。</strong></p>
+<h3 id="54-今日核心对照利润-vs-经营现金">5.4 今日核心对照：利润 vs 经营现金<a hidden class="anchor" aria-hidden="true" href="#54-今日核心对照利润-vs-经营现金">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>年份</th>
+          <th>归母净利（亿）</th>
+          <th>经营现金流净额（亿）</th>
+          <th>粗比值 经营现金/净利</th>
+          <th>同向？</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2025</td>
+          <td>439.45</td>
+          <td>533.46</td>
+          <td><strong>约 1.21</strong></td>
+          <td><strong>同向（都为正，且现金 &gt; 利润）</strong></td>
+      </tr>
+      <tr>
+          <td>2024</td>
+          <td>385.37</td>
+          <td>605.12</td>
+          <td><strong>约 1.57</strong></td>
+          <td>同向，现金更厚</td>
+      </tr>
+      <tr>
+          <td>2023</td>
+          <td>337.20</td>
+          <td>579.03</td>
+          <td><strong>约 1.72</strong></td>
+          <td>同向</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>295.54</td>
+          <td>346.58</td>
+          <td><strong>约 1.17</strong></td>
+          <td>同向</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>教学结论句（可直接写进作业）：</strong></p>
+<blockquote>
+<p>美的集团 2025 年归母净利润约 439 亿元，经营活动现金流量净额约 533 亿元；二者均为正，<strong>利润与经营现金同向</strong>，且经营现金覆盖净利有余。<br>
+注意：同向 ≠ 可以买；只表示「这一年不是典型的利润与现金严重背离形态」。<br>
+另：2025 经营现金绝对值低于 2024（605 → 533），同时净利更高 → <strong>现金/净利比值下降</strong>，这是下一阶段可以标的「质量观察点」，Session 2 记录即可。</p></blockquote>
+<h3 id="55-四种常见组合以后看任何公司都套这个表">5.5 四种常见组合（以后看任何公司都套这个表）<a hidden class="anchor" aria-hidden="true" href="#55-四种常见组合以后看任何公司都套这个表">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>净利润</th>
+          <th>经营现金流</th>
+          <th>初级解读</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>+</td>
+          <td>+</td>
+          <td>较健康的基础形态</td>
+      </tr>
+      <tr>
+          <td>+</td>
+          <td>−</td>
+          <td>高度警惕：应收/存货/挤占？还是扩张性营运资本？</td>
+      </tr>
+      <tr>
+          <td>−</td>
+          <td>+</td>
+          <td>可能有大额非现金成本，或利润表受伤但回款尚可</td>
+      </tr>
+      <tr>
+          <td>−</td>
+          <td>−</td>
+          <td>主业与现金双重压力</td>
+      </tr>
+  </tbody>
+</table>
+<p>美的 2025 落在第一格。</p>
+<h3 id="56-每股经营现金流补充识别">5.6 每股经营现金流（补充识别）<a hidden class="anchor" aria-hidden="true" href="#56-每股经营现金流补充识别">#</a></h3>
+<p>数据里常见 <strong>MGJYXJJE（每股经营现金流）</strong> 2025 年约 <strong>7.02 元</strong>。</p>
+<p>直觉：按股本摊下来，每股对应多大约经营现金。<br>
+<strong>不要</strong>和「股价 84 元」直接比大小当估值（单位与含义不同）。Session 2 只要求：知道这个指标在现金流质量工具箱里。</p>
+<hr>
+<h2 id="6-模块四约-3545-min标准作业--你必须自己再做一遍">6. 模块四（约 35–45 min）：标准作业 —— 你必须自己再做一遍<a hidden class="anchor" aria-hidden="true" href="#6-模块四约-3545-min标准作业--你必须自己再做一遍">#</a></h2>
+<blockquote>
+<p>下面给出「示范填空」。你的笔记里应有<strong>自己的笔迹/敲字</strong>；允许与示范一致，不允许「只收藏链接」。</p></blockquote>
+<h3 id="61-作业题原文照抄到笔记">6.1 作业题（原文照抄到笔记）<a hidden class="anchor" aria-hidden="true" href="#61-作业题原文照抄到笔记">#</a></h3>
+<p><strong>公司：</strong> 美的集团 000333<br>
+<strong>报告期：</strong> 2025 年年度报告<br>
+<strong>抄三个数：</strong></p>
+<ol>
+<li>营业总收入 = ___________<strong><strong>（单位：</strong></strong>）</li>
+<li>归属于上市公司股东的净利润 = _______________</li>
+<li>经营活动产生的现金流量净额 = _______________</li>
+</ol>
+<p><strong>写一句话：</strong></p>
+<blockquote>
+<p>利润和现金是否同向？________________<br>
+依据：________________</p></blockquote>
+<h3 id="62-示范填空对照用">6.2 示范填空（对照用）<a hidden class="anchor" aria-hidden="true" href="#62-示范填空对照用">#</a></h3>
+<ol>
+<li>营业总收入 ≈ <strong>4585.02 亿元</strong>（458,502,407,000 元）</li>
+<li>归母净利润 ≈ <strong>439.45 亿元</strong>（43,945,411,000 元）</li>
+<li>经营现金流净额 ≈ <strong>533.46 亿元</strong>（53,345,930,000 元）</li>
+</ol>
+<p><strong>同向判断：</strong></p>
+<blockquote>
+<p><strong>同向。</strong> 净利与经营现金流均为正；经营现金流（533 亿）高于归母净利（439 亿），2025 年不存在「大额盈利但主业现金崩塌」的初级警报。</p></blockquote>
+<h3 id="63-建议你在巨潮-pdf-上的动作清单">6.3 建议你在巨潮 PDF 上的动作清单<a hidden class="anchor" aria-hidden="true" href="#63-建议你在巨潮-pdf-上的动作清单">#</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"> 下载《美的集团股份有限公司 2025 年年度报告》</li>
+<li><input disabled="" type="checkbox"> 目录找到「合并利润表」「合并现金流量表」</li>
+<li><input disabled="" type="checkbox"> 用荧光笔标出上述三个数字（或截图贴笔记并标注页码）</li>
+<li><input disabled="" type="checkbox"> 额外扫一眼：合并资产负债表的「货币资金」「存货」「应收账款」标题位置（不用抄全）</li>
+<li><input disabled="" type="checkbox"> 在笔记写：数据来源路径 + 抄数日期</li>
+</ul>
+<h3 id="64-加分项有余力15-min">6.4 加分项（有余力，15 min）<a hidden class="anchor" aria-hidden="true" href="#64-加分项有余力15-min">#</a></h3>
+<p>计算：</p>
+$$
+\frac{\text{经营现金流净额}}{\text{归母净利润}} \approx \frac{533.46}{439.45} \approx 1.21
+$$<p>再算 2024 年同一比值（约 1.57）。写一句：比值下降可能意味着什么？<br>
+（提示方向：营运资本占用、客户回款、支付节奏、利润结构变化……先列假设，别下定论。）</p>
+<hr>
+<h2 id="7-把三张表放进一张session-2-总图">7. 把三张表放进一张「Session 2 总图」<a hidden class="anchor" aria-hidden="true" href="#7-把三张表放进一张session-2-总图">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                    ┌─────────────────────┐
+</span></span><span style="display:flex;"><span>                    │  利润表（一段期间）  │
+</span></span><span style="display:flex;"><span>                    │  营收 → … → 净利润   │
+</span></span><span style="display:flex;"><span>                    └──────────┬──────────┘
+</span></span><span style="display:flex;"><span>                               │ 赚了多少「会计利润」
+</span></span><span style="display:flex;"><span>                               ▼
+</span></span><span style="display:flex;"><span>┌──────────────┐      ┌─────────────────────┐
+</span></span><span style="display:flex;"><span>│ 资产负债表    │◄────►│ 权益中的留存收益等   │
+</span></span><span style="display:flex;"><span>│ 时点：家底    │      └─────────────────────┘
+</span></span><span style="display:flex;"><span>└──────┬───────┘
+</span></span><span style="display:flex;"><span>       │ 家底里的现金科目如何变化，要看
+</span></span><span style="display:flex;"><span>       ▼
+</span></span><span style="display:flex;"><span>┌─────────────────────┐
+</span></span><span style="display:flex;"><span>│ 现金流量表（一段期间）│
+</span></span><span style="display:flex;"><span>│ 经营 / 投资 / 筹资   │
+</span></span><span style="display:flex;"><span>│ ★先抓：经营现金流净额 │
+</span></span><span style="display:flex;"><span>└─────────────────────┘
+</span></span></code></pre></div><p><strong>研究型交易为什么 Session 2 要这么慢：</strong><br>
+不会读三张表，后面所有「预期差、一页纸、波段计划」都会变成听故事。</p>
+<hr>
+<h2 id="8-常见错题本session-2-高频翻车">8. 常见错题本（Session 2 高频翻车）<a hidden class="anchor" aria-hidden="true" href="#8-常见错题本session-2-高频翻车">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>错法</th>
+          <th>纠正</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>把「营收」当成「到手现金」</td>
+          <td>营收是确认的经营成果，现金看现金流表</td>
+      </tr>
+      <tr>
+          <td>净利很高就说公司很有钱</td>
+          <td>要看经营现金流、货币资金、负债</td>
+      </tr>
+      <tr>
+          <td>经营现金流一年为负就判死刑</td>
+          <td>先看行业季节、备货、扩张；看连续多期</td>
+      </tr>
+      <tr>
+          <td>抄数抄成母公司报表</td>
+          <td>A 股分析默认优先 <strong>合并报表</strong></td>
+      </tr>
+      <tr>
+          <td>单位错位（亿元当元）</td>
+          <td>作业第一行写单位</td>
+      </tr>
+      <tr>
+          <td>Session 2 就开始讨论「该不该 84 元买入」</td>
+          <td><strong>禁止</strong>；本课只有识字与抄数</td>
+      </tr>
+      <tr>
+          <td>只看美的示范不自己打开 PDF</td>
+          <td>等于没做 Session 2</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="9-2-小时时间表可直接照做">9. 2 小时时间表（可直接照做）<a hidden class="anchor" aria-hidden="true" href="#9-2-小时时间表可直接照做">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>块</th>
+          <th>时长</th>
+          <th>动作</th>
+          <th>完成标志</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>10 min</td>
+          <td>打开笔记模板 + 巨潮/F10</td>
+          <td>路径写好</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>25 min</td>
+          <td>读本文 §3 + 自己复述恒等式</td>
+          <td>能举债/权益各 2 例</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>35 min</td>
+          <td>读本文 §4 + 做 §4.5 三道小题</td>
+          <td>毛利率净利率会算</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>30 min</td>
+          <td>读本文 §5 + 抄美的三类现金表头</td>
+          <td>知道经营现金流在哪</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>20 min</td>
+          <td><strong>正式抄三个数 + 同向句</strong></td>
+          <td>笔记有数字与结论</td>
+      </tr>
+      <tr>
+          <td>缓冲</td>
+          <td>10 min</td>
+          <td>标记最卡概念</td>
+          <td>留给 Session 3</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="10-session-2-结束后的上交物格式">10. Session 2 结束后的「上交物」格式<a hidden class="anchor" aria-hidden="true" href="#10-session-2-结束后的上交物格式">#</a></h2>
+<p>请在笔记软件原样建一页：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span># Session 2 作业 | 日期：____
+</span></span><span style="display:flex;"><span>公司：美的集团 000333
+</span></span><span style="display:flex;"><span>报告期：2025 年报
+</span></span><span style="display:flex;"><span>数据来源：巨潮 PDF p.___ / 或 F10（圈一）
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. 营收：
+</span></span><span style="display:flex;"><span>2. 归母净利：
+</span></span><span style="display:flex;"><span>3. 经营现金流净额：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>同向判断：（同向 / 不同向）
+</span></span><span style="display:flex;"><span>一句话依据：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>我最卡的概念：
+</span></span><span style="display:flex;"><span>下节课（Session 3）要问的问题：
+</span></span></code></pre></div><hr>
+<h2 id="11-和-session-1--后续的衔接">11. 和 Session 1 / 后续的衔接<a hidden class="anchor" aria-hidden="true" href="#11-和-session-1--后续的衔接">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>周次块</th>
+          <th>内容</th>
+          <th>与本文关系</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Session 1</td>
+          <td>工具、基准、禁止事项、文件夹</td>
+          <td>前置；未完成先补</td>
+      </tr>
+      <tr>
+          <td><strong>Session 2（本文）</strong></td>
+          <td>三表最小集 + 三数同向</td>
+          <td><strong>当前</strong></td>
+      </tr>
+      <tr>
+          <td><a href="/tech-notes/research-trading-session3-quality-midea/">Session 3</a></td>
+          <td>毛利率细节、扣非、资产负债关键科目</td>
+          <td>会用到本文现金/利润裂口意识</td>
+      </tr>
+      <tr>
+          <td><a href="/tech-notes/research-trading-session4-industry-plan-midea/">Session 4</a></td>
+          <td>产业卡 + 第一份纸上计划</td>
+          <td>不再卡在「数是什么意思」</td>
+      </tr>
+  </tbody>
+</table>
+<p>上一篇一页纸文里强调的 <strong>2026Q1 扣非异常</strong>，在你完成 Session 2 后会更好懂：<br>
+那是「利润表内部质量」问题；Session 2 先保证你分得清 <strong>净利 vs 经营现金</strong>。</p>
+<hr>
+<h2 id="12-本文示范数据汇总表便于打印">12. 本文示范数据汇总表（便于打印）<a hidden class="anchor" aria-hidden="true" href="#12-本文示范数据汇总表便于打印">#</a></h2>
+<p><strong>美的集团 000333 | 合并报表教学快照</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>报告期</th>
+          <th>营收（亿元）</th>
+          <th>归母净利（亿元）</th>
+          <th>经营现金流净额（亿元）</th>
+          <th>同向（净利与经营现金）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2025 年报</td>
+          <td>4585.02</td>
+          <td>439.45</td>
+          <td>533.46</td>
+          <td>是（均正，现金&gt;净利）</td>
+      </tr>
+      <tr>
+          <td>2024 年报</td>
+          <td>4090.84</td>
+          <td>385.37</td>
+          <td>605.12</td>
+          <td>是</td>
+      </tr>
+      <tr>
+          <td>2023 年报</td>
+          <td>3737.10</td>
+          <td>337.20</td>
+          <td>579.03</td>
+          <td>是</td>
+      </tr>
+  </tbody>
+</table>
+<p>行情与估值<strong>不是</strong> Session 2 作业内容；需要时见一页纸专题文。</p>
+<hr>
+<h2 id="13-结论">13. 结论<a hidden class="anchor" aria-hidden="true" href="#13-结论">#</a></h2>
+<p>Session 2 的唯一使命：</p>
+<blockquote>
+<p><strong>看懂三张表在回答的三个问题——家底多少、赚了多少、钱从主业流没流回来；并用美的 2025 年报完成一次抄数与同向判断。</strong></p></blockquote>
+<p>示范答案是：营收约 4585 亿、归母净利约 439 亿、经营现金流约 533 亿，<strong>同向</strong>。<br>
+你的任务不是记住这三个数，而是 <strong>在自己的笔记里拥有这三个数的来源痕迹</strong>。</p>
+<hr>
+<h2 id="14-免责声明">14. 免责声明<a hidden class="anchor" aria-hidden="true" href="#14-免责声明">#</a></h2>
+<p>本文用于投资研究<strong>基础会计与财报阅读训练</strong>，不构成对任何证券的投资建议或收益承诺。财务数据来自公开聚合接口，可能存在口径差、调整与更新延迟；请以巨潮等法定披露文件为准。市场有风险，训练请遵守「先纸上、后小仓」纪律。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <div class="last-edited">
+      最后编辑于 2026年7月21日 11:04
+    </div>
+    <ul class="post-tags">
+      <li><a href="https://daily.jinl.in/tags/%E7%A0%94%E7%A9%B6%E5%9E%8B%E4%BA%A4%E6%98%93/">研究型交易</a></li>
+      <li><a href="https://daily.jinl.in/tags/session2/">Session2</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E4%BC%9A%E8%AE%A1%E5%85%A5%E9%97%A8/">会计入门</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E4%B8%89%E5%BC%A0%E8%A1%A8/">三张表</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E7%BE%8E%E7%9A%84%E9%9B%86%E5%9B%A2/">美的集团</a></li>
+      <li><a href="https://daily.jinl.in/tags/000333/">000333</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E7%BB%8F%E8%90%A5%E7%8E%B0%E9%87%91%E6%B5%81/">经营现金流</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E9%9B%B6%E5%9F%BA%E7%A1%80/">零基础</a></li>
+      <li><a href="https://daily.jinl.in/tags/a%E8%82%A1/">A股</a></li>
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://daily.jinl.in/">Daily Hub</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

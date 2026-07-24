@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.147.0"><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Daily Hub</title>
+<meta name="keywords" content="每日新闻, 技术笔记, AI摘要, RSS, 财经新闻, 科技资讯">
+<meta name="description" content="每日技术·财经·世界快览 — AI 精选 RSS 摘要、技术笔记、资源收藏与旅行记录">
+<meta name="author" content="Daily Bot">
+<link rel="canonical" href="https://daily.jinl.in/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b4d13903cc5bab8548bb462b1fb5be420749e7e6cc4d23ef237eb423a984b9f4.css" integrity="sha256-tNE5A8xbq4VIu0YrH7W&#43;QgdJ5&#43;bMTSPvI360I6mEufQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://daily.jinl.in/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://daily.jinl.in/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://daily.jinl.in/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://daily.jinl.in/apple-touch-icon.png">
+<link rel="mask-icon" href="https://daily.jinl.in/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://daily.jinl.in/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="https://daily.jinl.in/index.json" title="json">
+<link rel="alternate" hreflang="zh" href="https://daily.jinl.in/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<div class="reading-progress" id="reading-progress"></div>
+<script>
+
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  function update() {
+    var content = document.querySelector('.post-content');
+    if (!content) { bar.style.width = '0%'; return; }
+    var rect = content.getBoundingClientRect();
+    var total = content.offsetHeight - window.innerHeight;
+    var scrolled = -rect.top;
+    bar.style.width = Math.min(100, Math.max(0, (scrolled / total) * 100)) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.getElementById('hamburger');
+  var menu = document.getElementById('menu');
+  if (!hamburger || !menu) return;
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+});
+</script>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});">
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Daily Hub",
+  "url": "https://daily.jinl.in/",
+  "description": "每日技术·财经·世界快览 — AI 精选 RSS 摘要、技术笔记、资源收藏与旅行记录",
+  "inLanguage": "zh-CN"
+}
+</script>
+
+
+
+
+<meta property="og:url" content="https://daily.jinl.in/">
+  <meta property="og:site_name" content="Daily Hub">
+  <meta property="og:title" content="Daily Hub">
+  <meta property="og:description" content="每日技术·财经·世界快览 — AI 精选 RSS 摘要、技术笔记、资源收藏与旅行记录">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Daily Hub">
+  <meta name="twitter:description" content="每日技术·财经·世界快览 — AI 精选 RSS 摘要、技术笔记、资源收藏与旅行记录">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Daily Hub",
+  "url": "https://daily.jinl.in/",
+  "description": "每日技术·财经·世界快览 — AI 精选 RSS 摘要、技术笔记、资源收藏与旅行记录",
+  "logo": "https://daily.jinl.in/favicon.ico",
+  "sameAs": [
+      "/index.xml"
+  ]
+}
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://daily.jinl.in/" accesskey="h" title="Daily Hub (Alt + H)">Daily Hub</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://daily.jinl.in/daily-news/" title="Daily News">
+                    <span>Daily News</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/tech-notes/" title="Tech Notes">
+                    <span>Tech Notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/resources/" title="Resources">
+                    <span>Resources</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/travel-log/" title="Travel Log">
+                    <span>Travel Log</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<div class="timeline">
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.21
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>AI大佬忙着跳槽圈地，科技圈在通胀与安全警报中继续狂飙。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-21">2026年6月21日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.21" href="https://daily.jinl.in/daily-news/2026-06-21/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.20
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>科技在狂飙，现实在筑墙，从AI到出行，世界的门槛正悄悄变高。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-20">2026年6月20日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.20" href="https://daily.jinl.in/daily-news/2026-06-20/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.19
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>AI与核能正携手狂飙，登月与自动驾驶则在红灯前踩下刹车</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-19">2026年6月19日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.19" href="https://daily.jinl.in/daily-news/2026-06-19/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.18
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>巨头们在AI浪潮中狂飙，普通人却在为照片和系统交赎金。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-18">2026年6月18日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.18" href="https://daily.jinl.in/daily-news/2026-06-18/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.17
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>巨头忙着天价合体，苹果暗自憋大招，AI却在监管红线前急刹车。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-17">2026年6月17日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.17" href="https://daily.jinl.in/daily-news/2026-06-17/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.16
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>科技巨头在资本与太空里狂欢，地缘与监管的边界却在收紧。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-16">2026年6月16日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.16" href="https://daily.jinl.in/daily-news/2026-06-16/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.15
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>马斯克在太空数钱，地缘迎来和解，AI则在监管与争议中前行。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-15">2026年6月15日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.15" href="https://daily.jinl.in/daily-news/2026-06-15/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.14
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>巨头忙着重组与应对监管，科技界在安全博弈中悄然洗牌。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-14">2026年6月14日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.14" href="https://daily.jinl.in/daily-news/2026-06-14/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.13
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一边是星辰大海与无癌未来，一边是防不胜防的监控与AI诈骗</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-13">2026年6月13日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.13" href="https://daily.jinl.in/daily-news/2026-06-13/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.12
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>科技与股市一路狂飙，人类却在忙着给AI擦屁股和打官司。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-12">2026年6月12日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.12" href="https://daily.jinl.in/daily-news/2026-06-12/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.11
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>AI烧钱惹祸不断，局势动荡依旧，今天的科技圈焦虑中透着魔幻</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-11">2026年6月11日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.11" href="https://daily.jinl.in/daily-news/2026-06-11/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.10
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>AI正从地面卷向太空，大佬忙着捞金互撕，监管也在悄然收紧。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-10">2026年6月10日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.10" href="https://daily.jinl.in/daily-news/2026-06-10/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.09
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>苹果AI联手谷歌，科技巨头忙着翻篇，世界局势也迎来新剧本。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-09">2026年6月9日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.09" href="https://daily.jinl.in/daily-news/2026-06-09/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">复现 Koon et al. 2000: CR3BP 中的异宿连接与共振跃迁
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>完整复现 Koon, Lo, Marsden, Ross 2000 年 Chaos 论文——在圆形限制性三体问题中，通过 Poincaré 截面证明 L1↔L2 异宿连接和同宿连接的存在。 …</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-09">2026年6月9日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/tech-notes/">tech-notes</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 复现 Koon et al. 2000: CR3BP 中的异宿连接与共振跃迁" href="https://daily.jinl.in/tech-notes/koon-2000-heteroclinic-reproduction/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.08
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>地缘冲突推高油价，科技巨头们却只顾着卷AI和抢芯片。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-08">2026年6月8日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.08" href="https://daily.jinl.in/daily-news/2026-06-08/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.07
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>资本为算力狂欢，而AI正带着安全漏洞在聚光灯下蒙眼狂奔。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-07">2026年6月7日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.07" href="https://daily.jinl.in/daily-news/2026-06-07/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.06
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>科技圈正为AI和苹果狂欢，现实世界却在债务与冲突中头疼。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-06">2026年6月6日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.06" href="https://daily.jinl.in/daily-news/2026-06-06/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">每日快览：技术·财经·世界 · 2026.06.05
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>AI正忙着自我进化，而巨头们正因监管和隐私问题焦头烂额。</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-05">2026年6月5日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 每日快览：技术·财经·世界 · 2026.06.05" href="https://daily.jinl.in/daily-news/2026-06-05/"></a>
+</article>
+<article class="post-entry timeline-entry">
+  <div class="timeline-dot"></div>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">技术日报 · 2026-06-03
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>今日精选RSS AI摘要</p>
+  </div>
+  <footer class="entry-footer">
+    <span title="2026-06-03">2026年6月3日</span>
+    &nbsp;·&nbsp;<a href="https://daily.jinl.in/daily-news/">daily-news</a>
+  </footer>
+  <a class="entry-link" aria-label="post link to 技术日报 · 2026-06-03" href="https://daily.jinl.in/daily-news/2026-06-03/"></a>
+</article>
+</div>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://daily.jinl.in/page/2/">« 上一页</a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://daily.jinl.in/">Daily Hub</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

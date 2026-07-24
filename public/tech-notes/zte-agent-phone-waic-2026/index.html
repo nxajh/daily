@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>中兴智能体手机：过渡性 Pilot，还是消费级终局？ | Daily Hub</title>
+<meta name="keywords" content="中兴, 智能体手机, 豆包, WAIC, 手机, AI, 产品分析">
+<meta name="description" content="从 WAIC 2026 亮相与豆包集成出发，拆解中兴智能体手机的产品定位、体验约束、量产策略与集团层面的战略价值：它更像面向极客与早期采用者的 Pilot，而不是马上改写消费手机格局的终局产品。">
+<meta name="author" content="Daily Bot">
+<link rel="canonical" href="https://daily.jinl.in/tech-notes/zte-agent-phone-waic-2026/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b4d13903cc5bab8548bb462b1fb5be420749e7e6cc4d23ef237eb423a984b9f4.css" integrity="sha256-tNE5A8xbq4VIu0YrH7W&#43;QgdJ5&#43;bMTSPvI360I6mEufQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://daily.jinl.in/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://daily.jinl.in/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://daily.jinl.in/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://daily.jinl.in/apple-touch-icon.png">
+<link rel="mask-icon" href="https://daily.jinl.in/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://daily.jinl.in/tech-notes/zte-agent-phone-waic-2026/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<div class="reading-progress" id="reading-progress"></div>
+<script>
+
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  function update() {
+    var content = document.querySelector('.post-content');
+    if (!content) { bar.style.width = '0%'; return; }
+    var rect = content.getBoundingClientRect();
+    var total = content.offsetHeight - window.innerHeight;
+    var scrolled = -rect.top;
+    bar.style.width = Math.min(100, Math.max(0, (scrolled / total) * 100)) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.getElementById('hamburger');
+  var menu = document.getElementById('menu');
+  if (!hamburger || !menu) return;
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+});
+</script>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});">
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "中兴智能体手机：过渡性 Pilot，还是消费级终局？",
+  "description": "从 WAIC 2026 亮相与豆包集成出发，拆解中兴智能体手机的产品定位、体验约束、量产策略与集团层面的战略价值：它更像面向极客与早期采用者的 Pilot，而不是马上改写消费手机格局的终局产品。",
+  "url": "https://daily.jinl.in/tech-notes/zte-agent-phone-waic-2026/",
+  "image": "https://daily.jinl.in/og-default.png",
+  "datePublished": "2026-07-16T00:00:00Z",
+  "dateModified": "2026-07-16T05:22:40Z",
+  "author": {
+    "@type": "Organization",
+    "name": "Daily Bot"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Hub",
+    "url": "https://daily.jinl.in/"
+  }
+}
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://daily.jinl.in/"
+    }
+    
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tech Notes",
+      "item": "https://daily.jinl.in/tech-notes/"
+    }
+    
+    ,{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "中兴智能体手机：过渡性 Pilot，还是消费级终局？",
+      "item": "https://daily.jinl.in/tech-notes/zte-agent-phone-waic-2026/"
+    }
+  ]
+}
+</script>
+
+<meta property="og:url" content="https://daily.jinl.in/tech-notes/zte-agent-phone-waic-2026/">
+  <meta property="og:site_name" content="Daily Hub">
+  <meta property="og:title" content="中兴智能体手机：过渡性 Pilot，还是消费级终局？">
+  <meta property="og:description" content="从 WAIC 2026 亮相与豆包集成出发，拆解中兴智能体手机的产品定位、体验约束、量产策略与集团层面的战略价值：它更像面向极客与早期采用者的 Pilot，而不是马上改写消费手机格局的终局产品。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tech-notes">
+    <meta property="article:published_time" content="2026-07-16T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-16T05:22:40+00:00">
+    <meta property="article:tag" content="中兴">
+    <meta property="article:tag" content="智能体手机">
+    <meta property="article:tag" content="豆包">
+    <meta property="article:tag" content="WAIC">
+    <meta property="article:tag" content="手机">
+    <meta property="article:tag" content="AI">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="中兴智能体手机：过渡性 Pilot，还是消费级终局？">
+  <meta name="twitter:description" content="从 WAIC 2026 亮相与豆包集成出发，拆解中兴智能体手机的产品定位、体验约束、量产策略与集团层面的战略价值：它更像面向极客与早期采用者的 Pilot，而不是马上改写消费手机格局的终局产品。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Tech Notes",
+      "item": "https://daily.jinl.in/tech-notes/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "中兴智能体手机：过渡性 Pilot，还是消费级终局？",
+      "item": "https://daily.jinl.in/tech-notes/zte-agent-phone-waic-2026/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "中兴智能体手机：过渡性 Pilot，还是消费级终局？",
+  "name": "中兴智能体手机：过渡性 Pilot，还是消费级终局？",
+  "description": "从 WAIC 2026 亮相与豆包集成出发，拆解中兴智能体手机的产品定位、体验约束、量产策略与集团层面的战略价值：它更像面向极客与早期采用者的 Pilot，而不是马上改写消费手机格局的终局产品。",
+  "keywords": [
+    "中兴", "智能体手机", "豆包", "WAIC", "手机", "AI", "产品分析"
+  ],
+  "articleBody": "先给结论 中兴在 WAIC 2026 亮相的智能体手机，不宜按「下一代大众旗舰」来理解，更合适的定位是：\n过渡性 Pilot 产品。\n面向极客 / 早期采用者，备货量级约 10–20 万台；在消费大众市场容易成为探路炮灰，但对集团在政企定制、专利与生态筹码、端到端智能体链路验证上，仍有清晰的战略价值。\n一句话：\n对普通消费者：现在买，体验大概率被 App 壁垒、延迟、发热和软件成熟度拖后腿。 对中兴集团：值得做，但价值不在短期销量，而在把「手机端智能体」这条链路跑通，并沉淀可迁移能力。 产品卖点与公开叙事 公开叙事大致集中在四句话：\n听得懂 能干活 记得住 够安全 对应到产品层，核心不是「又一台多跑几个大模型的旗舰」，而是试图把手机从「应用容器」往「任务执行终端」推进：用户用自然语言表达意图，系统跨应用、跨步骤完成任务，并保留一定上下文记忆与权限边界。\n目前已知的关键信息包括：\n亮相场景：WAIC 2026 模型侧：集成豆包 一代样机 / 技术预览：M153 量产策略：靠堆硬件对冲软件不成熟 目标用户：极客与早期采用者，而非大众换机潮核心人群 这套叙事本身并不离谱。真正决定成败的，是「听得懂 / 能干活」能否在真实 App 生态里稳定落地，而不是 demo 里看起来聪明。\n为什么它现在更像 Pilot，而不是终局 1. 体验受三类硬约束 第一代智能体手机最容易被低估的，不是模型参数，而是执行环境：\n约束 表现 结果 App 壁垒 大量关键任务仍依赖第三方 App 的页面结构、接口与权限 跨 App 操作脆弱，版本一变就失效 延迟 端侧感知 + 云侧推理 + 多步工具调用串起来 交互节奏不像「顺手」，更像「等它想完」 发热与功耗 持续感知、本地预处理、后台编排都耗电发热 长时间使用时体验回落，堆硬件只能部分对冲 所以 M153 这类一代机更接近技术预览 / 工程验证机：用来暴露问题、收集真实任务分布、验证端到端链路，而不是用第一代就拿走大众市场份额。\n2. 软件成熟度落后于硬件叙事 智能体手机的卖点在软件编排，短板也在软件编排。\n当前行业普遍还卡在：\n意图理解尚可，可靠执行不够 单步演示好看，长链路任务易中断 记忆能力有，但何时记、记什么、何时遗忘仍粗糙 「安全」常被写成权限开关，真正难的是可审计的授权边界 在这个阶段，用更强 SoC、更大内存、更好散热去堆硬件，是理性选择：硬件冗余能给不稳定软件留缓冲。但这同时说明，产品还没有到「软件定义体验」的成熟期。\n3. 备货 10–20 万台是合理量级 如果按「消费级爆款」逻辑看 10–20 万台，会觉得保守；如果按 Pilot 逻辑看，这个量级反而合理：\n足够覆盖极客、开发者、政企试用与内部验证 足够收集真实失败 case，而不是只在展台脚本里成功 不会在软件未成熟时把库存与口碑一起押上 换句话说，小批量不是认怂，是风险控制。\n对消费市场：大概率是探路炮灰 消费手机市场的胜负手，从来不只是「AI 能力」。更现实的约束是：\n换机理由是否足够强\n用户不会因为「能听懂」就立刻换机，除非它稳定替代一批高频操作：订票、报销、跨 App 比价、复杂设置、消息整理等。 失败成本是否够低\n智能体一旦做错支付、发错消息、误删内容，一次事故就能毁掉信任。大众用户对「偶尔聪明、经常失手」的容忍度很低。 生态是否愿意开放\n没有稳定的系统级能力、厂商合作或标准化接口，智能体只能停留在脆弱的 UI 自动化层。 品牌心智是否匹配\n中兴在政企、通信与行业终端上的认知更强，消费端「AI 手机」心智并不占优。第一代更适合当试验田，不适合当品牌翻身仗。 因此，把这代产品放进大众消费赛道去对标顶流安卓旗舰，是错位评估。它更可能扮演的角色是：\n先替行业把坑踩一遍，再把能沉淀的能力迁到后续机型与行业方案里。\n对集团：战略价值大于短期销量 如果只看消费销量，这代产品很容易被判「不值」。但站在集团视角，至少有三层更硬的价值。\n1. 政企定制入口 政企场景天然更适合智能体手机：\n任务流程相对封闭、可标准化 安全与审计要求高，恰好匹配「够安全」叙事 客户愿意为效率提升付溢价，而不是只比跑分和影像 一旦端侧智能体在办公、运维、现场作业、政务办理等场景跑通，中兴可以把手机从「通信终端」扩展成「行业任务终端」。这条路比硬刚消费影像旗舰更符合其能力结构。\n2. 专利与生态筹码 智能体手机会把问题从「模型谁更大」推到：\n端云协同调度 权限与安全沙箱 跨应用任务编排 设备侧记忆与隐私边界 多模态交互与系统级 Agent 接口 谁先在这些层形成可专利化、可产品化的方案，谁就在下一轮合作与标准博弈里更有筹码。对中兴这种擅长通信协议、系统工程与行业方案的公司，这比单纯追消费营销更划算。\n3. 端到端验证场 很多「AI 手机」宣传停在聊天框或本地小模型。真正难的是端到端：\n感知 → 意图理解 → 规划 → 工具/App 调用 → 反馈校验 → 记忆更新 → 权限收敛 手机是最好的验证场之一，因为它同时具备：\n高频个人任务 复杂权限模型 实时交互压力 严格的功耗与散热约束 把这条链路在真机上跑通，能力可以反向输送到平板、行业终端、车载、政企助手等其它形态。手机不是唯一终点，而是最苛刻的试验台。\n一个更清楚的评估框架 不要问「中兴智能体手机能不能赢过某品牌旗舰」，而要拆成三层：\n层 1：自身边界约束 中兴消费品牌心智与渠道是否支撑大规模 C 端爆发？ 软件生态与顶级互联网/OS 厂商相比，开放度与协同能力如何？ 集团资源更擅长做通信/政企，还是消费潮流营销？ 层 2：企业核心制约因素 智能体体验的核心瓶颈是模型，还是 App 可编排性与系统权限？ 量产机靠堆硬件，能遮住哪些短板，遮不住哪些短板？ 第一代目标是验证链路，还是抢占心智？两者策略完全不同。 层 3：财务与经营硬约束 10–20 万台备货下，单台 BOM、补贴与售后成本是否可控？ 若消费端口碑一般，政企与专利收益能否覆盖试错成本？ 后续是否有可复用的软件平台，而不是每代重新堆料讲故事？ 按这个框架看，结论会稳定很多：\n消费端：试错。\n集团端：布局。\n产品形态：Pilot，不是终局。\n什么条件下它会从 Pilot 变成真产品 至少要同时看到以下几件事，才值得上调预期：\n跨 App 任务成功率稳定提升\n不是展台 3 个脚本任务，而是高频真实任务可重复完成。 延迟进入「可对话」区间\n用户感觉是在指挥助手，而不是提交异步工单。 发热与续航不再明显牺牲主体验\n堆硬件只能救急，不能当长期答案。 权限模型可解释、可撤销、可审计\n「够安全」必须从 slogan 变成可感知机制。 出现可复制的政企标杆案例\n证明这套能力能离开极客圈，进入付费流程。 如果上述条件迟迟不出现，量产机再堆料，也只是把 Pilot 做贵了。\n对三类读者的直接建议 普通消费者 现在不必为「智能体」三个字提前换机。\n除非你本来就喜欢尝鲜，且能接受：\n部分任务很惊艳 部分任务不稳定 发热、延迟、兼容性仍是日常摩擦 极客 / 早期采用者 可以把它当可玩的工程样品。\n关注点别放在跑分，而放在：\n哪些任务真能闭环 失败时如何回退 记忆与权限是否可控 系统更新是否持续修执行链路 看产业与公司战略的人 重点不要看首销数字漂不漂亮，而看三件事：\n中兴是否把智能体能力沉淀成可复用平台 是否拿到政企/行业项目，而不是只停在发布会 是否在端侧编排、安全与专利上形成下一轮谈判筹码 结尾 中兴智能体手机最容易被两种极端叙事带偏：\n一边说：AI 手机时代到了，谁先发谁通吃 一边说：又是厂商跟风，没什么用 更接近现实的判断是第三种：\n它大概率打不穿当下消费市场，但值得作为集团级 Pilot 存在。\n消费端像探路炮灰，产业端像能力验证器。\n一代机的任务不是赢下换机潮，而是证明「手机作为智能体执行终端」这条路，中兴能不能走通、能沉淀什么、能把哪些能力卖到更合适的客户里。\n等量产机真正落到评测和销量数据上，再回看这篇文章的框架会更清楚：\n别先问它聪不聪明，先问它在谁的约束下、解决谁的问题、以及失败了是否付得起代价。\n",
+  "wordCount" : "243",
+  "inLanguage": "zh",
+  "datePublished": "2026-07-16T00:00:00Z",
+  "dateModified": "2026-07-16T05:22:40Z",
+  "author":{
+    "@type": "Person",
+    "name": "Daily Bot"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://daily.jinl.in/tech-notes/zte-agent-phone-waic-2026/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Hub",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://daily.jinl.in/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://daily.jinl.in/" accesskey="h" title="Daily Hub (Alt + H)">Daily Hub</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://daily.jinl.in/daily-news/" title="Daily News">
+                    <span>Daily News</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/tech-notes/" title="Tech Notes">
+                    <span>Tech Notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/resources/" title="Resources">
+                    <span>Resources</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/travel-log/" title="Travel Log">
+                    <span>Travel Log</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">主页</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/tech-notes/">Tech Notes</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      中兴智能体手机：过渡性 Pilot，还是消费级终局？
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-07-16 00:00:00 +0000 UTC'>2026年7月16日</span>&nbsp;·&nbsp;<span>Daily Bot</span>
+
+</div>
+  </header> <nav class="toc" id="toc">
+  <button class="toc-toggle" onclick="this.parentElement.classList.toggle('open')" aria-label="Toggle TOC">
+    <span>目录</span>
+    <svg class="toc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4.427 9.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 9H4.604a.25.25 0 00-.177.427zM4.427 6.573L7.823 3.177a.25.25 0 01.354 0L11.573 6.573A.25.25 0 0111.396 7H4.604a.25.25 0 01-.177-.427z"/></svg>
+  </button>
+  <div class="toc-inner">
+    <ul><li class="toc-level-2"><a href="#%e5%85%88%e7%bb%99%e7%bb%93%e8%ae%ba">先给结论</a></li><li class="toc-level-2"><a href="#%e4%ba%a7%e5%93%81%e5%8d%96%e7%82%b9%e4%b8%8e%e5%85%ac%e5%bc%80%e5%8f%99%e4%ba%8b">产品卖点与公开叙事</a></li><li class="toc-level-2"><a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e5%ae%83%e7%8e%b0%e5%9c%a8%e6%9b%b4%e5%83%8f-pilot%e8%80%8c%e4%b8%8d%e6%98%af%e7%bb%88%e5%b1%80">为什么它现在更像 Pilot，而不是终局</a></li><li class="toc-level-3"><a href="#1-%e4%bd%93%e9%aa%8c%e5%8f%97%e4%b8%89%e7%b1%bb%e7%a1%ac%e7%ba%a6%e6%9d%9f">1. 体验受三类硬约束</a></li><li class="toc-level-3"><a href="#2-%e8%bd%af%e4%bb%b6%e6%88%90%e7%86%9f%e5%ba%a6%e8%90%bd%e5%90%8e%e4%ba%8e%e7%a1%ac%e4%bb%b6%e5%8f%99%e4%ba%8b">2. 软件成熟度落后于硬件叙事</a></li><li class="toc-level-3"><a href="#3-%e5%a4%87%e8%b4%a7-1020-%e4%b8%87%e5%8f%b0%e6%98%af%e5%90%88%e7%90%86%e9%87%8f%e7%ba%a7">3. 备货 10–20 万台是合理量级</a></li><li class="toc-level-2"><a href="#%e5%af%b9%e6%b6%88%e8%b4%b9%e5%b8%82%e5%9c%ba%e5%a4%a7%e6%a6%82%e7%8e%87%e6%98%af%e6%8e%a2%e8%b7%af%e7%82%ae%e7%81%b0">对消费市场：大概率是探路炮灰</a></li><li class="toc-level-2"><a href="#%e5%af%b9%e9%9b%86%e5%9b%a2%e6%88%98%e7%95%a5%e4%bb%b7%e5%80%bc%e5%a4%a7%e4%ba%8e%e7%9f%ad%e6%9c%9f%e9%94%80%e9%87%8f">对集团：战略价值大于短期销量</a></li><li class="toc-level-3"><a href="#1-%e6%94%bf%e4%bc%81%e5%ae%9a%e5%88%b6%e5%85%a5%e5%8f%a3">1. 政企定制入口</a></li><li class="toc-level-3"><a href="#2-%e4%b8%93%e5%88%a9%e4%b8%8e%e7%94%9f%e6%80%81%e7%ad%b9%e7%a0%81">2. 专利与生态筹码</a></li><li class="toc-level-3"><a href="#3-%e7%ab%af%e5%88%b0%e7%ab%af%e9%aa%8c%e8%af%81%e5%9c%ba">3. 端到端验证场</a></li><li class="toc-level-2"><a href="#%e4%b8%80%e4%b8%aa%e6%9b%b4%e6%b8%85%e6%a5%9a%e7%9a%84%e8%af%84%e4%bc%b0%e6%a1%86%e6%9e%b6">一个更清楚的评估框架</a></li><li class="toc-level-3"><a href="#%e5%b1%82-1%e8%87%aa%e8%ba%ab%e8%be%b9%e7%95%8c%e7%ba%a6%e6%9d%9f">层 1：自身边界约束</a></li><li class="toc-level-3"><a href="#%e5%b1%82-2%e4%bc%81%e4%b8%9a%e6%a0%b8%e5%bf%83%e5%88%b6%e7%ba%a6%e5%9b%a0%e7%b4%a0">层 2：企业核心制约因素</a></li><li class="toc-level-3"><a href="#%e5%b1%82-3%e8%b4%a2%e5%8a%a1%e4%b8%8e%e7%bb%8f%e8%90%a5%e7%a1%ac%e7%ba%a6%e6%9d%9f">层 3：财务与经营硬约束</a></li><li class="toc-level-2"><a href="#%e4%bb%80%e4%b9%88%e6%9d%a1%e4%bb%b6%e4%b8%8b%e5%ae%83%e4%bc%9a%e4%bb%8e-pilot-%e5%8f%98%e6%88%90%e7%9c%9f%e4%ba%a7%e5%93%81">什么条件下它会从 Pilot 变成真产品</a></li><li class="toc-level-2"><a href="#%e5%af%b9%e4%b8%89%e7%b1%bb%e8%af%bb%e8%80%85%e7%9a%84%e7%9b%b4%e6%8e%a5%e5%bb%ba%e8%ae%ae">对三类读者的直接建议</a></li><li class="toc-level-3"><a href="#%e6%99%ae%e9%80%9a%e6%b6%88%e8%b4%b9%e8%80%85">普通消费者</a></li><li class="toc-level-3"><a href="#%e6%9e%81%e5%ae%a2--%e6%97%a9%e6%9c%9f%e9%87%87%e7%94%a8%e8%80%85">极客 / 早期采用者</a></li><li class="toc-level-3"><a href="#%e7%9c%8b%e4%ba%a7%e4%b8%9a%e4%b8%8e%e5%85%ac%e5%8f%b8%e6%88%98%e7%95%a5%e7%9a%84%e4%ba%ba">看产业与公司战略的人</a></li><li class="toc-level-2"><a href="#%e7%bb%93%e5%b0%be">结尾</a></li></ul>
+  </div>
+</nav>
+
+  <div class="post-content md-content"><h2 id="先给结论">先给结论<a hidden class="anchor" aria-hidden="true" href="#先给结论">#</a></h2>
+<p>中兴在 WAIC 2026 亮相的智能体手机，不宜按「下一代大众旗舰」来理解，更合适的定位是：</p>
+<blockquote>
+<p><strong>过渡性 Pilot 产品。</strong><br>
+面向极客 / 早期采用者，备货量级约 10–20 万台；在消费大众市场容易成为探路炮灰，但对集团在政企定制、专利与生态筹码、端到端智能体链路验证上，仍有清晰的战略价值。</p></blockquote>
+<p>一句话：</p>
+<ul>
+<li><strong>对普通消费者</strong>：现在买，体验大概率被 App 壁垒、延迟、发热和软件成熟度拖后腿。</li>
+<li><strong>对中兴集团</strong>：值得做，但价值不在短期销量，而在把「手机端智能体」这条链路跑通，并沉淀可迁移能力。</li>
+</ul>
+<h2 id="产品卖点与公开叙事">产品卖点与公开叙事<a hidden class="anchor" aria-hidden="true" href="#产品卖点与公开叙事">#</a></h2>
+<p>公开叙事大致集中在四句话：</p>
+<ol>
+<li><strong>听得懂</strong></li>
+<li><strong>能干活</strong></li>
+<li><strong>记得住</strong></li>
+<li><strong>够安全</strong></li>
+</ol>
+<p>对应到产品层，核心不是「又一台多跑几个大模型的旗舰」，而是试图把手机从「应用容器」往「任务执行终端」推进：用户用自然语言表达意图，系统跨应用、跨步骤完成任务，并保留一定上下文记忆与权限边界。</p>
+<p>目前已知的关键信息包括：</p>
+<ul>
+<li>亮相场景：WAIC 2026</li>
+<li>模型侧：集成豆包</li>
+<li>一代样机 / 技术预览：M153</li>
+<li>量产策略：靠堆硬件对冲软件不成熟</li>
+<li>目标用户：极客与早期采用者，而非大众换机潮核心人群</li>
+</ul>
+<p>这套叙事本身并不离谱。真正决定成败的，是「听得懂 / 能干活」能否在真实 App 生态里稳定落地，而不是 demo 里看起来聪明。</p>
+<h2 id="为什么它现在更像-pilot而不是终局">为什么它现在更像 Pilot，而不是终局<a hidden class="anchor" aria-hidden="true" href="#为什么它现在更像-pilot而不是终局">#</a></h2>
+<h3 id="1-体验受三类硬约束">1. 体验受三类硬约束<a hidden class="anchor" aria-hidden="true" href="#1-体验受三类硬约束">#</a></h3>
+<p>第一代智能体手机最容易被低估的，不是模型参数，而是执行环境：</p>
+<table>
+  <thead>
+      <tr>
+          <th>约束</th>
+          <th>表现</th>
+          <th>结果</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>App 壁垒</strong></td>
+          <td>大量关键任务仍依赖第三方 App 的页面结构、接口与权限</td>
+          <td>跨 App 操作脆弱，版本一变就失效</td>
+      </tr>
+      <tr>
+          <td><strong>延迟</strong></td>
+          <td>端侧感知 + 云侧推理 + 多步工具调用串起来</td>
+          <td>交互节奏不像「顺手」，更像「等它想完」</td>
+      </tr>
+      <tr>
+          <td><strong>发热与功耗</strong></td>
+          <td>持续感知、本地预处理、后台编排都耗电发热</td>
+          <td>长时间使用时体验回落，堆硬件只能部分对冲</td>
+      </tr>
+  </tbody>
+</table>
+<p>所以 M153 这类一代机更接近<strong>技术预览 / 工程验证机</strong>：用来暴露问题、收集真实任务分布、验证端到端链路，而不是用第一代就拿走大众市场份额。</p>
+<h3 id="2-软件成熟度落后于硬件叙事">2. 软件成熟度落后于硬件叙事<a hidden class="anchor" aria-hidden="true" href="#2-软件成熟度落后于硬件叙事">#</a></h3>
+<p>智能体手机的卖点在软件编排，短板也在软件编排。</p>
+<p>当前行业普遍还卡在：</p>
+<ul>
+<li>意图理解尚可，<strong>可靠执行</strong>不够</li>
+<li>单步演示好看，<strong>长链路任务</strong>易中断</li>
+<li>记忆能力有，但<strong>何时记、记什么、何时遗忘</strong>仍粗糙</li>
+<li>「安全」常被写成权限开关，真正难的是<strong>可审计的授权边界</strong></li>
+</ul>
+<p>在这个阶段，用更强 SoC、更大内存、更好散热去堆硬件，是理性选择：硬件冗余能给不稳定软件留缓冲。但这同时说明，产品还没有到「软件定义体验」的成熟期。</p>
+<h3 id="3-备货-1020-万台是合理量级">3. 备货 10–20 万台是合理量级<a hidden class="anchor" aria-hidden="true" href="#3-备货-1020-万台是合理量级">#</a></h3>
+<p>如果按「消费级爆款」逻辑看 10–20 万台，会觉得保守；如果按 Pilot 逻辑看，这个量级反而合理：</p>
+<ul>
+<li>足够覆盖极客、开发者、政企试用与内部验证</li>
+<li>足够收集真实失败 case，而不是只在展台脚本里成功</li>
+<li>不会在软件未成熟时把库存与口碑一起押上</li>
+</ul>
+<p>换句话说，<strong>小批量不是认怂，是风险控制</strong>。</p>
+<h2 id="对消费市场大概率是探路炮灰">对消费市场：大概率是探路炮灰<a hidden class="anchor" aria-hidden="true" href="#对消费市场大概率是探路炮灰">#</a></h2>
+<p>消费手机市场的胜负手，从来不只是「AI 能力」。更现实的约束是：</p>
+<ol>
+<li><strong>换机理由是否足够强</strong><br>
+用户不会因为「能听懂」就立刻换机，除非它稳定替代一批高频操作：订票、报销、跨 App 比价、复杂设置、消息整理等。</li>
+<li><strong>失败成本是否够低</strong><br>
+智能体一旦做错支付、发错消息、误删内容，一次事故就能毁掉信任。大众用户对「偶尔聪明、经常失手」的容忍度很低。</li>
+<li><strong>生态是否愿意开放</strong><br>
+没有稳定的系统级能力、厂商合作或标准化接口，智能体只能停留在脆弱的 UI 自动化层。</li>
+<li><strong>品牌心智是否匹配</strong><br>
+中兴在政企、通信与行业终端上的认知更强，消费端「AI 手机」心智并不占优。第一代更适合当试验田，不适合当品牌翻身仗。</li>
+</ol>
+<p>因此，把这代产品放进大众消费赛道去对标顶流安卓旗舰，是错位评估。它更可能扮演的角色是：</p>
+<blockquote>
+<p>先替行业把坑踩一遍，再把能沉淀的能力迁到后续机型与行业方案里。</p></blockquote>
+<h2 id="对集团战略价值大于短期销量">对集团：战略价值大于短期销量<a hidden class="anchor" aria-hidden="true" href="#对集团战略价值大于短期销量">#</a></h2>
+<p>如果只看消费销量，这代产品很容易被判「不值」。但站在集团视角，至少有三层更硬的价值。</p>
+<h3 id="1-政企定制入口">1. 政企定制入口<a hidden class="anchor" aria-hidden="true" href="#1-政企定制入口">#</a></h3>
+<p>政企场景天然更适合智能体手机：</p>
+<ul>
+<li>任务流程相对封闭、可标准化</li>
+<li>安全与审计要求高，恰好匹配「够安全」叙事</li>
+<li>客户愿意为效率提升付溢价，而不是只比跑分和影像</li>
+</ul>
+<p>一旦端侧智能体在办公、运维、现场作业、政务办理等场景跑通，中兴可以把手机从「通信终端」扩展成「行业任务终端」。这条路比硬刚消费影像旗舰更符合其能力结构。</p>
+<h3 id="2-专利与生态筹码">2. 专利与生态筹码<a hidden class="anchor" aria-hidden="true" href="#2-专利与生态筹码">#</a></h3>
+<p>智能体手机会把问题从「模型谁更大」推到：</p>
+<ul>
+<li>端云协同调度</li>
+<li>权限与安全沙箱</li>
+<li>跨应用任务编排</li>
+<li>设备侧记忆与隐私边界</li>
+<li>多模态交互与系统级 Agent 接口</li>
+</ul>
+<p>谁先在这些层形成可专利化、可产品化的方案，谁就在下一轮合作与标准博弈里更有筹码。对中兴这种擅长通信协议、系统工程与行业方案的公司，这比单纯追消费营销更划算。</p>
+<h3 id="3-端到端验证场">3. 端到端验证场<a hidden class="anchor" aria-hidden="true" href="#3-端到端验证场">#</a></h3>
+<p>很多「AI 手机」宣传停在聊天框或本地小模型。真正难的是端到端：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>感知 → 意图理解 → 规划 → 工具/App 调用 → 反馈校验 → 记忆更新 → 权限收敛
+</span></span></code></pre></div><p>手机是最好的验证场之一，因为它同时具备：</p>
+<ul>
+<li>高频个人任务</li>
+<li>复杂权限模型</li>
+<li>实时交互压力</li>
+<li>严格的功耗与散热约束</li>
+</ul>
+<p>把这条链路在真机上跑通，能力可以反向输送到平板、行业终端、车载、政企助手等其它形态。<strong>手机不是唯一终点，而是最苛刻的试验台。</strong></p>
+<h2 id="一个更清楚的评估框架">一个更清楚的评估框架<a hidden class="anchor" aria-hidden="true" href="#一个更清楚的评估框架">#</a></h2>
+<p>不要问「中兴智能体手机能不能赢过某品牌旗舰」，而要拆成三层：</p>
+<h3 id="层-1自身边界约束">层 1：自身边界约束<a hidden class="anchor" aria-hidden="true" href="#层-1自身边界约束">#</a></h3>
+<ul>
+<li>中兴消费品牌心智与渠道是否支撑大规模 C 端爆发？</li>
+<li>软件生态与顶级互联网/OS 厂商相比，开放度与协同能力如何？</li>
+<li>集团资源更擅长做通信/政企，还是消费潮流营销？</li>
+</ul>
+<h3 id="层-2企业核心制约因素">层 2：企业核心制约因素<a hidden class="anchor" aria-hidden="true" href="#层-2企业核心制约因素">#</a></h3>
+<ul>
+<li>智能体体验的核心瓶颈是模型，还是 App 可编排性与系统权限？</li>
+<li>量产机靠堆硬件，能遮住哪些短板，遮不住哪些短板？</li>
+<li>第一代目标是验证链路，还是抢占心智？两者策略完全不同。</li>
+</ul>
+<h3 id="层-3财务与经营硬约束">层 3：财务与经营硬约束<a hidden class="anchor" aria-hidden="true" href="#层-3财务与经营硬约束">#</a></h3>
+<ul>
+<li>10–20 万台备货下，单台 BOM、补贴与售后成本是否可控？</li>
+<li>若消费端口碑一般，政企与专利收益能否覆盖试错成本？</li>
+<li>后续是否有可复用的软件平台，而不是每代重新堆料讲故事？</li>
+</ul>
+<p>按这个框架看，结论会稳定很多：</p>
+<blockquote>
+<p><strong>消费端：试错。</strong><br>
+<strong>集团端：布局。</strong><br>
+<strong>产品形态：Pilot，不是终局。</strong></p></blockquote>
+<h2 id="什么条件下它会从-pilot-变成真产品">什么条件下它会从 Pilot 变成真产品<a hidden class="anchor" aria-hidden="true" href="#什么条件下它会从-pilot-变成真产品">#</a></h2>
+<p>至少要同时看到以下几件事，才值得上调预期：</p>
+<ol>
+<li><strong>跨 App 任务成功率稳定提升</strong><br>
+不是展台 3 个脚本任务，而是高频真实任务可重复完成。</li>
+<li><strong>延迟进入「可对话」区间</strong><br>
+用户感觉是在指挥助手，而不是提交异步工单。</li>
+<li><strong>发热与续航不再明显牺牲主体验</strong><br>
+堆硬件只能救急，不能当长期答案。</li>
+<li><strong>权限模型可解释、可撤销、可审计</strong><br>
+「够安全」必须从 slogan 变成可感知机制。</li>
+<li><strong>出现可复制的政企标杆案例</strong><br>
+证明这套能力能离开极客圈，进入付费流程。</li>
+</ol>
+<p>如果上述条件迟迟不出现，量产机再堆料，也只是把 Pilot 做贵了。</p>
+<h2 id="对三类读者的直接建议">对三类读者的直接建议<a hidden class="anchor" aria-hidden="true" href="#对三类读者的直接建议">#</a></h2>
+<h3 id="普通消费者">普通消费者<a hidden class="anchor" aria-hidden="true" href="#普通消费者">#</a></h3>
+<p>现在不必为「智能体」三个字提前换机。<br>
+除非你本来就喜欢尝鲜，且能接受：</p>
+<ul>
+<li>部分任务很惊艳</li>
+<li>部分任务不稳定</li>
+<li>发热、延迟、兼容性仍是日常摩擦</li>
+</ul>
+<h3 id="极客--早期采用者">极客 / 早期采用者<a hidden class="anchor" aria-hidden="true" href="#极客--早期采用者">#</a></h3>
+<p>可以把它当<strong>可玩的工程样品</strong>。<br>
+关注点别放在跑分，而放在：</p>
+<ul>
+<li>哪些任务真能闭环</li>
+<li>失败时如何回退</li>
+<li>记忆与权限是否可控</li>
+<li>系统更新是否持续修执行链路</li>
+</ul>
+<h3 id="看产业与公司战略的人">看产业与公司战略的人<a hidden class="anchor" aria-hidden="true" href="#看产业与公司战略的人">#</a></h3>
+<p>重点不要看首销数字漂不漂亮，而看三件事：</p>
+<ol>
+<li>中兴是否把智能体能力沉淀成可复用平台</li>
+<li>是否拿到政企/行业项目，而不是只停在发布会</li>
+<li>是否在端侧编排、安全与专利上形成下一轮谈判筹码</li>
+</ol>
+<h2 id="结尾">结尾<a hidden class="anchor" aria-hidden="true" href="#结尾">#</a></h2>
+<p>中兴智能体手机最容易被两种极端叙事带偏：</p>
+<ul>
+<li>一边说：AI 手机时代到了，谁先发谁通吃</li>
+<li>一边说：又是厂商跟风，没什么用</li>
+</ul>
+<p>更接近现实的判断是第三种：</p>
+<blockquote>
+<p><strong>它大概率打不穿当下消费市场，但值得作为集团级 Pilot 存在。</strong><br>
+消费端像探路炮灰，产业端像能力验证器。<br>
+一代机的任务不是赢下换机潮，而是证明「手机作为智能体执行终端」这条路，中兴能不能走通、能沉淀什么、能把哪些能力卖到更合适的客户里。</p></blockquote>
+<p>等量产机真正落到评测和销量数据上，再回看这篇文章的框架会更清楚：<br>
+<strong>别先问它聪不聪明，先问它在谁的约束下、解决谁的问题、以及失败了是否付得起代价。</strong></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <div class="last-edited">
+      最后编辑于 2026年7月16日 05:22
+    </div>
+    <ul class="post-tags">
+      <li><a href="https://daily.jinl.in/tags/%E4%B8%AD%E5%85%B4/">中兴</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E6%99%BA%E8%83%BD%E4%BD%93%E6%89%8B%E6%9C%BA/">智能体手机</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E8%B1%86%E5%8C%85/">豆包</a></li>
+      <li><a href="https://daily.jinl.in/tags/waic/">WAIC</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E6%89%8B%E6%9C%BA/">手机</a></li>
+      <li><a href="https://daily.jinl.in/tags/ai/">AI</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90/">产品分析</a></li>
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://daily.jinl.in/">Daily Hub</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划 | Daily Hub</title>
+<meta name="keywords" content="研究型交易, 美的集团, 000333, 白色家电, 财报阅读, 交易计划, A股, 零基础">
+<meta name="description" content="按 A 股零基础、每周 8 小时训练大纲，以白色家电龙头美的集团为作业样本：走通数据从哪来、公司一页纸、同业对照、预期差与证伪、波段/事件两套纸上交易计划。本文是方法演示，不是投资建议。">
+<meta name="author" content="Daily Bot">
+<link rel="canonical" href="https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b4d13903cc5bab8548bb462b1fb5be420749e7e6cc4d23ef237eb423a984b9f4.css" integrity="sha256-tNE5A8xbq4VIu0YrH7W&#43;QgdJ5&#43;bMTSPvI360I6mEufQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://daily.jinl.in/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://daily.jinl.in/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://daily.jinl.in/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://daily.jinl.in/apple-touch-icon.png">
+<link rel="mask-icon" href="https://daily.jinl.in/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<div class="reading-progress" id="reading-progress"></div>
+<script>
+
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  function update() {
+    var content = document.querySelector('.post-content');
+    if (!content) { bar.style.width = '0%'; return; }
+    var rect = content.getBoundingClientRect();
+    var total = content.offsetHeight - window.innerHeight;
+    var scrolled = -rect.top;
+    bar.style.width = Math.min(100, Math.max(0, (scrolled / total) * 100)) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.getElementById('hamburger');
+  var menu = document.getElementById('menu');
+  if (!hamburger || !menu) return;
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+});
+</script>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});">
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划",
+  "description": "按 A 股零基础、每周 8 小时训练大纲，以白色家电龙头美的集团为作业样本：走通数据从哪来、公司一页纸、同业对照、预期差与证伪、波段/事件两套纸上交易计划。本文是方法演示，不是投资建议。",
+  "url": "https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/",
+  "image": "https://daily.jinl.in/og-default.png",
+  "datePublished": "2026-07-21T00:00:00Z",
+  "dateModified": "2026-07-21T09:21:30Z",
+  "author": {
+    "@type": "Organization",
+    "name": "Daily Bot"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Hub",
+    "url": "https://daily.jinl.in/"
+  }
+}
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://daily.jinl.in/"
+    }
+    
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tech Notes",
+      "item": "https://daily.jinl.in/tech-notes/"
+    }
+    
+    ,{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划",
+      "item": "https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/"
+    }
+  ]
+}
+</script>
+
+<meta property="og:url" content="https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/">
+  <meta property="og:site_name" content="Daily Hub">
+  <meta property="og:title" content="研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划">
+  <meta property="og:description" content="按 A 股零基础、每周 8 小时训练大纲，以白色家电龙头美的集团为作业样本：走通数据从哪来、公司一页纸、同业对照、预期差与证伪、波段/事件两套纸上交易计划。本文是方法演示，不是投资建议。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tech-notes">
+    <meta property="article:published_time" content="2026-07-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-21T09:21:30+00:00">
+    <meta property="article:tag" content="研究型交易">
+    <meta property="article:tag" content="美的集团">
+    <meta property="article:tag" content="000333">
+    <meta property="article:tag" content="白色家电">
+    <meta property="article:tag" content="财报阅读">
+    <meta property="article:tag" content="交易计划">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划">
+  <meta name="twitter:description" content="按 A 股零基础、每周 8 小时训练大纲，以白色家电龙头美的集团为作业样本：走通数据从哪来、公司一页纸、同业对照、预期差与证伪、波段/事件两套纸上交易计划。本文是方法演示，不是投资建议。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Tech Notes",
+      "item": "https://daily.jinl.in/tech-notes/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划",
+      "item": "https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划",
+  "name": "研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划",
+  "description": "按 A 股零基础、每周 8 小时训练大纲，以白色家电龙头美的集团为作业样本：走通数据从哪来、公司一页纸、同业对照、预期差与证伪、波段/事件两套纸上交易计划。本文是方法演示，不是投资建议。",
+  "keywords": [
+    "研究型交易", "美的集团", "000333", "白色家电", "财报阅读", "交易计划", "A股", "零基础"
+  ],
+  "articleBody": "0. 先声明边界 本文是训练作业，不是荐股。 选美的，只因为商业模式直观、披露完整，适合零基础练「读数 → 一页纸 → 预期差 → 计划」。 数据截至抓取日 2026-07-21，主要来自东方财富数据中心公开财务接口与行情接口；正式作业应以巨潮年报/季报 PDF 复核。 文中价格、PE、同比均为教学用快照，会过时；你要练的是字段含义与推理结构，不是抄结论下单。 训练大纲阶段约定：前 8 周以纸上交易为主；无完整计划不许记「纸上盈利」。 1. 这次作业要练什么 对应训练大纲的交付物：\n产出 本文对应章节 数据管道（公告/财务/行情从哪来） §2 公司一页纸 §4 同业轻量对照（格力、海尔） §5 核心变量压到 3 个 + 证伪 §4 / §6 预期差 一句话 §6 波段纸上计划 + 事件纸上计划 §7 复盘卡空表（平仓后用） §8 刻意不做的事（零基础纪律）：\n不写「目标价精确到分」 不编造未披露的订单/内幕 不把主题新闻当成研究结论 不在没有「市场在赌什么」时做事件单 2. 分析过程：零基础怎么「找到数」 2.1 固定三个入口（够用） 用途 入口 你要拿什么 公告原文 巨潮资讯 搜 000333 年报、一季报、业绩说明 财务序列 东财 F10 / 数据中心，或任一固定软件 营收、净利、扣非、毛利率、ROE、经营现金流 价格与估值快照 行情页 现价、总市值、PE、PB（只作情景锚点） 原则： 工具只选一套，连续 12 周不要换，否则全在学软件。\n2.2 本次用到的关键快照（2026-07-21） 行情（教学快照）\n项目 数值 代码 000333.SZ 美的集团 现价 约 84.27 元 总市值 约 6424 亿元 滚动市盈率 PE（接口口径） 约 12.7× 市净率 PB 约 3.1× 近几期利润表与质量指标（归母口径，金额约）\n报告期 营收（亿元） 营收同比 归母净利（亿元） 净利同比 扣非净利（亿元） 销售毛利率 销售净利率 ROE（加权） 每股经营现金流（元） 2026Q1 1315.8 +2.5% 126.7 +2.0% 109.6 25.6% 9.8% 5.6%（单季累计） 1.91 2025年报 4585.0 +12.1% 439.5 +14.0% 412.7 26.4% 9.8% 19.7% 7.02 2025Q3 累计 3647.2 +13.8% 378.8 +19.5% 371.4 25.9% 10.6% 16.8% 7.43 2024年报 4090.8 +9.5% 385.4 +14.3% 357.4 26.4% 9.5% 21.3% 7.90 2023年报 3737.1 +8.1% 337.2 +14.1% 329.8 25.7% 9.1% 22.2% 8.24 读表时零基础只抓四件事：\n营收是否还在长（规模） 利润是否同步或更快（盈利能力） 扣非是否大体跟着走（利润质量，防一锤子买卖） 经营现金流每股是否长期为正（现金是否跟上利润） 2.3 2026Q1 第一眼异常（研究的起点） 营收、归母净利同比大致 +2%，增速较 2025 全年明显放缓。 扣非净利同比约 −14%，与归母净利 +2% 不同向 —— 这是一页纸里必须写进「我不知道什么 / 待验证」的点：是非经常性损益结构变化、基数、投资收益，还是主业变难？不能跳过。 毛利率仍在 25%–26% 带，没有崩盘式下滑。 每股经营现金流 Q1 约 1.91，同比略正，说明至少不是「账面利润、现金枯竭」的极端形态。 研究型交易的习惯：异常字段 = 下一周作业题，不是立刻讲故事圆过去。\n3. 生意一句话（先人话，再报表） 美的集团： 以家用空调、冰箱洗衣机等消费电器为主体，并延伸到暖通、机器人与自动化、楼宇科技等 ToB 能力的综合电器与工业技术集团；国内品牌渠道 + 海外销售共同贡献收入，盈利依赖规模制造、产品结构、成本与费用控制、以及 ToB/海外的结构变化。\n零基础版更短：\n主要靠把电器（尤其空调链条）高效造出来并卖到全球，同时用第二曲线降低「只靠地产竣工/内销空调」的单一周期。\n4. 输出物 A：公司一页纸（v1 作业版） 格式按训练大纲；内容为教学填写，需你用年报 MD\u0026A 再改一版。\n4.1 基础信息 字段 内容 代码 / 名称 000333 / 美的集团 一句话生意 全球消费电器制造与销售为主，拓展 ToB 与自动化 客户是谁 家庭消费者（经经销/零售/电商）、工程与工业客户 行业位置 白色家电第一梯队，规模与产品组合显著宽于多数单品公司 基准对照 沪深300（训练大纲写死一个即可） 观察名单层级 核心研究（作业样本） 4.2 近几期趋势（只写结论句） 规模： 2023→2025 营收台阶式抬升（约 3737 → 4091 → 4585 亿），2026Q1 仍增长但斜率变平。 利润： 归母净利 2023–2025 连续两位数增长；2026Q1 归母微增、扣非走弱。 盈利能力： 毛利率中枢约 25%–26%；净利率约 9%–10%。 回报： 全年 ROE 约 20% 附近（2023–2025 略降但仍高位）。 现金： 每股经营现金流长期为正；注意 2025 年报相对 2024 有所回落（7.02 vs 7.90），要在年报里对「经营现金流 / 净利润」再算一遍。 4.3 核心变量（只许 3 个） # 变量 为什么重要 公开上大致怎么观察 1 内销空调/家电需求与均价 营收与产能利用率主锚 季度内销收入、行业排产/冷年数据、促销力度 2 毛利率（产品结构×成本） 利润弹性放大器 分产品毛利、原材料与汇兑、高端占比 3 ToB + 海外收入质量 决定是否「周期股」还是「平台」 外销占比、机器人与工业技术等分部披露、费用率 删掉的诱惑变量（先不进核心三）：股价、机构持仓、短线情绪、单次营销新闻。\n4.4 多逻辑 ≤3 / 空逻辑 ≤3 多逻辑（若成立，中期基本面不坏）\n规模与品牌渠道构成制造端成本与分销优势，ROE 长期不低。 产品与区域多元化，降低单一市场爆雷概率。 估值若处于「成熟龙头合理区间」而主业未恶化，波段赔率来自盈利平稳 + 估值收缩修复（需另做情景，见 §6）。 空逻辑（若成立，研究型应降级或退出）\n内需家电持续价格战，毛利率中枢下移且无法用结构对冲。 扣非与经营现金流连续弱于净利，利润质量恶化。 ToB/第二曲线只增收入不增利润，费用吞噬主业。 4.5 证伪条件（写清楚才叫研究） 满足任一条，原「稳健龙头」假设降级：\n连续两个报告期：毛利率同比下滑且幅度扩大，同时净利率同步下行。 扣非净利润增速持续显著弱于营收，且公司未给出可验证的一次性解释。 经营现金流净额 / 净利润 连续显著偏离历史区间（需你自己用年报算历史带）。 核心分部（如空调）收入与盈利同时失速，而不是「主动去库存」的一季阵痛。 4.6 催化剂日历（事件雷达） 时间类型 事件 研究用途 定期 中报 / 三季报 / 年报 验证增速、毛利、扣非、分部 季节 空调行业产销冷年节点 核对内销假设 公司 回购、分红、组织与业务重组公告 资本配置信号 外部 地产竣工、 consumables 需求、汇率 内需与外销假设 4.7 我不知道什么（强制诚实） 2026Q1 扣非 −14% 的完整拆解（需读附注与 MD\u0026A）。 外销与各 ToB 板块的真实利润贡献（分部口径年年有调整时要小心）。 渠道库存与经销商补库节奏（报表滞后）。 「一致预期」精确数字（零基础阶段可用「市场叙事」代替，但事件单必须标注假设弱）。 5. 输出物 B：同业轻量对照（为什么作业要三家） 训练大纲要求家电对比组。下面是同一数据源口径的对照快照，目的是练「谁贵在哪」，不是排名荐股。\n公司 代码 现价约 总市值约 PE 约 2025 营收约 2025 归母净利约 备注（教学） 美的集团 000333 84.3 6424 亿 12.7× 4585 亿 / +12% 440 亿 / +14% 规模最大、业务最宽 格力电器 000651 40.6 2274 亿 9.4× 1711 亿 / −10% 290 亿 / −10% 更聚焦空调；2025 规模收缩 海尔智家 600690 21.9 2049 亿 11.0× 3023 亿 / +5.7% 196 亿 / +4.4% 全球化与高端化叙事强 2026Q1 增速对照（教学）\n公司 营收同比 归母净利同比 美的 +2.5% +2.0% 格力 +3.5% +3.0% 海尔 −6.9% −15.2% 对比后应写下的研究句（示例）：\n2025 年美的仍是「规模扩张 + 利润双位数」组合；2026Q1 三家都显示压力，但形态不同——美的是高基数后的放缓 + 扣非偏差，格力是低基数弱复苏，海尔一季利润压力更大。\n因此： 「白电板块同涨同跌」在研究型框架里不成立，必须拆公司。\n估值一句（粗糙但有用）：\n若只看 PE 快照，格力更「便宜」、美的给一定平台溢价；溢价是否合理，取决于你对 增速质量与业务宽度 的判断，而不是 PE 低就买。\n6. 输出物 C：预期差（研究型交易的心脏） 6.1 先写「市场大概在赌什么」（可错，但必须显式） 对美的这类龙头，常见定价叙事是：\n成熟白电现金牛，ROE 高，分红与回购支撑下限； 内需弱时靠海外与 ToB 对冲； 增速中枢个位数～低双位数，给予 10–15× 左右的成熟制造估值带（随风险偏好漂移）。 6.2 你的可检验预期差（作业版示例） 预期差一句话（波段用）：\n市场容易把「2026Q1 扣非走弱 + 增速下台阶」线性外推成主业恶化；若后续中报显示 毛利率稳定、扣非与现金修复、外销/ToB 利润不塌，则属于增速换挡而非逻辑证伪，估值折价可能修复。\n反之，若中报确认扣非与主业利润率双弱，则当前「稳健 ROE 龙头」叙事过贵。\n注意：这是假设，不是结论。研究型交易买的是「验证路径」，不是金句。\n6.3 三情景（模糊正确） 不设精确目标价算法，只设逻辑情景（数字需你按最新 PE 带自己填）：\n情景 基本面路径 交易含义 悲观 内需价格战 + 扣非与毛利双下 逻辑证伪，计划退出，不扛 基准 全年低个位数～约 10% 利润增长，毛利平稳 持有逻辑来自质量与回报，不靠估值扩张 乐观 结构改善 + 费用可控，利润重回双位数且现金匹配 才讨论估值中枢上移 零基础禁止：只写乐观、不写悲观概率。\n7. 输出物 D：两套纸上交易计划 以下为模板填空示范。训练阶段默认虚拟仓位；触发价、仓位比例请按你本金与风险预算改写。\n单笔风险建议： 总资金的 0.5%–1% 亏损上限倒推仓位（大纲纪律）。\n7.1 波段计划（持有视角 1–6 个月） 字段 填写示例 类型 波段 标的 000333 美的集团 预期差 见 §6.2：换挡 vs 证伪，下注「中报验证质量」 触发条件（例） ① 已完成年报+一季报附注阅读；② 观察名单状态为「等待中报验证」；③ 价格未因无关题材异常暴涨透支乐观情景（自定义） 虚拟仓位 例如观察仓 10% 上限（示意） 亏损上限 总资金 1% → 反推股数 逻辑退出 命中 §4.5 任一条证伪 时间退出 中报披露后 10 个交易日 内，关键变量未按基准/乐观方向验证 → 降仓或平 价格纪律 预设硬止损（防黑天鹅），与逻辑退出并行，先到先执行 不加仓 仅因「更便宜」不加；仅当 毛利/扣非/现金 验证超预期时加 7.2 事件计划（财报窗口） 字段 填写示例 类型 事件 事件 2026 年中报披露 事前假设 基准：营收同比转正且不太低于个位数；毛利率 YoY 降幅可控；扣非降幅收敛 超预期定义 扣非同比转正或显著好于 Q1 趋势 + 经营现金流健康 低于预期定义 扣非继续大幅负增长 + 毛利下滑 + 公司解释不可验证 入场 零基础阶段：财报前可以不持仓，只做「反应复盘」；若做事件，必须先有书面一致预期来源 出场 公告后 1–5 日规则化减仓（自己写死），禁止无限故事续命 禁止 把「略超预期」讲成「主升浪」 零基础更推荐的事件作业（甚至优于下注）：\n中报前写下表格：营收/毛利/扣非/经营现金流 的「我的区间」。 公告后记录 3 日股价反应。 复盘：是预期差对了，还是大盘/板块带的。 8. 输出物 E：复盘卡（平仓或事件结束后 24h 内） 标的：000333 计划类型：波段 / 事件 原预期差： 实际验证： 盈亏（纸上）： 主要归因：□研究 □运气 □纪律 错在：□变量选错 □证伪太慢 □仓位 □时机 下一次只改一条规则： 9. 把过程串成「可重复动作」（你真正该带走的） 选作业公司（生意能一句话说清） → 拉 8 个报告期：营收/净利/扣非/毛利/ROE/经营现金流 → 标出异常字段（本次：Q1 扣非） → 填公司一页纸（变量≤3，证伪可执行） → 同业 2 家对照（防板块幻觉） → 写预期差一句话 + 三情景 → 波段计划 \u0026 事件计划（不填完不下单） → 等待验证 → 复盘卡 → 只改一条规则 时间盒（适配每周 8 小时）： 美的这一家，深度 v1 建议拆成 2 周 × 3h 研究块 完成；不要一天写万字却不复核 PDF。\n10. 作业题（读完必须做） 打开美的 2025 年报 PDF：在 MD\u0026A 找到主营构成，用自己的话重写 §3「一句话生意」。 在附注中定位 2026 年一季报扣非 相关说明，用 5 行解释 §2.3 的异常。 自己用表格计算：2023–2025 年「经营现金流净额 / 归母净利」——写入一页纸。 给格力或海尔各做一页纸 半页版（只填核心 3 变量 + 证伪）。 在中报前填空 §7.2 的事前区间；公告后完成 §8。 11. 结论（方法层） 美的适合当零基础样板，因为报表语言标准、同业可对照、周期与质量问题都「看得见」。 本次快照里，教学上最有价值的不是「该不该买」，而是：2026Q1 扣非与归母的裂口 逼你练「利润质量」和「证伪条件」。 研究型交易的及格线：能在 10 分钟内讲清 变量、预期差、什么情况下你错了；讲不清，就还在看热闹。 12. 免责声明 本文全部内容用于投资研究方法训练与信息展示，不构成任何证券的投资建议、要约或承诺。市场有风险，训练请用可承受损失的纸上或极小资金规则。数据来自公开接口与二手聚合，可能存在口径差与更新延迟；下结论前请以上市公司在指定媒体披露的公告为准。\n数据与发布说明 财务与行情快照抓取日：2026-07-21 示例输出对齐 Daily Hub 训练文系列：公司一页纸 / 对照表 / 双计划 / 复盘卡 站点栏目：Tech Notes（/tech-notes/） ",
+  "wordCount" : "716",
+  "inLanguage": "zh",
+  "datePublished": "2026-07-21T00:00:00Z",
+  "dateModified": "2026-07-21T09:21:30Z",
+  "author":{
+    "@type": "Person",
+    "name": "Daily Bot"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://daily.jinl.in/tech-notes/research-trading-case-midea-000333/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Hub",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://daily.jinl.in/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://daily.jinl.in/" accesskey="h" title="Daily Hub (Alt + H)">Daily Hub</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://daily.jinl.in/daily-news/" title="Daily News">
+                    <span>Daily News</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/tech-notes/" title="Tech Notes">
+                    <span>Tech Notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/resources/" title="Resources">
+                    <span>Resources</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://daily.jinl.in/travel-log/" title="Travel Log">
+                    <span>Travel Log</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">主页</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/tech-notes/">Tech Notes</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      研究型交易作业实例：美的集团（000333）——从读数到一页纸与纸上计划
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-07-21 00:00:00 +0000 UTC'>2026年7月21日</span>&nbsp;·&nbsp;<span>Daily Bot</span>
+
+</div>
+  </header> <nav class="toc" id="toc">
+  <button class="toc-toggle" onclick="this.parentElement.classList.toggle('open')" aria-label="Toggle TOC">
+    <span>目录</span>
+    <svg class="toc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4.427 9.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 9H4.604a.25.25 0 00-.177.427zM4.427 6.573L7.823 3.177a.25.25 0 01.354 0L11.573 6.573A.25.25 0 0111.396 7H4.604a.25.25 0 01-.177-.427z"/></svg>
+  </button>
+  <div class="toc-inner">
+    <ul><li class="toc-level-2"><a href="#0-%e5%85%88%e5%a3%b0%e6%98%8e%e8%be%b9%e7%95%8c">0. 先声明边界</a></li><li class="toc-level-2"><a href="#1-%e8%bf%99%e6%ac%a1%e4%bd%9c%e4%b8%9a%e8%a6%81%e7%bb%83%e4%bb%80%e4%b9%88">1. 这次作业要练什么</a></li><li class="toc-level-2"><a href="#2-%e5%88%86%e6%9e%90%e8%bf%87%e7%a8%8b%e9%9b%b6%e5%9f%ba%e7%a1%80%e6%80%8e%e4%b9%88%e6%89%be%e5%88%b0%e6%95%b0">2. 分析过程：零基础怎么「找到数」</a></li><li class="toc-level-3"><a href="#21-%e5%9b%ba%e5%ae%9a%e4%b8%89%e4%b8%aa%e5%85%a5%e5%8f%a3%e5%a4%9f%e7%94%a8">2.1 固定三个入口（够用）</a></li><li class="toc-level-3"><a href="#22-%e6%9c%ac%e6%ac%a1%e7%94%a8%e5%88%b0%e7%9a%84%e5%85%b3%e9%94%ae%e5%bf%ab%e7%85%a72026-07-21">2.2 本次用到的关键快照（2026-07-21）</a></li><li class="toc-level-3"><a href="#23-2026q1-%e7%ac%ac%e4%b8%80%e7%9c%bc%e5%bc%82%e5%b8%b8%e7%a0%94%e7%a9%b6%e7%9a%84%e8%b5%b7%e7%82%b9">2.3 2026Q1 第一眼异常（研究的起点）</a></li><li class="toc-level-2"><a href="#3-%e7%94%9f%e6%84%8f%e4%b8%80%e5%8f%a5%e8%af%9d%e5%85%88%e4%ba%ba%e8%af%9d%e5%86%8d%e6%8a%a5%e8%a1%a8">3. 生意一句话（先人话，再报表）</a></li><li class="toc-level-2"><a href="#4-%e8%be%93%e5%87%ba%e7%89%a9-a%e5%85%ac%e5%8f%b8%e4%b8%80%e9%a1%b5%e7%ba%b8v1-%e4%bd%9c%e4%b8%9a%e7%89%88">4. 输出物 A：公司一页纸（v1 作业版）</a></li><li class="toc-level-3"><a href="#41-%e5%9f%ba%e7%a1%80%e4%bf%a1%e6%81%af">4.1 基础信息</a></li><li class="toc-level-3"><a href="#42-%e8%bf%91%e5%87%a0%e6%9c%9f%e8%b6%8b%e5%8a%bf%e5%8f%aa%e5%86%99%e7%bb%93%e8%ae%ba%e5%8f%a5">4.2 近几期趋势（只写结论句）</a></li><li class="toc-level-3"><a href="#43-%e6%a0%b8%e5%bf%83%e5%8f%98%e9%87%8f%e5%8f%aa%e8%ae%b8-3-%e4%b8%aa">4.3 核心变量（只许 3 个）</a></li><li class="toc-level-3"><a href="#44-%e5%a4%9a%e9%80%bb%e8%be%91-3--%e7%a9%ba%e9%80%bb%e8%be%91-3">4.4 多逻辑 ≤3 / 空逻辑 ≤3</a></li><li class="toc-level-3"><a href="#45-%e8%af%81%e4%bc%aa%e6%9d%a1%e4%bb%b6%e5%86%99%e6%b8%85%e6%a5%9a%e6%89%8d%e5%8f%ab%e7%a0%94%e7%a9%b6">4.5 证伪条件（写清楚才叫研究）</a></li><li class="toc-level-3"><a href="#46-%e5%82%ac%e5%8c%96%e5%89%82%e6%97%a5%e5%8e%86%e4%ba%8b%e4%bb%b6%e9%9b%b7%e8%be%be">4.6 催化剂日历（事件雷达）</a></li><li class="toc-level-3"><a href="#47-%e6%88%91%e4%b8%8d%e7%9f%a5%e9%81%93%e4%bb%80%e4%b9%88%e5%bc%ba%e5%88%b6%e8%af%9a%e5%ae%9e">4.7 我不知道什么（强制诚实）</a></li><li class="toc-level-2"><a href="#5-%e8%be%93%e5%87%ba%e7%89%a9-b%e5%90%8c%e4%b8%9a%e8%bd%bb%e9%87%8f%e5%af%b9%e7%85%a7%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bd%9c%e4%b8%9a%e8%a6%81%e4%b8%89%e5%ae%b6">5. 输出物 B：同业轻量对照（为什么作业要三家）</a></li><li class="toc-level-2"><a href="#6-%e8%be%93%e5%87%ba%e7%89%a9-c%e9%a2%84%e6%9c%9f%e5%b7%ae%e7%a0%94%e7%a9%b6%e5%9e%8b%e4%ba%a4%e6%98%93%e7%9a%84%e5%bf%83%e8%84%8f">6. 输出物 C：预期差（研究型交易的心脏）</a></li><li class="toc-level-3"><a href="#61-%e5%85%88%e5%86%99%e5%b8%82%e5%9c%ba%e5%a4%a7%e6%a6%82%e5%9c%a8%e8%b5%8c%e4%bb%80%e4%b9%88%e5%8f%af%e9%94%99%e4%bd%86%e5%bf%85%e9%a1%bb%e6%98%be%e5%bc%8f">6.1 先写「市场大概在赌什么」（可错，但必须显式）</a></li><li class="toc-level-3"><a href="#62-%e4%bd%a0%e7%9a%84%e5%8f%af%e6%a3%80%e9%aa%8c%e9%a2%84%e6%9c%9f%e5%b7%ae%e4%bd%9c%e4%b8%9a%e7%89%88%e7%a4%ba%e4%be%8b">6.2 你的可检验预期差（作业版示例）</a></li><li class="toc-level-3"><a href="#63-%e4%b8%89%e6%83%85%e6%99%af%e6%a8%a1%e7%b3%8a%e6%ad%a3%e7%a1%ae">6.3 三情景（模糊正确）</a></li><li class="toc-level-2"><a href="#7-%e8%be%93%e5%87%ba%e7%89%a9-d%e4%b8%a4%e5%a5%97%e7%ba%b8%e4%b8%8a%e4%ba%a4%e6%98%93%e8%ae%a1%e5%88%92">7. 输出物 D：两套纸上交易计划</a></li><li class="toc-level-3"><a href="#71-%e6%b3%a2%e6%ae%b5%e8%ae%a1%e5%88%92%e6%8c%81%e6%9c%89%e8%a7%86%e8%a7%92-16-%e4%b8%aa%e6%9c%88">7.1 波段计划（持有视角 1–6 个月）</a></li><li class="toc-level-3"><a href="#72-%e4%ba%8b%e4%bb%b6%e8%ae%a1%e5%88%92%e8%b4%a2%e6%8a%a5%e7%aa%97%e5%8f%a3">7.2 事件计划（财报窗口）</a></li><li class="toc-level-2"><a href="#8-%e8%be%93%e5%87%ba%e7%89%a9-e%e5%a4%8d%e7%9b%98%e5%8d%a1%e5%b9%b3%e4%bb%93%e6%88%96%e4%ba%8b%e4%bb%b6%e7%bb%93%e6%9d%9f%e5%90%8e-24h-%e5%86%85">8. 输出物 E：复盘卡（平仓或事件结束后 24h 内）</a></li><li class="toc-level-2"><a href="#9-%e6%8a%8a%e8%bf%87%e7%a8%8b%e4%b8%b2%e6%88%90%e5%8f%af%e9%87%8d%e5%a4%8d%e5%8a%a8%e4%bd%9c%e4%bd%a0%e7%9c%9f%e6%ad%a3%e8%af%a5%e5%b8%a6%e8%b5%b0%e7%9a%84">9. 把过程串成「可重复动作」（你真正该带走的）</a></li><li class="toc-level-2"><a href="#10-%e4%bd%9c%e4%b8%9a%e9%a2%98%e8%af%bb%e5%ae%8c%e5%bf%85%e9%a1%bb%e5%81%9a">10. 作业题（读完必须做）</a></li><li class="toc-level-2"><a href="#11-%e7%bb%93%e8%ae%ba%e6%96%b9%e6%b3%95%e5%b1%82">11. 结论（方法层）</a></li><li class="toc-level-2"><a href="#12-%e5%85%8d%e8%b4%a3%e5%a3%b0%e6%98%8e">12. 免责声明</a></li><li class="toc-level-3"><a href="#%e6%95%b0%e6%8d%ae%e4%b8%8e%e5%8f%91%e5%b8%83%e8%af%b4%e6%98%8e">数据与发布说明</a></li></ul>
+  </div>
+</nav>
+
+  <div class="post-content md-content"><h2 id="0-先声明边界">0. 先声明边界<a hidden class="anchor" aria-hidden="true" href="#0-先声明边界">#</a></h2>
+<ol>
+<li><strong>本文是训练作业，不是荐股。</strong> 选美的，只因为商业模式直观、披露完整，适合零基础练「读数 → 一页纸 → 预期差 → 计划」。</li>
+<li>数据截至抓取日 <strong>2026-07-21</strong>，主要来自东方财富数据中心公开财务接口与行情接口；正式作业应以<strong>巨潮年报/季报 PDF</strong> 复核。</li>
+<li>文中价格、PE、同比均为<strong>教学用快照</strong>，会过时；你要练的是<strong>字段含义与推理结构</strong>，不是抄结论下单。</li>
+<li>训练大纲阶段约定：前 8 周以<strong>纸上交易</strong>为主；无完整计划不许记「纸上盈利」。</li>
+</ol>
+<hr>
+<h2 id="1-这次作业要练什么">1. 这次作业要练什么<a hidden class="anchor" aria-hidden="true" href="#1-这次作业要练什么">#</a></h2>
+<p>对应训练大纲的交付物：</p>
+<table>
+  <thead>
+      <tr>
+          <th>产出</th>
+          <th>本文对应章节</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>数据管道（公告/财务/行情从哪来）</td>
+          <td>§2</td>
+      </tr>
+      <tr>
+          <td><strong>公司一页纸</strong></td>
+          <td>§4</td>
+      </tr>
+      <tr>
+          <td>同业轻量对照（格力、海尔）</td>
+          <td>§5</td>
+      </tr>
+      <tr>
+          <td>核心变量压到 3 个 + 证伪</td>
+          <td>§4 / §6</td>
+      </tr>
+      <tr>
+          <td><strong>预期差</strong> 一句话</td>
+          <td>§6</td>
+      </tr>
+      <tr>
+          <td><strong>波段</strong>纸上计划 + <strong>事件</strong>纸上计划</td>
+          <td>§7</td>
+      </tr>
+      <tr>
+          <td>复盘卡空表（平仓后用）</td>
+          <td>§8</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>刻意不做的事（零基础纪律）：</strong></p>
+<ul>
+<li>不写「目标价精确到分」</li>
+<li>不编造未披露的订单/内幕</li>
+<li>不把主题新闻当成研究结论</li>
+<li>不在没有「市场在赌什么」时做事件单</li>
+</ul>
+<hr>
+<h2 id="2-分析过程零基础怎么找到数">2. 分析过程：零基础怎么「找到数」<a hidden class="anchor" aria-hidden="true" href="#2-分析过程零基础怎么找到数">#</a></h2>
+<h3 id="21-固定三个入口够用">2.1 固定三个入口（够用）<a hidden class="anchor" aria-hidden="true" href="#21-固定三个入口够用">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>用途</th>
+          <th>入口</th>
+          <th>你要拿什么</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>公告原文</td>
+          <td><a href="http://www.cninfo.com.cn">巨潮资讯</a> 搜 <code>000333</code></td>
+          <td>年报、一季报、业绩说明</td>
+      </tr>
+      <tr>
+          <td>财务序列</td>
+          <td>东财 F10 / 数据中心，或任一固定软件</td>
+          <td>营收、净利、扣非、毛利率、ROE、经营现金流</td>
+      </tr>
+      <tr>
+          <td>价格与估值快照</td>
+          <td>行情页</td>
+          <td>现价、总市值、PE、PB（只作情景锚点）</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>原则：</strong> 工具只选一套，连续 12 周不要换，否则全在学软件。</p>
+<h3 id="22-本次用到的关键快照2026-07-21">2.2 本次用到的关键快照（2026-07-21）<a hidden class="anchor" aria-hidden="true" href="#22-本次用到的关键快照2026-07-21">#</a></h3>
+<p><strong>行情（教学快照）</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>数值</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>代码</td>
+          <td>000333.SZ 美的集团</td>
+      </tr>
+      <tr>
+          <td>现价</td>
+          <td>约 <strong>84.27</strong> 元</td>
+      </tr>
+      <tr>
+          <td>总市值</td>
+          <td>约 <strong>6424</strong> 亿元</td>
+      </tr>
+      <tr>
+          <td>滚动市盈率 PE（接口口径）</td>
+          <td>约 <strong>12.7×</strong></td>
+      </tr>
+      <tr>
+          <td>市净率 PB</td>
+          <td>约 <strong>3.1×</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>近几期利润表与质量指标（归母口径，金额约）</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>报告期</th>
+          <th>营收（亿元）</th>
+          <th>营收同比</th>
+          <th>归母净利（亿元）</th>
+          <th>净利同比</th>
+          <th>扣非净利（亿元）</th>
+          <th>销售毛利率</th>
+          <th>销售净利率</th>
+          <th>ROE（加权）</th>
+          <th>每股经营现金流（元）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2026Q1</td>
+          <td>1315.8</td>
+          <td>+2.5%</td>
+          <td>126.7</td>
+          <td>+2.0%</td>
+          <td>109.6</td>
+          <td>25.6%</td>
+          <td>9.8%</td>
+          <td>5.6%（单季累计）</td>
+          <td>1.91</td>
+      </tr>
+      <tr>
+          <td>2025年报</td>
+          <td>4585.0</td>
+          <td>+12.1%</td>
+          <td>439.5</td>
+          <td>+14.0%</td>
+          <td>412.7</td>
+          <td>26.4%</td>
+          <td>9.8%</td>
+          <td><strong>19.7%</strong></td>
+          <td>7.02</td>
+      </tr>
+      <tr>
+          <td>2025Q3 累计</td>
+          <td>3647.2</td>
+          <td>+13.8%</td>
+          <td>378.8</td>
+          <td>+19.5%</td>
+          <td>371.4</td>
+          <td>25.9%</td>
+          <td>10.6%</td>
+          <td>16.8%</td>
+          <td>7.43</td>
+      </tr>
+      <tr>
+          <td>2024年报</td>
+          <td>4090.8</td>
+          <td>+9.5%</td>
+          <td>385.4</td>
+          <td>+14.3%</td>
+          <td>357.4</td>
+          <td>26.4%</td>
+          <td>9.5%</td>
+          <td><strong>21.3%</strong></td>
+          <td>7.90</td>
+      </tr>
+      <tr>
+          <td>2023年报</td>
+          <td>3737.1</td>
+          <td>+8.1%</td>
+          <td>337.2</td>
+          <td>+14.1%</td>
+          <td>329.8</td>
+          <td>25.7%</td>
+          <td>9.1%</td>
+          <td><strong>22.2%</strong></td>
+          <td>8.24</td>
+      </tr>
+  </tbody>
+</table>
+<p>读表时零基础只抓四件事：</p>
+<ol>
+<li><strong>营收是否还在长</strong>（规模）</li>
+<li><strong>利润是否同步或更快</strong>（盈利能力）</li>
+<li><strong>扣非是否大体跟着走</strong>（利润质量，防一锤子买卖）</li>
+<li><strong>经营现金流每股是否长期为正</strong>（现金是否跟上利润）</li>
+</ol>
+<h3 id="23-2026q1-第一眼异常研究的起点">2.3 2026Q1 第一眼异常（研究的起点）<a hidden class="anchor" aria-hidden="true" href="#23-2026q1-第一眼异常研究的起点">#</a></h3>
+<ul>
+<li>营收、归母净利同比大致 <strong>+2%</strong>，增速较 2025 全年明显放缓。</li>
+<li><strong>扣非净利同比约 −14%</strong>，与归母净利 +2% <strong>不同向</strong> —— 这是一页纸里必须写进「我不知道什么 / 待验证」的点：是非经常性损益结构变化、基数、投资收益，还是主业变难？<strong>不能跳过。</strong></li>
+<li>毛利率仍在 <strong>25%–26%</strong> 带，没有崩盘式下滑。</li>
+<li>每股经营现金流 Q1 约 <strong>1.91</strong>，同比略正，说明至少不是「账面利润、现金枯竭」的极端形态。</li>
+</ul>
+<p>研究型交易的习惯：<strong>异常字段 = 下一周作业题</strong>，不是立刻讲故事圆过去。</p>
+<hr>
+<h2 id="3-生意一句话先人话再报表">3. 生意一句话（先人话，再报表）<a hidden class="anchor" aria-hidden="true" href="#3-生意一句话先人话再报表">#</a></h2>
+<p><strong>美的集团：</strong> 以家用空调、冰箱洗衣机等消费电器为主体，并延伸到暖通、机器人与自动化、楼宇科技等 ToB 能力的综合电器与工业技术集团；国内品牌渠道 + 海外销售共同贡献收入，盈利依赖<strong>规模制造、产品结构、成本与费用控制、以及 ToB/海外的结构变化</strong>。</p>
+<p>零基础版更短：</p>
+<blockquote>
+<p>主要靠把电器（尤其空调链条）高效造出来并卖到全球，同时用第二曲线降低「只靠地产竣工/内销空调」的单一周期。</p></blockquote>
+<hr>
+<h2 id="4-输出物-a公司一页纸v1-作业版">4. 输出物 A：公司一页纸（v1 作业版）<a hidden class="anchor" aria-hidden="true" href="#4-输出物-a公司一页纸v1-作业版">#</a></h2>
+<blockquote>
+<p>格式按训练大纲；内容为教学填写，需你用年报 MD&amp;A 再改一版。</p></blockquote>
+<h3 id="41-基础信息">4.1 基础信息<a hidden class="anchor" aria-hidden="true" href="#41-基础信息">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>字段</th>
+          <th>内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>代码 / 名称</td>
+          <td>000333 / 美的集团</td>
+      </tr>
+      <tr>
+          <td>一句话生意</td>
+          <td>全球消费电器制造与销售为主，拓展 ToB 与自动化</td>
+      </tr>
+      <tr>
+          <td>客户是谁</td>
+          <td>家庭消费者（经经销/零售/电商）、工程与工业客户</td>
+      </tr>
+      <tr>
+          <td>行业位置</td>
+          <td>白色家电第一梯队，规模与产品组合显著宽于多数单品公司</td>
+      </tr>
+      <tr>
+          <td>基准对照</td>
+          <td>沪深300（训练大纲写死一个即可）</td>
+      </tr>
+      <tr>
+          <td>观察名单层级</td>
+          <td>核心研究（作业样本）</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="42-近几期趋势只写结论句">4.2 近几期趋势（只写结论句）<a hidden class="anchor" aria-hidden="true" href="#42-近几期趋势只写结论句">#</a></h3>
+<ul>
+<li><strong>规模：</strong> 2023→2025 营收台阶式抬升（约 3737 → 4091 → 4585 亿），2026Q1 仍增长但斜率变平。</li>
+<li><strong>利润：</strong> 归母净利 2023–2025 连续两位数增长；2026Q1 归母微增、<strong>扣非走弱</strong>。</li>
+<li><strong>盈利能力：</strong> 毛利率中枢约 25%–26%；净利率约 9%–10%。</li>
+<li><strong>回报：</strong> 全年 ROE 约 20% 附近（2023–2025 略降但仍高位）。</li>
+<li><strong>现金：</strong> 每股经营现金流长期为正；注意 2025 年报相对 2024 有所回落（7.02 vs 7.90），要在年报里对「经营现金流 / 净利润」再算一遍。</li>
+</ul>
+<h3 id="43-核心变量只许-3-个">4.3 核心变量（只许 3 个）<a hidden class="anchor" aria-hidden="true" href="#43-核心变量只许-3-个">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>变量</th>
+          <th>为什么重要</th>
+          <th>公开上大致怎么观察</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>内销空调/家电需求与均价</strong></td>
+          <td>营收与产能利用率主锚</td>
+          <td>季度内销收入、行业排产/冷年数据、促销力度</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>毛利率（产品结构×成本）</strong></td>
+          <td>利润弹性放大器</td>
+          <td>分产品毛利、原材料与汇兑、高端占比</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>ToB + 海外收入质量</strong></td>
+          <td>决定是否「周期股」还是「平台」</td>
+          <td>外销占比、机器人与工业技术等分部披露、费用率</td>
+      </tr>
+  </tbody>
+</table>
+<p>删掉的诱惑变量（先不进核心三）：股价、机构持仓、短线情绪、单次营销新闻。</p>
+<h3 id="44-多逻辑-3--空逻辑-3">4.4 多逻辑 ≤3 / 空逻辑 ≤3<a hidden class="anchor" aria-hidden="true" href="#44-多逻辑-3--空逻辑-3">#</a></h3>
+<p><strong>多逻辑（若成立，中期基本面不坏）</strong></p>
+<ol>
+<li>规模与品牌渠道构成制造端成本与分销优势，ROE 长期不低。</li>
+<li>产品与区域多元化，降低单一市场爆雷概率。</li>
+<li>估值若处于「成熟龙头合理区间」而主业未恶化，波段赔率来自盈利平稳 + 估值收缩修复（需另做情景，见 §6）。</li>
+</ol>
+<p><strong>空逻辑（若成立，研究型应降级或退出）</strong></p>
+<ol>
+<li>内需家电持续价格战，毛利率中枢下移且无法用结构对冲。</li>
+<li>扣非与经营现金流连续弱于净利，利润质量恶化。</li>
+<li>ToB/第二曲线只增收入不增利润，费用吞噬主业。</li>
+</ol>
+<h3 id="45-证伪条件写清楚才叫研究">4.5 证伪条件（写清楚才叫研究）<a hidden class="anchor" aria-hidden="true" href="#45-证伪条件写清楚才叫研究">#</a></h3>
+<p>满足任一条，<strong>原「稳健龙头」假设降级</strong>：</p>
+<ol>
+<li>连续两个报告期：毛利率同比下滑且幅度扩大，同时净利率同步下行。</li>
+<li>扣非净利润增速持续显著弱于营收，且公司未给出可验证的一次性解释。</li>
+<li>经营现金流净额 / 净利润 连续显著偏离历史区间（需你自己用年报算历史带）。</li>
+<li>核心分部（如空调）收入与盈利同时失速，而不是「主动去库存」的一季阵痛。</li>
+</ol>
+<h3 id="46-催化剂日历事件雷达">4.6 催化剂日历（事件雷达）<a hidden class="anchor" aria-hidden="true" href="#46-催化剂日历事件雷达">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>时间类型</th>
+          <th>事件</th>
+          <th>研究用途</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>定期</td>
+          <td>中报 / 三季报 / 年报</td>
+          <td>验证增速、毛利、扣非、分部</td>
+      </tr>
+      <tr>
+          <td>季节</td>
+          <td>空调行业产销冷年节点</td>
+          <td>核对内销假设</td>
+      </tr>
+      <tr>
+          <td>公司</td>
+          <td>回购、分红、组织与业务重组公告</td>
+          <td>资本配置信号</td>
+      </tr>
+      <tr>
+          <td>外部</td>
+          <td>地产竣工、 consumables 需求、汇率</td>
+          <td>内需与外销假设</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="47-我不知道什么强制诚实">4.7 我不知道什么（强制诚实）<a hidden class="anchor" aria-hidden="true" href="#47-我不知道什么强制诚实">#</a></h3>
+<ul>
+<li>2026Q1 <strong>扣非 −14%</strong> 的完整拆解（需读附注与 MD&amp;A）。</li>
+<li>外销与各 ToB 板块的<strong>真实利润贡献</strong>（分部口径年年有调整时要小心）。</li>
+<li>渠道库存与经销商补库节奏（报表滞后）。</li>
+<li>「一致预期」精确数字（零基础阶段可用「市场叙事」代替，但事件单必须标注假设弱）。</li>
+</ul>
+<hr>
+<h2 id="5-输出物-b同业轻量对照为什么作业要三家">5. 输出物 B：同业轻量对照（为什么作业要三家）<a hidden class="anchor" aria-hidden="true" href="#5-输出物-b同业轻量对照为什么作业要三家">#</a></h2>
+<p>训练大纲要求家电对比组。下面是<strong>同一数据源口径</strong>的对照快照，目的是练「谁贵在哪」，不是排名荐股。</p>
+<table>
+  <thead>
+      <tr>
+          <th>公司</th>
+          <th>代码</th>
+          <th>现价约</th>
+          <th>总市值约</th>
+          <th>PE 约</th>
+          <th>2025 营收约</th>
+          <th>2025 归母净利约</th>
+          <th>备注（教学）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>美的集团</td>
+          <td>000333</td>
+          <td>84.3</td>
+          <td>6424 亿</td>
+          <td>12.7×</td>
+          <td>4585 亿 / +12%</td>
+          <td>440 亿 / +14%</td>
+          <td>规模最大、业务最宽</td>
+      </tr>
+      <tr>
+          <td>格力电器</td>
+          <td>000651</td>
+          <td>40.6</td>
+          <td>2274 亿</td>
+          <td>9.4×</td>
+          <td>1711 亿 / −10%</td>
+          <td>290 亿 / −10%</td>
+          <td>更聚焦空调；2025 规模收缩</td>
+      </tr>
+      <tr>
+          <td>海尔智家</td>
+          <td>600690</td>
+          <td>21.9</td>
+          <td>2049 亿</td>
+          <td>11.0×</td>
+          <td>3023 亿 / +5.7%</td>
+          <td>196 亿 / +4.4%</td>
+          <td>全球化与高端化叙事强</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>2026Q1 增速对照（教学）</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>公司</th>
+          <th>营收同比</th>
+          <th>归母净利同比</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>美的</td>
+          <td>+2.5%</td>
+          <td>+2.0%</td>
+      </tr>
+      <tr>
+          <td>格力</td>
+          <td>+3.5%</td>
+          <td>+3.0%</td>
+      </tr>
+      <tr>
+          <td>海尔</td>
+          <td>−6.9%</td>
+          <td>−15.2%</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>对比后应写下的研究句（示例）：</strong></p>
+<blockquote>
+<p>2025 年美的仍是「规模扩张 + 利润双位数」组合；2026Q1 三家都显示压力，但形态不同——美的是高基数后的放缓 + 扣非偏差，格力是低基数弱复苏，海尔一季利润压力更大。<br>
+<strong>因此：</strong> 「白电板块同涨同跌」在研究型框架里不成立，必须拆公司。</p></blockquote>
+<p>估值一句（粗糙但有用）：</p>
+<blockquote>
+<p>若只看 PE 快照，格力更「便宜」、美的给一定平台溢价；溢价是否合理，取决于你对 <strong>增速质量与业务宽度</strong> 的判断，而不是 PE 低就买。</p></blockquote>
+<hr>
+<h2 id="6-输出物-c预期差研究型交易的心脏">6. 输出物 C：预期差（研究型交易的心脏）<a hidden class="anchor" aria-hidden="true" href="#6-输出物-c预期差研究型交易的心脏">#</a></h2>
+<h3 id="61-先写市场大概在赌什么可错但必须显式">6.1 先写「市场大概在赌什么」（可错，但必须显式）<a hidden class="anchor" aria-hidden="true" href="#61-先写市场大概在赌什么可错但必须显式">#</a></h3>
+<p>对美的这类龙头，常见定价叙事是：</p>
+<ol>
+<li>成熟白电现金牛，ROE 高，分红与回购支撑下限；</li>
+<li>内需弱时靠海外与 ToB 对冲；</li>
+<li>增速中枢个位数～低双位数，给予 <strong>10–15×</strong> 左右的成熟制造估值带（随风险偏好漂移）。</li>
+</ol>
+<h3 id="62-你的可检验预期差作业版示例">6.2 你的可检验预期差（作业版示例）<a hidden class="anchor" aria-hidden="true" href="#62-你的可检验预期差作业版示例">#</a></h3>
+<p><strong>预期差一句话（波段用）：</strong></p>
+<blockquote>
+<p>市场容易把「2026Q1 扣非走弱 + 增速下台阶」线性外推成主业恶化；若后续中报显示 <strong>毛利率稳定、扣非与现金修复、外销/ToB 利润不塌</strong>，则属于<strong>增速换挡而非逻辑证伪</strong>，估值折价可能修复。<br>
+反之，若中报确认扣非与主业利润率双弱，则当前「稳健 ROE 龙头」叙事过贵。</p></blockquote>
+<p>注意：这是<strong>假设</strong>，不是结论。研究型交易买的是「验证路径」，不是金句。</p>
+<h3 id="63-三情景模糊正确">6.3 三情景（模糊正确）<a hidden class="anchor" aria-hidden="true" href="#63-三情景模糊正确">#</a></h3>
+<p>不设精确目标价算法，只设<strong>逻辑情景</strong>（数字需你按最新 PE 带自己填）：</p>
+<table>
+  <thead>
+      <tr>
+          <th>情景</th>
+          <th>基本面路径</th>
+          <th>交易含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>悲观</td>
+          <td>内需价格战 + 扣非与毛利双下</td>
+          <td>逻辑证伪，计划退出，不扛</td>
+      </tr>
+      <tr>
+          <td>基准</td>
+          <td>全年低个位数～约 10% 利润增长，毛利平稳</td>
+          <td>持有逻辑来自质量与回报，不靠估值扩张</td>
+      </tr>
+      <tr>
+          <td>乐观</td>
+          <td>结构改善 + 费用可控，利润重回双位数且现金匹配</td>
+          <td>才讨论估值中枢上移</td>
+      </tr>
+  </tbody>
+</table>
+<p>零基础禁止：只写乐观、不写悲观概率。</p>
+<hr>
+<h2 id="7-输出物-d两套纸上交易计划">7. 输出物 D：两套纸上交易计划<a hidden class="anchor" aria-hidden="true" href="#7-输出物-d两套纸上交易计划">#</a></h2>
+<blockquote>
+<p>以下为<strong>模板填空示范</strong>。训练阶段默认虚拟仓位；触发价、仓位比例请按你本金与风险预算改写。<br>
+<strong>单笔风险建议：</strong> 总资金的 0.5%–1% 亏损上限倒推仓位（大纲纪律）。</p></blockquote>
+<h3 id="71-波段计划持有视角-16-个月">7.1 波段计划（持有视角 1–6 个月）<a hidden class="anchor" aria-hidden="true" href="#71-波段计划持有视角-16-个月">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>字段</th>
+          <th>填写示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>类型</td>
+          <td>波段</td>
+      </tr>
+      <tr>
+          <td>标的</td>
+          <td>000333 美的集团</td>
+      </tr>
+      <tr>
+          <td>预期差</td>
+          <td>见 §6.2：换挡 vs 证伪，下注「中报验证质量」</td>
+      </tr>
+      <tr>
+          <td>触发条件（例）</td>
+          <td>① 已完成年报+一季报附注阅读；② 观察名单状态为「等待中报验证」；③ 价格未因无关题材异常暴涨透支乐观情景（自定义）</td>
+      </tr>
+      <tr>
+          <td>虚拟仓位</td>
+          <td>例如观察仓 10% 上限（示意）</td>
+      </tr>
+      <tr>
+          <td>亏损上限</td>
+          <td>总资金 1% → 反推股数</td>
+      </tr>
+      <tr>
+          <td>逻辑退出</td>
+          <td>命中 §4.5 任一条证伪</td>
+      </tr>
+      <tr>
+          <td>时间退出</td>
+          <td>中报披露后 <strong>10 个交易日</strong> 内，关键变量未按基准/乐观方向验证 → 降仓或平</td>
+      </tr>
+      <tr>
+          <td>价格纪律</td>
+          <td>预设硬止损（防黑天鹅），与逻辑退出并行，先到先执行</td>
+      </tr>
+      <tr>
+          <td>不加仓</td>
+          <td>仅因「更便宜」不加；仅当 <strong>毛利/扣非/现金</strong> 验证超预期时加</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="72-事件计划财报窗口">7.2 事件计划（财报窗口）<a hidden class="anchor" aria-hidden="true" href="#72-事件计划财报窗口">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>字段</th>
+          <th>填写示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>类型</td>
+          <td>事件</td>
+      </tr>
+      <tr>
+          <td>事件</td>
+          <td>2026 年中报披露</td>
+      </tr>
+      <tr>
+          <td>事前假设</td>
+          <td>基准：营收同比转正且不太低于个位数；毛利率 YoY 降幅可控；扣非降幅收敛</td>
+      </tr>
+      <tr>
+          <td>超预期定义</td>
+          <td>扣非同比转正或显著好于 Q1 趋势 + 经营现金流健康</td>
+      </tr>
+      <tr>
+          <td>低于预期定义</td>
+          <td>扣非继续大幅负增长 + 毛利下滑 + 公司解释不可验证</td>
+      </tr>
+      <tr>
+          <td>入场</td>
+          <td>零基础阶段：<strong>财报前可以不持仓</strong>，只做「反应复盘」；若做事件，必须先有书面一致预期来源</td>
+      </tr>
+      <tr>
+          <td>出场</td>
+          <td>公告后 1–5 日规则化减仓（自己写死），禁止无限故事续命</td>
+      </tr>
+      <tr>
+          <td>禁止</td>
+          <td>把「略超预期」讲成「主升浪」</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>零基础更推荐的事件作业（甚至优于下注）：</strong></p>
+<ol>
+<li>中报前写下表格：营收/毛利/扣非/经营现金流 的「我的区间」。</li>
+<li>公告后记录 3 日股价反应。</li>
+<li>复盘：是预期差对了，还是大盘/板块带的。</li>
+</ol>
+<hr>
+<h2 id="8-输出物-e复盘卡平仓或事件结束后-24h-内">8. 输出物 E：复盘卡（平仓或事件结束后 24h 内）<a hidden class="anchor" aria-hidden="true" href="#8-输出物-e复盘卡平仓或事件结束后-24h-内">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>标的：000333
+</span></span><span style="display:flex;"><span>计划类型：波段 / 事件
+</span></span><span style="display:flex;"><span>原预期差：
+</span></span><span style="display:flex;"><span>实际验证：
+</span></span><span style="display:flex;"><span>盈亏（纸上）：
+</span></span><span style="display:flex;"><span>主要归因：□研究 □运气 □纪律
+</span></span><span style="display:flex;"><span>错在：□变量选错 □证伪太慢 □仓位 □时机
+</span></span><span style="display:flex;"><span>下一次只改一条规则：
+</span></span></code></pre></div><hr>
+<h2 id="9-把过程串成可重复动作你真正该带走的">9. 把过程串成「可重复动作」（你真正该带走的）<a hidden class="anchor" aria-hidden="true" href="#9-把过程串成可重复动作你真正该带走的">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>选作业公司（生意能一句话说清）
+</span></span><span style="display:flex;"><span>    → 拉 8 个报告期：营收/净利/扣非/毛利/ROE/经营现金流
+</span></span><span style="display:flex;"><span>    → 标出异常字段（本次：Q1 扣非）
+</span></span><span style="display:flex;"><span>    → 填公司一页纸（变量≤3，证伪可执行）
+</span></span><span style="display:flex;"><span>    → 同业 2 家对照（防板块幻觉）
+</span></span><span style="display:flex;"><span>    → 写预期差一句话 + 三情景
+</span></span><span style="display:flex;"><span>    → 波段计划 &amp; 事件计划（不填完不下单）
+</span></span><span style="display:flex;"><span>    → 等待验证 → 复盘卡 → 只改一条规则
+</span></span></code></pre></div><p><strong>时间盒（适配每周 8 小时）：</strong> 美的这一家，深度 v1 建议拆成 <strong>2 周 × 3h 研究块</strong> 完成；不要一天写万字却不复核 PDF。</p>
+<hr>
+<h2 id="10-作业题读完必须做">10. 作业题（读完必须做）<a hidden class="anchor" aria-hidden="true" href="#10-作业题读完必须做">#</a></h2>
+<ol>
+<li>打开美的 <strong>2025 年报 PDF</strong>：在 MD&amp;A 找到主营构成，用自己的话重写 §3「一句话生意」。</li>
+<li>在附注中定位 <strong>2026 年一季报扣非</strong> 相关说明，用 5 行解释 §2.3 的异常。</li>
+<li>自己用表格计算：2023–2025 年「经营现金流净额 / 归母净利」——写入一页纸。</li>
+<li>给格力或海尔各做一页纸 <strong>半页版</strong>（只填核心 3 变量 + 证伪）。</li>
+<li>在中报前填空 §7.2 的事前区间；公告后完成 §8。</li>
+</ol>
+<hr>
+<h2 id="11-结论方法层">11. 结论（方法层）<a hidden class="anchor" aria-hidden="true" href="#11-结论方法层">#</a></h2>
+<ul>
+<li><strong>美的适合当零基础样板</strong>，因为报表语言标准、同业可对照、周期与质量问题都「看得见」。</li>
+<li>本次快照里，教学上最有价值的不是「该不该买」，而是：<strong>2026Q1 扣非与归母的裂口</strong> 逼你练「利润质量」和「证伪条件」。</li>
+<li>研究型交易的及格线：能在 10 分钟内讲清 <strong>变量、预期差、什么情况下你错了</strong>；讲不清，就还在看热闹。</li>
+</ul>
+<hr>
+<h2 id="12-免责声明">12. 免责声明<a hidden class="anchor" aria-hidden="true" href="#12-免责声明">#</a></h2>
+<p>本文全部内容用于<strong>投资研究方法训练与信息展示</strong>，不构成任何证券的投资建议、要约或承诺。市场有风险，训练请用可承受损失的纸上或极小资金规则。数据来自公开接口与二手聚合，可能存在口径差与更新延迟；下结论前请以上市公司在指定媒体披露的公告为准。</p>
+<hr>
+<h3 id="数据与发布说明">数据与发布说明<a hidden class="anchor" aria-hidden="true" href="#数据与发布说明">#</a></h3>
+<ul>
+<li>财务与行情快照抓取日：2026-07-21</li>
+<li>示例输出对齐 Daily Hub 训练文系列：公司一页纸 / 对照表 / 双计划 / 复盘卡</li>
+<li>站点栏目：Tech Notes（<code>/tech-notes/</code>）</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <div class="last-edited">
+      最后编辑于 2026年7月21日 09:21
+    </div>
+    <ul class="post-tags">
+      <li><a href="https://daily.jinl.in/tags/%E7%A0%94%E7%A9%B6%E5%9E%8B%E4%BA%A4%E6%98%93/">研究型交易</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E7%BE%8E%E7%9A%84%E9%9B%86%E5%9B%A2/">美的集团</a></li>
+      <li><a href="https://daily.jinl.in/tags/000333/">000333</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E7%99%BD%E8%89%B2%E5%AE%B6%E7%94%B5/">白色家电</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E8%B4%A2%E6%8A%A5%E9%98%85%E8%AF%BB/">财报阅读</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E4%BA%A4%E6%98%93%E8%AE%A1%E5%88%92/">交易计划</a></li>
+      <li><a href="https://daily.jinl.in/tags/a%E8%82%A1/">A股</a></li>
+      <li><a href="https://daily.jinl.in/tags/%E9%9B%B6%E5%9F%BA%E7%A1%80/">零基础</a></li>
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://daily.jinl.in/">Daily Hub</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
