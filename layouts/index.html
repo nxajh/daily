@@ -4,6 +4,11 @@
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
 {{- $paginator := .Paginate ($pages.ByDate.Reverse) }}
 
+<header class="page-header">
+  <h1>Daily Hub</h1>
+  <div class="post-description">每日新闻 · 技术笔记 · 资源收藏 · 旅行日志</div>
+</header>
+
 <div class="timeline">
 {{- range $index, $page := $paginator.Pages }}
 <article class="post-entry timeline-entry">
