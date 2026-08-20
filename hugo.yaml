@@ -12,6 +12,13 @@ buildDrafts: false
 buildFuture: true
 buildExpired: false
 
+# lastmod 只取 front matter 的 date（enableGitInfo 在无意义 git 时间时会让全站
+# lastmod 随构建漂移，污染 sitemap 新鲜度信号；见 daily_hub_seo_indexing_diagnosis）
+frontmatter:
+  lastmod:
+    - lastmod
+    - date
+
 params:
   env: production
   description: "每日技术·财经·世界快览 — AI 精选 RSS 摘要、技术笔记、资源收藏与旅行记录"
